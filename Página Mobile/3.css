@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #112920;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+:root {
+    --cor-primaria: #004d40;
+    --cor-secundaria: #2e7d32;
+    --cor-menu: #a5d6a7;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 412px;
+    min-height: 100vh;
+    background-color: #1b3d2f;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+.menu-btn-toggle {
+    font-size: 26px;
+    color: #333;
+    cursor: pointer;
+    margin-right: 15px;
+    user-select: none;
+}
+
+.header-logo {
+    height: 35px;
+    object-fit: contain;
+}
+
+/* --- Menu Lateral --- */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    background-color: var(--cor-menu);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 110;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.3);
+}
+
+.side-nav-content hr {
+    border: 0;
+    border-top: 1px solid rgba(0, 77, 64, 0.2);
+    margin: 15px 0;
+}
+
+.side-nav-logo {
+    height: 45px;
+}
+
+.side-nav-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.side-nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.side-nav-item .icon {
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.side-nav-footer {
+    border-top: 1px solid rgba(0, 77, 64, 0.2);
+    padding-top: 15px;
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.menu-checkbox:checked ~ .side-nav {
+    transform: translateX(0);
+}
+
+.menu-checkbox:checked ~ .nav-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Banner Superior --- */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+    z-index: 2;
+}
+
+.hero-title {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* --- Conteúdo Principal --- */
+.content-section {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- Grelha de Botões com Hover de Expansão --- */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.option-card {
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    position: relative;
+    
+    /* Transição suave para o efeito de expansão */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* O EFEITO HOVER DE LEVE/MÍNIMA EXPANSÃO */
+.option-card:hover {
+    transform: scale(1.04); /* Aumenta levemente de tamanho */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.option-circle-img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.option-circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.option-text {
+    color: #111;
+    font-size: 16px;
+    font-weight: bold;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.option-badge {
+    background-color: #2e7d32;
+    color: #fff;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+/* --- Caixas de Texto (Cards Cinzentos) --- */
+.info-card {
+    background-color: #cbd5ce;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.info-card-title {
+    color: #00382b;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-card-text {
+    color: #222;
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Botão Interno "Explorar outro bioma" com hover de expansão também */
+.explore-other-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #1b4d3e;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.25s ease, background-color 0.2s ease;
+}
+
+.explore-other-btn:hover {
+    transform: scale(1.04);
+    background-color: #11382b;
+}
+
+/* --- Rodapé --- */
+.main-footer {
+    background-color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}
+
+.footer-logo {
+    height: 25px;
+}
+
+.footer-copyright {
+    font-size: 10px;
+    color: #757575;
+    text-align: right;
+    line-height: 1.2;
+}

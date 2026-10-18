@@ -1,0 +1,301 @@
+/* --- Reset Básico --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1b3d2f; /* Fundo verde escuro exterior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- Variáveis de Cores dos Biomas --- */
+:root {
+    --cor-primaria: #004d40;
+    --cor-menu: #a5d6a7;
+    
+    /* Cores translúcidas das barras de cada bioma */
+    --amazonia-bg: rgba(46, 125, 50, 0.85);
+    --caatinga-bg: rgba(238, 210, 90, 0.85);
+    --pampa-bg: rgba(220, 150, 160, 0.85);
+    --cerrado-bg: rgba(230, 130, 30, 0.85);
+    --pantanal-bg: rgba(180, 130, 200, 0.85);
+    --mata-bg: rgba(110, 180, 70, 0.85);
+}
+
+/* --- Checkbox Invisível para Menu --- */
+.menu-checkbox {
+    display: none;
+}
+
+/* --- Contentor Mobile --- */
+.page-container {
+    width: 100%;
+    max-width: 412px;
+    min-height: 100vh;
+    background-color: #1b3d2f; /* Fundo verde escuro da página de biomas */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    overflow-x: hidden;
+}
+
+/* --- Cabeçalho --- */
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+.menu-btn-toggle {
+    font-size: 26px;
+    color: #333;
+    cursor: pointer;
+    margin-right: 15px;
+    user-select: none;
+}
+
+.header-logo {
+    height: 35px;
+    object-fit: contain;
+}
+
+/* --- Menu Lateral (Gaveta) --- */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    background-color: var(--cor-menu);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 110;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.3);
+}
+
+.side-nav-content hr {
+    border: 0;
+    border-top: 1px solid rgba(0, 77, 64, 0.2);
+    margin: 15px 0;
+}
+
+.side-nav-logo {
+    height: 45px;
+}
+
+.side-nav-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.side-nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.side-nav-item .icon {
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.side-nav-footer {
+    border-top: 1px solid rgba(0, 77, 64, 0.2);
+    padding-top: 15px;
+}
+
+/* --- Overlay Escuro --- */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.menu-checkbox:checked ~ .side-nav {
+    transform: translateX(0);
+}
+
+.menu-checkbox:checked ~ .nav-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Secção Explorar Biomas --- */
+.explore-section {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.explore-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --- Mapa do Brasil --- */
+.map-container {
+    background-color: #fcf9f0;
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brazil-map {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- Grelha dos Biomas (2 colunas) --- */
+.biomes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+    max-width: 380px;
+    padding-bottom: 20px;
+}
+
+.biome-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 130px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: block;
+}
+
+.biome-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.biome-card:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Barra de Identificação do Bioma (Com efeito Hover de "Desaparecer") --- */
+.biome-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    backdrop-filter: blur(4px);
+    
+    /* Efeito de transição suave para o desaparecimento no hover */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* O EFEITO HOVER DE DESAPARECER PEDIDO NA IMAGEM 2 */
+.biome-card:hover .biome-bar {
+    opacity: 0; /* Faz a barra desaparecer totalmente ao passar o rato */
+    pointer-events: none; /* Impede cliques na barra invisível */
+}
+
+/* Cores específicas de fundo para cada barra de bioma */
+.biome-amazonia { background-color: var(--amazonia-bg); }
+.biome-caatinga { background-color: var(--caatinga-bg); }
+.biome-pampa { background-color: var(--pampa-bg); }
+.biome-cerrado { background-color: var(--cerrado-bg); }
+.biome-pantanal { background-color: var(--pantanal-bg); }
+.biome-mata { background-color: var(--mata-bg); }
+
+.biome-name {
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.biome-arrow {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Bolinha colorida indicativa ao lado do nome */
+.biome-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: -4px;
+}
+
+.biome-amazonia .biome-dot { background-color: #2e7d32; }
+.biome-caatinga .biome-dot { background-color: #fbc02d; }
+.biome-pampa .biome-dot { background-color: #f48fb1; }
+.biome-cerrado .biome-dot { background-color: #fb8c00; }
+.biome-pantanal .biome-dot { background-color: #ba68c8; }
+.biome-mata .biome-dot { background-color: #81c784; }
+
+/* --- Rodapé --- */
+.main-footer {
+    background-color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}
+
+.footer-logo {
+    height: 25px;
+}
+
+.footer-copyright {
+    font-size: 10px;
+    color: #757575;
+    text-align: right;
+    line-height: 1.2;
+}

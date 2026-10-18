@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #112920;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+:root {
+    --cor-primaria: #004d40;
+    --amazonia-bg: rgba(46, 125, 50, 0.9);
+    --caatinga-bg: rgba(238, 210, 90, 0.9);
+    --pampa-bg: rgba(220, 150, 160, 0.9);
+    --cerrado-bg: rgba(230, 130, 30, 0.9);
+    --pantanal-bg: rgba(180, 130, 200, 0.9);
+    --mata-bg: rgba(110, 180, 70, 0.9);
+}
+
+/* Moldura principal de desktop */
+.desktop-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    max-height: 750px;
+    background-color: #112920;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+/* --- Cabeçalho Desktop --- */
+.desktop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    z-index: 10;
+}
+
+.desktop-logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 35px;
+}
+
+/* Efeito de hover sublinhado no menu */
+.nav-link {
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #004d40;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #004d40;
+    font-weight: bold;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* --- Seção de Exploração --- */
+.explore-desktop-section {
+    flex: 1;
+    padding: 25px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.explore-desktop-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.explore-content-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    height: 100%;
+}
+
+/* --- Mapa do Brasil Desktop --- */
+.desktop-map-container {
+    background-color: #fcf9f0;
+    border-radius: 20px;
+    padding: 20px;
+    width: 340px;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+}
+
+.brazil-map-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* --- Grelha dos Biomas (3 colunas) --- */
+.desktop-biomes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 1;
+}
+
+.biome-card-desk {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 200px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: block;
+}
+
+.biome-card-desk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.biome-card-desk:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Barra de Identificação com Hover de Desaparecer --- */
+.biome-bar-desk {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    backdrop-filter: blur(4px);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover de desaparecer idêntico ao mobile */
+.biome-card-desk:hover .biome-bar-desk {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.biome-amazonia { background-color: var(--amazonia-bg); }
+.biome-caatinga { background-color: var(--caatinga-bg); }
+.biome-pampa { background-color: var(--pampa-bg); }
+.biome-cerrado { background-color: var(--cerrado-bg); }
+.biome-pantanal { background-color: var(--pantanal-bg); }
+.biome-mata { background-color: var(--mata-bg); }
+
+.biome-name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.biome-arrow {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.biome-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: -4px;
+}
+
+.biome-amazonia .biome-dot { background-color: #2e7d32; }
+.biome-caatinga .biome-dot { background-color: #fbc02d; }
+.biome-pampa .biome-dot { background-color: #f48fb1; }
+.biome-cerrado .biome-dot { background-color: #fb8c00; }
+.biome-pantanal .biome-dot { background-color: #ba68c8; }
+.biome-mata .biome-dot { background-color: #81c784; }
+
+/* --- Rodapé Desktop --- */
+.desktop-footer {
+    background-color: #fff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    z-index: 10;
+}
+
+.footer-logo {
+    height: 30px;
+}
+
+.footer-copyright {
+    font-size: 11px;
+    color: #757575;
+    text-align: right;
+    line-height: 1.3;
+}
