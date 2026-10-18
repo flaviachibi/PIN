@@ -1,0 +1,333 @@
+/* variável das cores */
+:root {
+    --corprincipal1: #F4FAF4;
+    --corprinciapl2: #B8E5BA;
+    --corprincipal3: #45C44B;
+    --corprincipal4: #217D26;
+    --corprincipal5: #124814;
+
+    --coramazonia1: #F5FAF5;
+    --coramazonia2: #C0E2BB;
+    --coramazonia3: #59BE4B;
+    --coramazonia4: #286121;
+    --coramazonia5: #11240F;
+
+    --cormataatlantica1: #F8FAF5;
+    --cormataatlantica2: #D4E1BC;
+    --cormataatlantica3: #94BB4E;
+    --cormataatlantica4: #3F521E;
+    --cormataatlantica5: #1C240F;
+
+    --corcaatinga1: #FCFAF3;
+    --corcaatinga2: #EBDBAO;
+    --corcaatinga3: #CAAD3F;
+    --corcaatinga4: #756629;
+    --corcaatinga5: #232010;
+
+    --corcerrado1: #FCF8F3;
+    --corcerrado2: #F0D5AD;
+    --corcerrado3: #E99721;
+    --corcerrado4: #A46609;
+    --corcerrado5: #2D1E06;
+
+    --corpantanal1: #F9F5FA;
+    --corpantanal2: #DABDE1;
+    --corpantanal3: #9344A4;
+    --corpantanal4: #603569;
+    --corpantanal5: #1E1320;
+
+    --corpampas1: #FBF4F5;
+    --corpampas2: #EEAFBC;
+    --corpampas3: #E84D6C;
+    --corpampas4: #801E31;
+    --corpampas5: #250E12;
+}
+
+
+/* --- Re   set Básico --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+
+/* --- Checkbox Invisível --- */
+.menu-checkbox {
+    display: none;
+}
+
+/* --- Cabeçalho Principal --- */
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+.menu-btn-toggle {
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+    user-select: none;
+}
+
+.menu-btn-toggle:hover {
+    color: var(--cor-secundaria);
+}
+
+.header-logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+/* --- Menu Lateral (Slide-in) --- */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--cor-menu);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    transform: translateX(-100%); /* Esconde o menu por padrão */
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+}
+
+.side-nav-content hr {
+    border: 0;
+    border-top: 1px solid #004d4033;
+    margin: 20px 0;
+}
+
+.side-nav-logo {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.side-nav-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 0;
+    transition: background-color 0.2s ease;
+    border-radius: 5px;
+}
+
+.side-nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.side-nav-item .icon {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.side-nav-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #004d4033;
+}
+
+/* --- Overlay de Fundo --- */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 95;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* --- A Mágica do CSS: Quando o checkbox for marcado (:checked) --- */
+.menu-checkbox:checked ~ .side-nav {
+    transform: translateX(0); /* Traz o menu para a tela */
+}
+
+.menu-checkbox:checked ~ .nav-overlay {
+    opacity: 1;
+    visibility: visible; /* Mostra o fundo escuro clicável */
+}
+
+.menu-checkbox:checked ~ body {
+    overflow: hidden;
+}
+
+/* --- Seção Principal (Hero) --- */
+.hero-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1518549410186-00e5c20b2c0d?q=80&w=500&h=800&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: var(--cor-texto-claro);
+    position: relative;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 40px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    margin-bottom: -5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-text h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--cor-primaria);
+    margin-bottom: 5px;
+}
+
+.hero-text p {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    letter-spacing: 1px;
+}
+
+.hero-buttons {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.hero-btn:active {
+    transform: scale(0.98);
+}
+
+.btn-green {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+}
+
+.btn-light {
+    background-color: var(--cor-fundo-botao-claro);
+    color: var(--cor-texto-escuro);
+}
+
+.btn-icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.alert-icon {
+    color: #d32f2f;
+    font-size: 20px;
+}
+
+/* --- Rodapé Principal --- */
+.main-footer {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}
+
+.footer-logo {
+    height: 30px;
+}
+
+.footer-copyright {
+    font-size: 11px;
+    color: #757575;
+    text-align: right;
+}
+
+/* --- Ajustes para telas maiores (Desktop) --- */
+@media (min-width: 768px) {
+    .main-header {
+        padding: 15px 30px;
+    }
+
+    .menu-btn-toggle {
+        display: none;
+    }
+
+    .side-nav {
+        transform: translateX(0);
+        position: relative;
+        width: 280px;
+        box-shadow: none;
+    }
+    
+    .nav-overlay {
+        display: none;
+    }
+
+    body {
+        flex-direction: row;
+    }
+}
