@@ -53,7 +53,7 @@
 
 body {
     background-color: var(--coorprincipal1);
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
