@@ -1,3 +1,49 @@
+/* variável das cores */
+:root {
+    --corprincipal1: #F4FAF4;
+    --corprinciapl2: #B8E5BA;
+    --corprincipal3: #45C44B;
+    --corprincipal4: #217D26;
+    --corprincipal5: #124814;
+
+    --coramazonia1: #F5FAF5;
+    --coramazonia2: #C0E2BB;
+    --coramazonia3: #59BE4B;
+    --coramazonia4: #286121;
+    --coramazonia5: #11240F;
+
+    --cormataatlantica1: #F8FAF5;
+    --cormataatlantica2: #D4E1BC;
+    --cormataatlantica3: #94BB4E;
+    --cormataatlantica4: #3F521E;
+    --cormataatlantica5: #1C240F;
+
+    --corcaatinga1: #FCFAF3;
+    --corcaatinga2: #EBDBAO;
+    --corcaatinga3: #CAAD3F;
+    --corcaatinga4: #756629;
+    --corcaatinga5: #232010;
+
+    --corcerrado1: #FCF8F3;
+    --corcerrado2: #F0D5AD;
+    --corcerrado3: #E99721;
+    --corcerrado4: #A46609;
+    --corcerrado5: #2D1E06;
+
+    --corpantanal1: #F9F5FA;
+    --corpantanal2: #DABDE1;
+    --corpantanal3: #9344A4;
+    --corpantanal4: #603569;
+    --corpantanal5: #1E1320;
+
+    --corpampas1: #FBF4F5;
+    --corpampas2: #EEAFBC;
+    --corpampas3: #E84D6C;
+    --corpampas4: #801E31;
+    --corpampas5: #250E12;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +52,7 @@
 }
 
 body {
-    background-color: #e0e0e0;
+    background-color: var(--coorprincipal1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +68,7 @@ body {
     max-width: 100%;
     height: 100vh;
     max-height: 720px;
-    background-color: #fff;
+    background-color: var(--corprincipal1);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -74,12 +120,12 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #004d40;
+    background-color: var(--corprincipal3);
     transition: width 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-    color: #004d40;
+    color: var(--corprincipal3);
 }
 
 .nav-link:hover::after {
@@ -93,7 +139,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
-    background-image: url('https://images.unsplash.com/photo-1518549410186-00e5c20b2c0d?q=80&w=1200&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -116,37 +161,44 @@ body {
 
 .hero-left-content {
     position: relative;
-    z-index: 2;
+    z-index: 5;
+    margin-left: 80px;
+    
 }
 
 .hero-title {
     font-size: 52px;
     font-weight: bold;
-    color: #004d40;
+    color: var(--corprincipal5);
     margin-bottom: -5px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+    
 }
 
 .hero-subtitle {
     font-size: 20px;
     font-weight: normal;
-    color: #004d40;
+    color: var(--corprincipal5);
     margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+    
 }
 
 .hero-description {
     font-size: 15px;
     font-weight: bold;
-    color: #004d40;
+    color: var(--corprincipal5);
     letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
 }
 
 /* --- Botões Centrais --- */
 .hero-buttons-desktop {
-    position: relative;
+   
     z-index: 2;
     display: flex;
     gap: 20px;
+    margin: 100px 50px 0;
 }
 
 .desktop-btn {
@@ -167,33 +219,36 @@ body {
     transform: scale(1.03);
 }
 
-/* 1. Botão que muda de Verde para Cinza no hover */
+/* botão explorar biomas*/
 .btn-green-to-gray {
-    background-color: #2e7d32;
-    color: #fff;
+    background-color: var(--corprincipal4);
+    color: var(--corprincipal1);
 }
 
 .btn-green-to-gray:hover {
-    background-color: #d1d1d1; /* Transforma-se em cinza */
-    color: #111;
+    background-color: var(--corprincipal1); 
+    color: var(--corprincipal5);
 }
 
-/* 2. Botão secundário (já começa cinza claro e mantém-se ou ajusta tom) */
+/* botão problemas ambientais */
 .btn-light-gray {
-    background-color: #e0e0e0;
-    color: #222;
+    background-color: var(--corprincipal1);
+    color: var(--corprincipal5);
 }
 
 .btn-light-gray:hover {
-    background-color: #c7c7c7;
+    background-color: var(--corprincipal4);
+    color: var(--corprincipal1);
 }
+
 
 .btn-icon {
     margin-right: 10px;
     font-size: 18px;
+    width: 30px;
 }
 
-/* --- Rodapé Desktop --- */
+/* rodapé*/
 .desktop-footer {
     background-color: #fff;
     padding: 20px;
