@@ -15,37 +15,43 @@ body {
 
 /* Moldura principal de desktop */
 .desktop-container {
-    width: 100%;
+     width: 100%;
     max-width: 1200px;
-    height: 100vh;
-    max-height: 800px;
-    background-color: #1b3d2f;
+    height: auto;
+    min-height: 80vh;
+    background-color: #112920;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: relative;
-    box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     overflow: hidden;
+    text-decoration: none;
 }
 
 /* --- Cabeçalho Desktop --- */
 .desktop-header {
-    display: flex;
+     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
     background-color: #fff;
     border-bottom: 1px solid #eee;
-    z-index: 10;
-}
+    z-index: 10;}
 
 .desktop-logo {
-    height: 40px;
+   height: 40px;
     object-fit: contain;
+    width: 170px;
+    height: auto;
 }
 
 .desktop-nav {
-    display: flex;
-    gap: 35px;
+   display: flex;
+    gap: 55px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 /* Efeito de hover sublinhado no menu */
