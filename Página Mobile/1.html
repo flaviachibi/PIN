@@ -6,57 +6,63 @@
     <title>Biomas do Brasil</title>
     <link rel="stylesheet" href="1.css">
 </head>
+
 <body>
 
-    <!-- Checkbox invisível que controla o estado do menu (aberto/fechado) -->
-    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <!--menu clicável-->
+    <input type="checkbox" id="menu-toggle" class="menu-click">
 
-    <!-- Overlay de fundo para fechar o menu ao clicar fora -->
-    <label for="menu-toggle" class="nav-overlay"></label>
+    <!--para fechar o menu-->
+    <label for="menu-toggle" class="fecha-menu"></label>
 
-    <!-- Menu Lateral (Slide-in) -->
-    <nav class="side-nav">
-        <div class="side-nav-content">
-            <!-- Logo dentro do menu -->
-            <img src="..\IMGS\LOGOdentroMenu.png" alt="Biomas do Brasil Logo" class="side-nav-logo">
+    <!--menu clicável-->
+    <nav class="dentro-menu">
+        <div class="dentro-menu-content">
+
+            <!--logo de dentro d menu-->
+            <img src="../Página Mobile/Img/LOGOdentroMenu.png" alt="Biomas do Brasil Logo" class="dentro-menu-logo">
             <hr>
-            <!-- Itens do menu -->
-            <a href="#" class="side-nav-item active">
-                <span class="icon">&#127806;</span>
+            <!--itens de dentro do menu-->
+            <a href="#" class="dentro-menu-item active">
+                <span class="icon"></span>
                 Preservação
             </a>
-            <a href="#" class="side-nav-item">
-                <span class="icon">&#128683;</span>
+            <a href="#" class="dentro-menu-item">
+                <span class="icon"></span>
                 Problemas
             </a>
-            <a href="#" class="side-nav-item">
-                <span class="icon">&#128240;</span>
+            <a href="#" class="dentro-menu-item">
+                <span class="icon"></span>
                 Notícias
             </a>
-            <a href="#" class="side-nav-item">
-                <span class="icon">&#128213;</span>
+            <a href="#" class="dentro-menu-item">
+                <span class="icon"></span>
                 Quiz's
             </a>
         </div>
-        <!-- Item inferior (Sobre Nós) -->
-        <div class="side-nav-footer">
-            <a href="#" class="side-nav-item">
-                <span class="icon">&#128172;</span>
+
+        <!--rodape fixo de dentro do menu-->
+        <div class="dentro-menu-footer">
+            <hr>
+            <a href="#" class="dentro-menu-item">
+                <span class="icon"></span>
                 Sobre Nós
             </a>
         </div>
     </nav>
 
-    <!-- Cabeçalho Principal -->
-    <header class="main-header">
-        <!-- O label funciona como botão e interage com o checkbox invisível -->
+    <!--cabeçalho-->
+    <header class="cabecalho">
+        <!--label é tipo um botão-->
         <label for="menu-toggle" class="menu-btn-toggle" aria-label="Abrir Menu">
-            &#9776;
+           <span></span>
+           <span></span>
+           <span></span>
         </label>
-        <img src="logo.png" alt="Biomas do Brasil Logo" class="header-logo">
+        <img src="../Página Mobile/Img/logo-superior.png" alt="Biomas do Brasil Logo" class="cabecalhologo">
     </header>
 
-    <!-- Conteúdo Principal -->
+    <!--página principal-->
     <main class="hero-section">
         <div class="hero-text">
             <h1>BIOMAS</h1>
@@ -76,10 +82,10 @@
         </div>
     </main>
 
-    <!-- Rodapé -->
-    <footer class="main-footer">
-        <img src="logo.png" alt="Biomas do Brasil Logo" class="footer-logo">
-        <p class="footer-copyright">&copy; 2026 Biomas do Brasil<br>Todos os direitos reservados</p>
+    <!--rodapé-->
+    <footer class="rodapefixo">
+        <img src="../Página Mobile/Img/logo-superior.png" alt="Biomas do Brasil Logo" class="rodapelogo">
+        <p class="rodapecopyright">&copy; 2026 Biomas do Brasil<br>Todos os direitos reservados</p>
     </footer>
 
 </body>
