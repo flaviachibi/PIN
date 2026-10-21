@@ -9,58 +9,96 @@
 
 <body>
 
-    <!--menu clicável-->
-    <input type="checkbox" id="menu-toggle" class="menu-click">
+    <!--INICIO DO MENU CLICAVEL-->
 
-    <!--para fechar o menu-->
-    <label for="menu-toggle" class="fecha-menu"></label>
+    <!-- Input Checkbox Oculto (Técnica do Checkbox Hack) isso serve para abrir o menu-->
+    <input type="checkbox" id="drawer-toggle">
 
-    <!--menu clicável-->
-    <nav class="dentro-menu">
-        <div class="dentro-menu-content">
-
-            <!--logo de dentro d menu-->
-            <img src="../Página Mobile/Img/LOGOdentroMenu.png" alt="Biomas do Brasil Logo" class="dentro-menu-logo">
-            <hr>
-            <!--itens de dentro do menu-->
-            <a href="#" class="dentro-menu-item active">
-                <span class="icon"></span>
-                Preservação
-            </a>
-            <a href="#" class="dentro-menu-item">
-                <span class="icon"></span>
-                Problemas
-            </a>
-            <a href="#" class="dentro-menu-item">
-                <span class="icon"></span>
-                Notícias
-            </a>
-            <a href="#" class="dentro-menu-item">
-                <span class="icon"></span>
-                Quiz's
-            </a>
+<!--inicio  -->
+    <!-- Header Fixo -->
+    <header>
+        <div class="header-left">
+            <!-- Label que funciona como Botão Hambúrguer -->
+            <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!--substituir isso pela logo-->
+            <a href="#" class="logo">teste</a>
         </div>
-
-        <!--rodape fixo de dentro do menu-->
-        <div class="dentro-menu-footer">
-            <hr>
-            <a href="#" class="dentro-menu-item">
-                <span class="icon"></span>
-                Sobre Nós
-            </a>
-        </div>
-    </nav>
-
-    <!--cabeçalho-->
-    <header class="cabecalho">
-        <!--label é tipo um botão-->
-        <label for="menu-toggle" class="menu-btn-toggle" aria-label="Abrir Menu">
-           <span></span>
-           <span></span>
-           <span></span>
-        </label>
-        <img src="../Página Mobile/Img/logo-superior.png" alt="Biomas do Brasil Logo" class="cabecalhologo">
+       
     </header>
+
+
+
+    <!-- Overlay Translúcido -->
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+    <!-- Sidebar Drawer (Puxando da Esquerda) isso serve pro menu vir da direita-->
+    <aside class="drawer">
+        <div class="drawer-header">
+            <div class="drawer-title-area">
+
+                <!--insira aqui o logo que fica dentro do menu  -->
+                <div class="drawer-avatar">teSte</div>
+                <span style="font-weight: 600; font-size: 0.95rem;"></span>
+            </div>
+            <!-- Botão de Fechar dentro do Drawer, o X que fecha -->
+            <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+        </div>
+<!--fim-menu-->
+        
+        
+        
+
+<!--aqui fica as opções do menu como "preservação, problemas, noticias......   "-->
+        <nav class="drawer-nav">
+            <a href="#" class="nav-link active">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                Início
+            </a>
+            <a href="#" class="nav-link">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                Projetos
+            </a>
+            <a href="#" class="nav-link">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                Estatísticas
+            </a>
+            <a href="#" class="nav-link">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                Equipe
+            </a>
+
+            <div class="nav-section-title">Sistema</div>
+            <a href="#" class="nav-link">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Configurações
+            </a>
+        </nav>
+<!--FIM DO: aqui fica as opções do menu como "preservação, problemas, noticias......   "-->
+
+
+
+        <!--aqui fica o rodape fixo de dentro do menu-->
+        <div class="drawer-footer">
+            <div class="user-card">
+                <div class="user-avatar">JS</div>
+                <div class="user-info">
+                    <h4>João Silva</h4>
+                    <p>joao@exemplo.com</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+<!--fim do: aqui fica o rodape fixo de dentro do menu-->
+
+  
 
     <!--página principal-->
     <main class="hero-section">
