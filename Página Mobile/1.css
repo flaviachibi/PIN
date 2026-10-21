@@ -43,8 +43,6 @@
     --corpampas5: #250E12;
 }
 
-
-
 body {
     display: flex;
     flex-direction: column;
@@ -54,16 +52,28 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', 'Arial', sans-serif
+    font-family: 'Inter', 'Arial', sans-serif;
 }
 
+/* --- RESET DE BOTÃO (Essencial para as novas tags button) --- */
+.btn-reset {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
 
-/*menu clicável*/
+/* menu clicável (Invisível) */
 .menu-click {
     display: none;
 }
 
-/*cabeçalho*/
+/* cabeçalho */
 .cabecalho {
     display: flex;
     align-items: center;
@@ -75,16 +85,10 @@ body {
 }
 
 .menu-btn-toggle {
-    font-size: 28px;
-    color: var(--corprincipal3);
+    display: block;
     cursor: pointer;
     margin-right: 15px;
-    transition: color 0.3s ease;
     user-select: none;
-}
-
-.menu-btn-toggle:hover {
-    color: var(--cor-secundaria);
 }
 
 .menu-btn-toggle span {
@@ -102,9 +106,31 @@ body {
     margin: 0 0 0 30px;
 }
 
+/* --- Ícone de fechar de DENTRO do menu --- */
+.fecha-menu-interno {
+    display: block;
+    width: 40px;      /* Área de clique expandida */
+    height: 40px;     /* Área de clique expandida */
+    cursor: pointer;
+    position: relative;
+    z-index: 110;     /* Fica ACIMA de tudo dentro do menu */
+    margin-bottom: 20px;
+}
+/* Cria as 3 barrinhas visíveis do botão de fechar */
+.fecha-menu-interno span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--corpampas2); /* Cor escura bem visível */
+    margin: 6px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    
+}
+    
 
-
-/*dentro do menu clicavel*/
+    
+/* dentro do menu clicável (Agora usando ASIDE) */
 .dentro-menu {
     position: fixed;
     top: 0;
@@ -116,15 +142,15 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    transform: translateX(-100%);
-    /*isso serve pra esconder o menu*/
+    transform: translateX(-100%); /* Esconde o menu na esquerda */
+    transition: transform 0.3s ease-in-out;
     z-index: 100;
-   
+    box-sizing: border-box;
 }
 
 .dentro-menu-content hr {
     border: 0;
-    border-top: 2px solid var(--corprincipal5);
+    border-top: 2px solid var(--corprincipal2);
     margin: 20px 0;
 }
 
@@ -137,16 +163,18 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--corprinciapl1);
+    color: var(--corprincipal1); /* Corrigido de var(--corprincipal2apl1) que não existia */
     font-size: 16px;
     font-weight: bold;
-    padding: 12px 0;
+    padding: 12px 10px;
     transition: background-color 0.2s ease;
     border-radius: 5px;
 }
 
-.dentro-menu-item:hover {
-    background-color: var(--corprincipal1);
+.dentro-menu-item:hover, 
+.dentro-menu-item.active {
+    background-color: var(--corprincipal4);
+    color: #fff;
 }
 
 .dentro-menu-item .icon {
@@ -162,45 +190,21 @@ body {
 
 .dentro-menu-footer {
     margin-top: auto;
-    padding-top: 20px;
 }
-/*FIM de dentro do menu clicavel*/
 
 
-
-
-/* --- Overlay de Fundo --- */
-.fecha-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 95;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    cursor: pointer;
-}
 
 /* --- A Mágica do CSS: Quando o checkbox for marcado (:checked) --- */
-.menu-click:checked~.dentro-menu {
-    transform: translateX(0);
-    /* Traz o menu para a tela */
+.menu-click:checked ~ .dentro-menu {
+    transform: translateX(0); /* Traz o menu para a tela */
 }
 
-.menu-click:checked~.fecha-menu {
+.menu-click:checked ~ .fecha-menu {
     opacity: 1;
-    visibility: visible;
-    /* Mostra o fundo escuro clicável */
+    visibility: visible; /* Mostra o fundo escuro clicável */
 }
 
-.menu-click:checked~body {
-    overflow: hidden;
-}
-
-/* --- Seção Principal (Hero) --- */
+/* --- Seção Principal (Hero usando MAIN) --- */
 .hero-section {
     flex: 1;
     display: flex;
@@ -209,8 +213,7 @@ body {
     align-items: center;
     background-image: url('../Página Mobile/Img/fotoprincipal.png');
     background-size: cover;
-    background-position: initial;
-    
+    background-position: center;
     padding: 20px;
     color: var(--cor-texto-claro);
     position: relative;
@@ -224,7 +227,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4); /* Escurecido um pouco mais para dar leitura */
     z-index: 1;
 }
 
@@ -238,7 +241,7 @@ body {
     font-size: 48px;
     font-weight: bold;
     color: var(--cor-primaria);
-    margin-bottom: -5px;
+    margin: 0 0 -5px 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -246,7 +249,7 @@ body {
     font-size: 18px;
     font-weight: normal;
     color: var(--cor-primaria);
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
 }
 
 .hero-text p {
@@ -254,6 +257,7 @@ body {
     font-weight: bold;
     color: var(--cor-primaria);
     letter-spacing: 1px;
+    margin: 0;
 }
 
 .hero-buttons {
@@ -304,7 +308,7 @@ body {
     font-size: 20px;
 }
 
-/*rodape*/
+/* rodapé */
 .rodapefixo {
     background-color: #fff;
     padding: 20px;
@@ -323,23 +327,19 @@ body {
     font-size: 11px;
     color: var(--corprincipal5);
     text-align: right;
+    margin: 0;
 }
 
 /* --- Ajustes para telas maiores (Desktop) --- */
 @media (min-width: 768px) {
-    .main-header {
-        padding: 15px 30px;
-    }
-
     .menu-btn-toggle {
         display: none;
     }
 
-    .side-nav {
+    .dentro-menu {
         transform: translateX(0);
         position: relative;
         width: 280px;
-        box-shadow: none;
     }
 
     .fecha-menu {
