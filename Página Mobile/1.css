@@ -334,11 +334,9 @@ main {
 }
 
 .hero {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-    color: white;
     padding: 48px;
     border-radius: 20px;
-    box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+    
 }
 
 .hero h1 {
