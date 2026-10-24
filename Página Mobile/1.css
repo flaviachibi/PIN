@@ -44,31 +44,15 @@
 }
 
 
-/*BODY da Pág*/
-/*body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', 'Arial', sans-serif;
-}
+/*CORPO, SÓ COLOQUEI A FONTE*/
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-    line-height: 1.5;
-    padding-top: 70px; 
+    font-family: Inter, Arial, Helvetica, sans-serif;
 }
-*/
-
 
 
 /* --- RESET DE BOTÃO (Essencial para as novas tags button) --- */
 .btn-reset {
-    background: none;
+    background: var(--coramazonia4);
     border: none;
     padding: 0;
     margin: 0;
@@ -77,12 +61,6 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-}
-
-
-/* menu clicável (Invisível) */
-.menu-click {
-    display: none;
 }
 
 /* cabeçalho */
@@ -94,6 +72,18 @@ body {
     position: sticky;
     top: 0;
     z-index: 90;
+}
+.cabecalhologo {
+    height: 60px;
+    margin: 0 0 0 30px;
+}
+
+
+
+
+/* menu clicável (Invisível) */
+.menu-click {
+    display: none;
 }
 
 .menu-btn-toggle {
@@ -113,19 +103,17 @@ body {
     transition: all 0.3s ease;
 }
 
-.cabecalhologo {
-    height: 60px;
-    margin: 0 0 0 30px;
-}
 
+
+
+
+/*INICIO DO MENU LATERAL*/
 /* Reset básico e tipografia */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
 
 /* Checkbox oculto para controlar o estado do drawer */
 #drawer-toggle {
@@ -139,10 +127,9 @@ header {
     left: 0;
     width: 100%;
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: white;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid #e2e8f0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -156,7 +143,7 @@ header {
     gap: 16px;
 }
 
-/* Botão do Menu Hambúrguer (label associada ao checkbox) */
+/* Botão do MENU (label associada ao checkbox) */
 .hamburger-btn {
     display: flex;
     flex-direction: column;
@@ -173,7 +160,7 @@ header {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #334155;
+    background-color: var(--coramazonia5);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -181,8 +168,6 @@ header {
 .logo {
     font-size: 1.25rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-   
     -webkit-text-fill-color: transparent;
     text-decoration: none;
 }
@@ -194,8 +179,8 @@ header {
 }
 
 .btn-primary {
-    background-color: #4f46e5;
-    color: white;
+    background-color: var(--coramazonia4);
+    color: var(--coramazonia3);
     padding: 8px 16px;
     border-radius: 8px;
     font-size: 0.875rem;
@@ -205,14 +190,13 @@ header {
 }
 
 .btn-primary:hover {
-    background-color: #4338ca;
+    background-color: #d11caa;
 }
 
 /* Overlay Translúcido */
 .overlay {
     position: fixed;
     inset: 0;
-    background-color: rgba(15, 23, 42, 0.4);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     opacity: 0;
@@ -228,7 +212,7 @@ aside.drawer {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 280px;
+    width: 200px; /*tamanho do menu lateralizado*/
     background-color: #ffffff;
     border-right: 1px solid #e2e8f0;
     display: flex;
@@ -242,15 +226,13 @@ aside.drawer {
 .drawer-header {
     height: 70px;
     padding: 0 24px;
-    border-bottom: 1px solid #f1f5f9;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
 .drawer-title-area {
     display: flex;
-    align-items: center;
+   
     gap: 10px;
 }
 
@@ -263,18 +245,17 @@ aside.drawer {
     background: none;
     border: none;
     cursor: pointer;
-    color: #64748b;
+    color:var(--coramazonia5);
     padding: 6px;
     border-radius: 6px;
     display: flex;
-    align-items: center;
     justify-content: center;
     transition: background-color 0.2s, color 0.2s;
 }
 
 .drawer-close-btn:hover {
     background-color: #f1f5f9;
-    color: #0f172a;
+    color: var(--coramazonia5);
 }
 
 
@@ -283,10 +264,9 @@ aside.drawer {
 .drawer-nav {
     padding: 16px;
     display: flex;
-    align-items: center;
     padding: 50px;
     flex: 1;
-    padding: 24px 16px;
+    padding: 30px 16px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -299,7 +279,7 @@ aside.drawer {
     gap: 12px;
     padding: 10px 12px;
     border-radius: 8px;
-    color: #475569;
+    color: var(--coramazonia4);
     text-decoration: none;
     font-size: 0.9375rem;
     font-weight: 500;
@@ -307,13 +287,13 @@ aside.drawer {
 }
 
 .nav-link:hover {
-    background-color: #f1f5f9;
-    color: #0f172a;
+    background-color: var(--coramazonia2);
+    color: var(--coramazonia5);
 }
 
 .nav-link.active {
-    background-color: #eef2ff;
-    color: #4f46e5;
+    background-color: var(--coramazonia3) ;
+    color: var(--coramazonia3);
 }
 
 .nav-section-title {
@@ -321,7 +301,7 @@ aside.drawer {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #94a3b8;
+    color: var(--coramazonia3);
     padding: 16px 12px 6px 12px;
 }
 
@@ -331,6 +311,7 @@ aside.drawer {
     display: flex;
     align-items: center;
     padding: 50px;
+    color: var(--coramazonia5);
 }
 
 
@@ -339,6 +320,8 @@ aside.drawer {
     font-weight: 600;
     color: #1e293b;
 }
+
+/*FIM DO MENU LATERAL*/
 
 
 
@@ -413,6 +396,7 @@ main {
     font-size: 0.9375rem;
 }
 
+
 /* ==========================================
    MÁGICA DO CSS: ESTADO ATIVADO VIA CHECKBOX
    ========================================== */
@@ -425,6 +409,7 @@ main {
     pointer-events: auto;
 }
 
+
 /* Responsividade para telas menores */
 @media (max-width: 640px) {
     .hero {
@@ -435,19 +420,15 @@ main {
     }
 }
 
-/* --- Seção Principal (Hero usando MAIN) --- */
+
+/* --- Seção Principal CORPO DA PAGINA  --- */
 .hero-section {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-image: url('../Página Mobile/Img/fotoprincipal.png');
-    background-size: cover;
-    background-position: center;
+    background-position: initial;
     padding: 20px;
-    color: var(--cor-texto-claro);
-    position: relative;
     text-align: center;
 }
 
@@ -458,7 +439,6 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Escurecido um pouco mais para dar leitura */
     z-index: 1;
 }
 
@@ -471,22 +451,22 @@ main {
 .hero-text h1 {
     font-size: 48px;
     font-weight: bold;
-    color: var(--cor-primaria);
-    margin: 0 0 -5px 0;
+    color: var(--coramazonia4);
+    margin: 60px 0 -5px 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-text h2 {
     font-size: 18px;
     font-weight: normal;
-    color: var(--cor-primaria);
+    color: var(--coramazonia5);
     margin: 0 0 5px 0;
 }
 
 .hero-text p {
     font-size: 14px;
     font-weight: bold;
-    color: var(--cor-primaria);
+    color: var(--coramazonia4);
     letter-spacing: 1px;
     margin: 0;
 }
@@ -499,6 +479,7 @@ main {
     gap: 15px;
     width: 100%;
     max-width: 300px;
+
 }
 
 .hero-btn {
@@ -513,10 +494,12 @@ main {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
+    background-color: #217D26;
 }
 
 .hero-btn:active {
     transform: scale(0.98);
+    
 }
 
 .btn-green {
@@ -532,6 +515,7 @@ main {
 .btn-icon {
     margin-right: 10px;
     font-size: 18px;
+    
 }
 
 .alert-icon {
@@ -546,8 +530,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #eee;
-    margin-top: auto;
 }
 
 .rodapelogo {
@@ -560,6 +542,8 @@ main {
     text-align: right;
     margin: 0;
 }
+
+
 
 /* --- Ajustes para telas maiores (Desktop) --- */
 @media (min-width: 768px) {
