@@ -182,7 +182,7 @@ header {
     font-size: 1.25rem;
     font-weight: 700;
     background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    -webkit-background-clip: text;
+   
     -webkit-text-fill-color: transparent;
     text-decoration: none;
 }
