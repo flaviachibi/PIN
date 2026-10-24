@@ -43,17 +43,28 @@
     --corpampas5: #250E12;
 }
 
-body {
+
+/*BODY da Pág*/
+/*body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #fff;
     overflow-x: hidden;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Inter', 'Arial', sans-serif;
 }
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.5;
+    padding-top: 70px; 
+}
+*/
+
+
 
 /* --- RESET DE BOTÃO (Essencial para as novas tags button) --- */
 .btn-reset {
@@ -67,6 +78,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 
 /* menu clicável (Invisível) */
 .menu-click {
@@ -113,13 +125,7 @@ body {
     box-sizing: border-box;
 }
 
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-    line-height: 1.5;
-    padding-top: 70px; /* Espaço para o header fixo */
-}
+
 
 /* Checkbox oculto para controlar o estado do drawer */
 #drawer-toggle {
@@ -249,16 +255,8 @@ aside.drawer {
 }
 
 .drawer-avatar {
-    width: 32px;
-    height: 32px;
-    background-color: #4f46e5;
-    color: white;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 0.875rem;
+    width: 50px;
+    height: 50px;
 }
 
 .drawer-close-btn {
@@ -279,14 +277,20 @@ aside.drawer {
     color: #0f172a;
 }
 
+
+
 /* Navegação do Drawer */
 .drawer-nav {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
     flex: 1;
     padding: 24px 16px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    
 }
 
 .nav-link {
@@ -324,30 +328,11 @@ aside.drawer {
 /* Rodapé do Drawer */
 .drawer-footer {
     padding: 16px;
-    border-top: 1px solid #f1f5f9;
-}
-
-.user-card {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 10px;
-    background-color: #f8fafc;
-    border-radius: 8px;
+    padding: 50px;
 }
 
-.user-avatar {
-    width: 36px;
-    height: 36px;
-    background-color: #cbd5e1;
-    color: #334155;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 0.875rem;
-}
 
 .user-info h4 {
     font-size: 0.875rem;
@@ -355,10 +340,8 @@ aside.drawer {
     color: #1e293b;
 }
 
-.user-info p {
-    font-size: 0.75rem;
-    color: #64748b;
-}
+
+
 
 /* CONTEÚDO PRINCIPAL DA PÁGINA */
 main {

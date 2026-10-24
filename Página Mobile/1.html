@@ -17,7 +17,7 @@
 <!--inicio  -->
     <!-- Header Fixo -->
     <header>
-        <div class="header-left">
+        <section class="header-left">
             <!-- Label que funciona como Botão Hambúrguer -->
             <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
                 <span></span>
@@ -26,7 +26,7 @@
             </label>
             <!--substituir isso pela logo-->
             <a href="#" class="logo"><img src="Img/logo-superior.png" alt="logo biomas" width="100"></a>
-        </div>
+        </section>
        
     </header>
 
@@ -35,14 +35,15 @@
     <!-- Overlay Translúcido -->
     <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
 
+    
     <!-- Sidebar Drawer (Puxando da Esquerda) isso serve pro menu vir da direita-->
     <aside class="drawer">
         <div class="drawer-header">
             <div class="drawer-title-area">
 
                 <!--insira aqui o logo que fica dentro do menu  -->
-                <div class="drawer-avatar">teSte</div>
-                <span style="font-weight: 600; font-size: 0.95rem;"></span>
+                <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png" alt="logo biomas" width="80"></div>
+                
             </div>
             <!-- Botão de Fechar dentro do Drawer, o X que fecha -->
             <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
@@ -59,26 +60,24 @@
 <!--aqui fica as opções do menu como "preservação, problemas, noticias......   "-->
         <nav class="drawer-nav">
             <a href="#" class="nav-link active">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
                 Início
             </a>
             <a href="#" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-                Projetos
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
+                Preservação
             </a>
             <a href="#" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                preservação
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
+                Problemas
             </a>
             <a href="#" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
                 Noticias
             </a>
-
-            <div class="nav-section-title">Sistema</div>
             <a href="#" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                Configurações
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
+                Quiz
             </a>
         </nav>
 <!--FIM DO: aqui fica as opções do menu como "preservação, problemas, noticias......   "-->
@@ -86,41 +85,43 @@
 
 
         <!--aqui fica o rodape fixo de dentro do menu-->
-        <div class="drawer-footer">
-            <div class="user-card">
-                <div class="user-avatar">JS</div>
-                <div class="user-info">
-                    <h4>João Silva</h4>
-                    <p>joao@exemplo.com</p>
-                </div>
-            </div>
-        </div>
+        <footer class="drawer-footer">
+            <section>
+                <article>
+                    <h4>Sobre Nós</h4>
+                </article>
+            </section>
+        </footer>
     </aside>
 <!--fim do: aqui fica o rodape fixo de dentro do menu-->
 
   
 
+
     <!--página principal-->
     <main class="hero-section">
-        <div class="hero-text">
+        <section class="hero-text">
             <h1>BIOMAS</h1>
             <h2>— DO BRASIL —</h2>
             <p>CONHECER PARA PRESERVAR</p>
-        </div>
+        </section>
         
-        <div class="hero-buttons">
+        <section class="hero-buttons">
             <button class="hero-btn btn-green">
-                <span class="btn-icon">&#127806;</span>
+                <span class="btn-icon"><img src="Img/folhinha.png" alt="logo biomas" width="100"></span>
                 Explorar Biomas
             </button>
             <button class="hero-btn btn-light">
-                <span class="btn-icon alert-icon">&#9888;</span>
+                <span class="btn-icon alert-icon"><img src="Img/alerta1.png" alt="logo biomas" width="100"></span>
                 Problemas Ambientais
             </button>
-        </div>
+        </section>
     </main>
 
-    <!--rodapé-->
+
+
+
+    <!--rodapé fixo da página-->
     <footer class="rodapefixo">
         <img src="../Página Mobile/Img/logo-superior.png" alt="Biomas do Brasil Logo" class="rodapelogo">
         <p class="rodapecopyright">&copy; 2026 Biomas do Brasil<br>Todos os direitos reservados</p>
