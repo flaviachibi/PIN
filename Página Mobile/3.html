@@ -8,15 +8,15 @@
 </head>
 <body>
 
-    <!-- Checkbox invisível para o menu lateral -->
+    <!-- Checkbox invisível para o controle do menu lateral -->
     <input type="checkbox" id="menu-toggle" class="menu-checkbox">
 
-    <!-- Overlay escuro de fundo -->
-    <label for="menu-toggle" class="nav-overlay"></label>
+    <!-- Overlay escuro de fundo ao abrir o menu -->
+    <label for="menu-toggle" class="nav-overlay" aria-hidden="true"></label>
 
     <!-- Menu Lateral -->
     <nav class="side-nav">
-        <div class="side-nav-content">
+        <section class="side-nav-content">
             <!-- INSIRA A FOTO DO LOGO DO MENU AQUI -->
             <img src="logo.png" alt="Biomas do Brasil Logo" class="side-nav-logo">
             <hr>
@@ -32,18 +32,18 @@
             <a href="#" class="side-nav-item">
                 <span class="icon">&#128213;</span> Quiz's
             </a>
-        </div>
-        <div class="side-nav-footer">
+        </section>
+        <footer class="side-nav-footer">
             <a href="#" class="side-nav-item">
                 <span class="icon">&#128172;</span> Sobre Nós
             </a>
-        </div>
+        </footer>
     </nav>
 
     <!-- Contentor Principal (Moldura Mobile) -->
-    <div class="page-container">
+    <section class="page-container">
         
-        <!-- Cabeçalho -->
+        <!-- Cabeçalho Principal -->
         <header class="main-header">
             <label for="menu-toggle" class="menu-btn-toggle" aria-label="Abrir Menu">
                 &#9776;
@@ -52,52 +52,97 @@
             <img src="logo.png" alt="Biomas do Brasil Logo" class="header-logo">
         </header>
 
-        <!-- Banner com Imagem de Fundo e Título -->
-        <div class="hero-banner">
+        <!-- Banner de Destaque / Hero -->
+        <header class="hero-banner">
             <!-- INSIRA A FOTO DE CAPA DO BIOMA AQUI (ex: floresta amazônica) -->
             <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=500&auto=format&fit=crop" alt="Amazônia Fundo" class="hero-bg-img">
-            <div class="hero-overlay"></div>
+            <span class="hero-overlay"></span>
             <h1 class="hero-title">Amazônia</h1>
-        </div>
+        </header>
 
-        <!-- Conteúdo Principal -->
+        <!-- Conteúdo Principal da Página -->
         <main class="content-section">
             
-            <!-- Grelha dos 4 Botões (Fauna, Flora, Clima, Solo) com Hover de Expansão -->
-            <div class="options-grid">
+            <!-- Grelha dos 4 Botões (Fauna, Flora, Clima, Solo) -->
+            <nav class="options-grid">
                 
-                <!-- Fauna -->
+                <!-- Card Fauna -->
                 <a href="#" class="option-card">
-                    <div class="option-circle-img">
+                    <figure class="option-circle-img">
                         <!-- INSIRA A FOTO DA FAUNA AQUI -->
                         <img src="https://images.unsplash.com/photo-1543946207-391e47a5a4cf?q=80&w=150&auto=format&fit=crop" alt="Fauna">
-                    </div>
+                    </figure>
                     <span class="option-text">Fauna</span>
                     <span class="option-badge">&#128062;</span>
                 </a>
 
-                <!-- Flora -->
+                <!-- Card Flora -->
                 <a href="#" class="option-card">
-                    <div class="option-circle-img">
+                    <figure class="option-circle-img">
                         <!-- INSIRA A FOTO DA FLORA AQUI -->
                         <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=150&auto=format&fit=crop" alt="Flora">
-                    </div>
+                    </figure>
                     <span class="option-text">Flora</span>
                     <span class="option-badge">&#127793;</span>
                 </a>
 
-                <!-- Clima -->
+                <!-- Card Clima -->
                 <a href="#" class="option-card">
-                    <div class="option-circle-img">
+                    <figure class="option-circle-img">
                         <!-- INSIRA A FOTO DO CLIMA AQUI -->
                         <img src="https://images.unsplash.com/photo-1518549410186-00e5c20b2c0d?q=80&w=150&auto=format&fit=crop" alt="Clima">
-                    </div>
+                    </figure>
                     <span class="option-text">Clima</span>
                     <span class="option-badge">&#9928;</span>
                 </a>
 
-                <!-- Solo -->
+                <!-- Card Solo -->
                 <a href="#" class="option-card">
-                    <div class="option-circle-img">
+                    <figure class="option-circle-img">
                         <!-- INSIRA A FOTO DO SOLO AQUI -->
-                        <img src="
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=150&auto=format&fit=crop" alt="Solo">
+                    </figure>
+                    <span class="option-text">Solo</span>
+                    <span class="option-badge">&#127793;</span>
+                </a>
+
+            </nav>
+
+            <!-- Card 1: Descrição do Bioma Amazônia -->
+            <article class="info-card">
+                <h2 class="info-card-title">
+                    <span class="card-icon">&#127811;</span> Amazônia
+                </h2>
+                <p class="info-card-text">
+                    A Amazônia é o maior bioma do Brasil, abrigando a mais extensa floresta tropical e bacia hidrográfica do planeta sob um clima quente e chuvoso. Com uma biodiversidade incomparável dividida entre florestas inundáveis e de terra firme, o bioma é essencial para a regulação do clima global e o regime de chuvas, embora enfrente a pressão contínua da desflorestação.
+                </p>
+                <a href="#" class="explore-other-btn">
+                    <span class="card-icon">&#127811;</span> Explorar outro bioma &rarr;
+                </a>
+            </article>
+
+            <!-- Card 2: Curiosidades Rápidas -->
+            <article class="info-card curiosidades-card">
+                <h2 class="info-card-title">
+                    Curiosidades Rápidas
+                </h2>
+                <p class="info-card-text">
+                    Ao contrário da informação de conhecimento popular que a Amazônia contribui com 20% do oxigênio na atmosfera, o bioma – na verdade – contribui com cerca de 20% do oxigênio produzido pela fotossíntese no planeta. Em seu estado mais primitivo, a Amazônia faz uma contribuição significativa para retirar o dióxido de carbono da atmosfera, o que não chega a ser um par de pulmões, e sim se assemelha a um ar-condicionado para o planeta.
+                </p>
+            </article>
+
+        </main>
+
+        <!-- Rodapé da Página -->
+        <footer class="main-footer">
+            <!-- INSIRA A FOTO DO LOGO DO RODAPÉ AQUI -->
+            <img src="logo.png" alt="Biomas do Brasil Logo" class="footer-logo">
+            <p class="footer-copyright">
+                © Biomas do Brasil.<br>Todos os direitos reservados.
+            </p>
+        </footer>
+
+    </section>
+
+</body>
+</html>

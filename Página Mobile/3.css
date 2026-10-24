@@ -35,9 +35,11 @@ body {
     box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
+/* --- Cabeçalho --- */
 .main-header {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 12px 15px;
     background-color: #fff;
     border-bottom: 1px solid #eee;
@@ -50,7 +52,8 @@ body {
     font-size: 26px;
     color: #333;
     cursor: pointer;
-    margin-right: 15px;
+    position: absolute;
+    left: 15px;
     user-select: none;
 }
 
@@ -184,7 +187,7 @@ body {
     gap: 20px;
 }
 
-/* --- Grelha de Botões com Hover de Expansão --- */
+/* --- Grelha de Botões --- */
 .options-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -201,14 +204,11 @@ body {
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     position: relative;
-    
-    /* Transição suave para o efeito de expansão */
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* O EFEITO HOVER DE LEVE/MÍNIMA EXPANSÃO */
 .option-card:hover {
-    transform: scale(1.04); /* Aumenta levemente de tamanho */
+    transform: scale(1.04);
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
@@ -218,6 +218,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
+    margin: 0;
 }
 
 .option-circle-img img {
@@ -249,35 +250,43 @@ body {
 
 /* --- Caixas de Texto (Cards Cinzentos) --- */
 .info-card {
-    background-color: #cbd5ce;
+    background-color: #8c9e92;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+.curiosidades-card {
+    background-color: #cbd5ce;
+}
+
 .info-card-title {
-    color: #00382b;
+    color: #0b291d;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 800;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.info-card-text {
-    color: #222;
-    font-size: 13.5px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    text-align: justify;
+.card-icon {
+    font-size: 18px;
 }
 
-/* Botão Interno "Explorar outro bioma" com hover de expansão também */
+.info-card-text {
+    color: #111;
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Botão "Explorar outro bioma" */
 .explore-other-btn {
     display: inline-flex;
     align-items: center;
-    background-color: #1b4d3e;
+    background-color: #13392a;
     color: #fff;
     padding: 10px 18px;
     border-radius: 20px;
@@ -291,7 +300,7 @@ body {
 
 .explore-other-btn:hover {
     transform: scale(1.04);
-    background-color: #11382b;
+    background-color: #0b241a;
 }
 
 /* --- Rodapé --- */
