@@ -50,7 +50,7 @@ body {
 }
 
 
-/* --- RESET DE BOTÃO (Essencial para as novas tags button) --- */
+/*RESET DE BOTÃO*/
 .btn-reset {
     background: var(--coramazonia4);
     border: none;
@@ -80,42 +80,17 @@ body {
 
 
 
-
-/* menu clicável (Invisível) */
-.menu-click {
-    display: none;
-}
-
-.menu-btn-toggle {
-    display: block;
-    cursor: pointer;
-    margin-right: 15px;
-    user-select: none;
-}
-
-.menu-btn-toggle span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: var(--corprincipal4);
-    margin: 5px 0;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-
-
-
-
 /*INICIO DO MENU LATERAL*/
-/* Reset básico e tipografia */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} /* Reset básico e tipografia */
 
-/* Checkbox oculto para controlar o estado do drawer */
+
+
+/*Checkbox oculto para controlar o estado do drawer*/
 #drawer-toggle {
     display: none;
 }
@@ -143,7 +118,7 @@ header {
     gap: 16px;
 }
 
-/* Botão do MENU (label associada ao checkbox) */
+/* Botão do MENU*/
 .hamburger-btn {
     display: flex;
     flex-direction: column;
@@ -176,21 +151,6 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
-}
-
-.btn-primary {
-    background-color: var(--coramazonia4);
-    color: var(--coramazonia3);
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background-color 0.2s;
-}
-
-.btn-primary:hover {
-    background-color: #d11caa;
 }
 
 /* Overlay Translúcido */
@@ -326,6 +286,8 @@ aside.drawer {
 
 
 
+
+
 /* CONTEÚDO PRINCIPAL DA PÁGINA */
 main {
     max-width: 900px;
@@ -394,10 +356,6 @@ main {
     font-size: 0.9375rem;
 }
 
-
-/* ==========================================
-   MÁGICA DO CSS: ESTADO ATIVADO VIA CHECKBOX
-   ========================================== */
 #drawer-toggle:checked ~ aside.drawer {
     transform: translateX(0);
 }
@@ -406,6 +364,7 @@ main {
     opacity: 1;
     pointer-events: auto;
 }
+
 
 
 /* Responsividade para telas menores */
@@ -419,7 +378,7 @@ main {
 }
 
 
-/* --- Seção Principal CORPO DA PAGINA  --- */
+/* ---CORPO DA PAGINA--- */
 .hero-section {
     flex: 1;
     display: flex;
@@ -477,6 +436,7 @@ main {
     gap: 15px;
     width: 100%;
     max-width: 300px;
+    
 
 }
 
@@ -491,8 +451,8 @@ main {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    background-color: #217D26;
+    
+    background-color: var(--coramazonia3);
 }
 
 .hero-btn:active {
@@ -500,13 +460,14 @@ main {
     
 }
 
-.btn-green {
-    background-color: var(--cor-secundaria);
+
+.btn-verde {
+    background-color: var(--coramazonia3);
     color: var(--cor-texto-claro);
 }
 
-.btn-light {
-    background-color: var(--cor-fundo-botao-claro);
+.btn-branco {
+    background-color: var(--coramazonia1);
     color: var(--cor-texto-escuro);
 }
 
@@ -518,7 +479,7 @@ main {
 
 .alert-icon {
     color: #d32f2f;
-    font-size: 20px;
+    font-size: 5px;
 }
 
 /* rodapé */
