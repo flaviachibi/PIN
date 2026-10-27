@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomas do Brasil</title>
+    <link rel="stylesheet" href="2PagBiomas.css">
+</head>
+
+<body>
+    <!-- Input Checkbox Oculto (Técnica do Checkbox Hack) -->
+    <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
+
+    <!-- Overlay Translúcido -->
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+    <!-- Header Fixo -->
+    <header class="main-header">
+        <section class="header-left">
+            <!-- Label que funciona como Botão Hambúrguer -->
+            <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </section>
+        <a href="#" class="logo"><img src="Img/logo-superior.png" alt="logo biomas" class="header-logo"></a>
+    </header>
+
+    <!-- Sidebar Drawer (Menu Lateral) -->
+    <aside class="drawer">
+        <div class="drawer-header">
+            <div class="drawer-title-area">
+                <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png" alt="logo biomas" width="80"></div>
+            </div>
+            <!-- Botão de Fechar -->
+            <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+        </div>
+
+        <nav class="drawer-nav">
+            <a href="1Inicio.html" class="nav-link">Início</a>
+            <a href="#" class="nav-link">Preservação</a>
+            <a href="#" class="nav-link">Problemas</a>
+            <a href="#" class="nav-link">Noticias</a>
+            <a href="#" class="nav-link">Quiz</a>
+        </nav>
+
+        <footer class="drawer-footer">
+            <section>
+                <article>
+                    <h4>Sobre Nós</h4>
+                </article>
+            </section>
+        </footer>
+    </aside>
+
+    <!-- Contentor Principal (Garante o rodapé no fundo) -->
+    <div class="page-container">
+        
+        <!-- Conteúdo Principal -->
+        <main class="explore-section">
+            <h1 class="explore-title">Explore os biomas brasileiros</h1>
+
+            <!-- Mapa do Brasil -->
+            <div class="map-container">
+                <img src="Img/mapaibge2.jpg" alt="Mapa do Brasil com Biomas" class="brazil-map">
+            </div>
+
+            <!-- Grelha de Biomas -->
+            <div class="biomes-grid">
+                
+                <!-- 1. Amazônia -->
+                <a href="3Amazonia.html" class="biome-card">
+                    <img src="Img/amazoniabiomas.jpeg" alt="Amazônia">
+                    <div class="biome-bar biome-amazonia">
+                        <span class="biome-dotAm"></span>
+                        <span class="biome-name">Amazônia</span>
+                        <span class="biome-arrow">&rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 2. Caatinga -->
+                <a href="#" class="biome-card">
+                    <img src="Img/caatingabanner.jpg" alt="Caatinga">
+                    <div class="biome-bar biome-caatinga">
+                        <span class="biome-dotCa"></span>
+                        <span class="biome-name">Caatinga</span>
+                        <span class="biome-arrow">&rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 3. Pampa -->
+                <a href="#" class="biome-card">
+                    <img src="Img/pampabiomas.jpg" alt="Pampa">
+                    <div class="biome-bar biome-pampa">
+                        <span class="biome-dotPp"></span>
+                        <span class="biome-name">Pampa</span>
+                        <span class="biome-arrow">&rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 4. Cerrado -->
+                <a href="#" class="biome-card">
+                    <img src="Img/cerradobiomas.webp" alt="Cerrado">
+                    <div class="biome-bar biome-cerrado">
+                        <span class="biome-dotCr"></span>
+                        <span class="biome-name">Cerrado</span>
+                        <span class="biome-arrow">&rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 5. Pantanal -->
+                <a href="#" class="biome-card">
+                    <img src="Img/pantanalbiomas.webp" alt="Pantanal">
+                    <div class="biome-bar biome-pantanal">
+                        <span class="biome-dotPt"></span>
+                        <span class="biome-name">Pantanal</span>
+                        <span class="biome-arrow">&rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 6. Mata Atlântica -->
+                <a href="#" class="biome-card">
+                    <img src="Img/mataatlanticabiomas.jpg" alt="Mata Atlântica">
+                    <div class="biome-bar biome-mata">
+                        <span class="biome-dotMt"></span>
+                        <span class="biome-name">Mata Atlântica</span>
+                        <span class="biome-arrow">&rarr;</span>
+                    </div>
+                </a>
+
+            </div>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="main-footer">
+            <img src="Img/logo-superior.png" alt="Biomas do Brasil Logo" class="footer-logo">
+            <p class="footer-copyright">&copy; 2026 Biomas do Brasil<br>Todos os direitos reservados</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazônia - Biomas do Brasil</title>
-    <link rel="stylesheet" href="3.css">
+    <!-- Aqui estamos chamando o arquivo CSS externo -->
+    <link rel="stylesheet" href="pagTeste.css">
 </head>
 <body>
 
-    <!--INICIO DO MENU CLICAVEL-->
+    <!-- Input Checkbox Oculto - Classe 'menu-checkbox' adicionada para funcionar com o CSS -->
+    <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
 
-    <!-- Input Checkbox Oculto (Técnica do Checkbox Hack) isso serve para abrir o menu-->
-    <input type="checkbox" id="drawer-toggle">
-
-<!--inicio  -->
     <!-- Header Fixo -->
     <header>
         <section class="header-left">
@@ -23,26 +21,22 @@
                 <span></span>
                 <span></span>
             </label>
-            <!--logo-->
+            <!-- logo -->
             <a href="#" class="logo"><img src="Img/logo-superior.png" alt="logo biomas" width="150"></a>
         </section>
-  
     </header>
 
     <!-- Overlay Translúcido -->
     <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
-
     
-    <!-- Sidebar Drawer (Puxando da Esquerda) isso serve pro menu vir da direita-->
+    <!-- Sidebar Drawer -->
     <aside class="drawer">
         <div class="drawer-header">
             <div class="drawer-title-area">
-
-                <!--insira aqui o logo que fica dentro do menu  -->
+                <!-- logo que fica dentro do menu -->
                 <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png" alt="logo biomas" width="80"></div>
-                
             </div>
-            <!-- Botão de Fechar dentro do Drawer, o X que fecha -->
+            <!-- Botão de Fechar dentro do Drawer -->
             <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
                 <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
@@ -50,10 +44,8 @@
             </label>
         </div>
 
-
-<!--aqui fica as opções do menu como "preservação, problemas, noticias......   "-->
         <nav class="drawer-nav">
-            <a href="#" class="nav-link">
+            <a href="1.html" class="nav-link">
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
                 Início
             </a>
@@ -75,7 +67,6 @@
             </a>
         </nav>
 
-        <!--aqui fica o rodape fixo de dentro do menu-->
         <footer class="drawer-footer">
             <section>
                 <article>
@@ -84,17 +75,14 @@
             </section>
         </footer>
     </aside>
-<!--FIM DO MENU LATERAL-->
+    <!-- FIM DO MENU LATERAL -->
 
     <!-- Contentor Principal (Moldura Mobile) -->
     <section class="page-container">
-        
-
 
         <!-- Banner de Destaque / Hero -->
         <header class="hero-banner">
-            <!-- INSIRA A FOTO DE CAPA DO BIOMA AQUI (ex: floresta amazônica) -->
-            <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=500&auto=format&fit=crop" alt="Amazônia Fundo" class="hero-bg-img">
+            <img src="Img/amazoniabanner.webp" alt="Amazônia Fundo" class="hero-bg-img">
             <span class="hero-overlay"></span>
             <h1 class="hero-title">Amazônia</h1>
         </header>
@@ -104,59 +92,53 @@
             
             <!-- Grelha dos 4 Botões (Fauna, Flora, Clima, Solo) -->
             <nav class="options-grid">
-                
                 <!-- Card Fauna -->
                 <a href="#" class="option-card">
                     <figure class="option-circle-img">
-                        <!-- INSIRA A FOTO DA FAUNA AQUI -->
-                        <img src="https://images.unsplash.com/photo-1543946207-391e47a5a4cf?q=80&w=150&auto=format&fit=crop" alt="Fauna">
+                        <img src="Img/amazoniafauna.png" alt="Fauna">
                     </figure>
                     <span class="option-text">Fauna</span>
-                    <span class="option-badge">&#128062;</span>
+                    <span class="option-badge"><img src="Img/patafauna.png" width="15" height="15"></span>
                 </a>
 
                 <!-- Card Flora -->
                 <a href="#" class="option-card">
                     <figure class="option-circle-img">
-                        <!-- INSIRA A FOTO DA FLORA AQUI -->
-                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=150&auto=format&fit=crop" alt="Flora">
+                        <img src="Img/amazoniaflora1.jpg" alt="Flora">
                     </figure>
                     <span class="option-text">Flora</span>
-                    <span class="option-badge">&#127793;</span>
+                    <span class="option-badge"><img src="Img/florflora.png" width="20" height="20"></span>
                 </a>
 
                 <!-- Card Clima -->
                 <a href="#" class="option-card">
                     <figure class="option-circle-img">
-                        <!-- INSIRA A FOTO DO CLIMA AQUI -->
-                        <img src="https://images.unsplash.com/photo-1518549410186-00e5c20b2c0d?q=80&w=150&auto=format&fit=crop" alt="Clima">
+                        <img src="Img/amazoniaclima.jpg" alt="Clima">
                     </figure>
                     <span class="option-text">Clima</span>
-                    <span class="option-badge">&#9928;</span>
+                    <span class="option-badge"><img src="Img/tempoclima.png" width="20" height="20"></span>
                 </a>
 
                 <!-- Card Solo -->
                 <a href="#" class="option-card">
                     <figure class="option-circle-img">
-                        <!-- INSIRA A FOTO DO SOLO AQUI -->
-                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=150&auto=format&fit=crop" alt="Solo">
+                        <img src="Img/amazoniasolo.png" alt="Solo">
                     </figure>
                     <span class="option-text">Solo</span>
-                    <span class="option-badge">&#127793;</span>
+                    <span class="option-badge"><img src="Img/terrasolo.png" width="20" height="20"></span>
                 </a>
-
             </nav>
 
             <!-- Card 1: Descrição do Bioma Amazônia -->
             <article class="info-card">
                 <h2 class="info-card-title">
-                    <span class="card-icon">&#127811;</span> Amazônia
+                    <span class="card-icon"><img src="Img/folhinha.png" width="20" height="20"></span> Amazônia
                 </h2>
                 <p class="info-card-text">
                     A Amazônia é o maior bioma do Brasil, abrigando a mais extensa floresta tropical e bacia hidrográfica do planeta sob um clima quente e chuvoso. Com uma biodiversidade incomparável dividida entre florestas inundáveis e de terra firme, o bioma é essencial para a regulação do clima global e o regime de chuvas, embora enfrente a pressão contínua da desflorestação.
                 </p>
-                <a href="#" class="explore-other-btn">
-                    <span class="card-icon">&#127811;</span> Explorar outro bioma &rarr;
+                <a href="2.html" class="explore-other-btn">
+                    <span class="card-icon"><img src="Img/folhinha2.png" width="20" height="20"></span> Explorar outro bioma &rarr;
                 </a>
             </article>
 
@@ -174,7 +156,6 @@
 
         <!-- Rodapé da Página -->
         <footer class="main-footer">
-            <!-- INSIRA A FOTO DO LOGO DO RODAPÉ AQUI -->
             <img src="logo.png" alt="Biomas do Brasil Logo" class="footer-logo">
             <p class="footer-copyright">
                 © Biomas do Brasil.<br>Todos os direitos reservados.

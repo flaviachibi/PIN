@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazônia - Biomas do Brasil</title>
+    <!-- Aqui estamos chamando o arquivo CSS externo -->
+    <link rel="stylesheet" href="3Amazonia.css">
+</head>
+<body>
+
+    <!-- Input Checkbox Oculto - Classe 'menu-checkbox' adicionada para funcionar com o CSS -->
+    <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
+
+    <!-- Header Fixo -->
+    <header>
+        <section class="header-left">
+            <!-- Label que funciona como Botão Hambúrguer -->
+            <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- logo -->
+            <a href="#" class="logo"><img src="Img/logo-superior.png" alt="logo biomas" width="150"></a>
+        </section>
+    </header>
+
+    <!-- Overlay Translúcido -->
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+    
+    <!-- Sidebar Drawer -->
+    <aside class="drawer">
+        <div class="drawer-header">
+            <div class="drawer-title-area">
+                <!-- logo que fica dentro do menu -->
+                <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png" alt="logo biomas" width="80"></div>
+            </div>
+            <!-- Botão de Fechar dentro do Drawer -->
+            <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+        </div>
+
+        <nav class="drawer-nav">
+            <a href="1Inicio.html" class="nav-link">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
+                Início
+            </a>
+            <a href="#" class="nav-link">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
+                Preservação
+            </a>
+            <a href="#" class="nav-link">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
+                Problemas
+            </a>
+            <a href="#" class="nav-link">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
+                Noticias
+            </a>
+            <a href="#" class="nav-link">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
+                Quiz
+            </a>
+        </nav>
+
+        <footer class="drawer-footer">
+            <section>
+                <article>
+                    <h4>Sobre Nós</h4>
+                </article>
+            </section>
+        </footer>
+    </aside>
+    <!-- FIM DO MENU LATERAL -->
+
+    <!-- Contentor Principal (Moldura Mobile) -->
+    <section class="page-container">
+
+        <!-- Banner de Destaque / Hero -->
+        <header class="hero-banner">
+            <img src="Img/amazoniabanner.webp" alt="Amazônia Fundo" class="hero-bg-img">
+            <span class="hero-overlay"></span>
+            <h1 class="hero-title">Amazônia</h1>
+        </header>
+
+        <!-- Conteúdo Principal da Página -->
+        <main class="content-section">
+            
+            <!-- Grelha dos 4 Botões (Fauna, Flora, Clima, Solo) -->
+            <nav class="options-grid">
+                <!-- Card Fauna -->
+                <a href="#" class="option-card">
+                    <figure class="option-circle-img">
+                        <img src="Img/amazoniafauna.png" alt="Fauna">
+                    </figure>
+                    <span class="option-text">Fauna</span>
+                    <span class="option-badge"><img src="Img/patafauna.png" width="15" height="15"></span>
+                </a>
+
+                <!-- Card Flora -->
+                <a href="#" class="option-card">
+                    <figure class="option-circle-img">
+                        <img src="Img/amazoniaflora1.jpg" alt="Flora">
+                    </figure>
+                    <span class="option-text">Flora</span>
+                    <span class="option-badge"><img src="Img/florflora.png" width="20" height="20"></span>
+                </a>
+
+                <!-- Card Clima -->
+                <a href="#" class="option-card">
+                    <figure class="option-circle-img">
+                        <img src="Img/amazoniaclima.jpg" alt="Clima">
+                    </figure>
+                    <span class="option-text">Clima</span>
+                    <span class="option-badge"><img src="Img/tempoclima.png" width="20" height="20"></span>
+                </a>
+
+                <!-- Card Solo -->
+                <a href="#" class="option-card">
+                    <figure class="option-circle-img">
+                        <img src="Img/amazoniasolo.png" alt="Solo">
+                    </figure>
+                    <span class="option-text">Solo</span>
+                    <span class="option-badge"><img src="Img/terrasolo.png" width="20" height="20"></span>
+                </a>
+            </nav>
+
+            <!-- Card 1: Descrição do Bioma Amazônia -->
+            <article class="info-card">
+                <h2 class="info-card-title">
+                    <span class="card-icon"><img src="Img/folhinha.png" width="20" height="20"></span> Amazônia
+                </h2>
+                <p class="info-card-text">
+                    A Amazônia é o maior bioma do Brasil, abrigando a mais extensa floresta tropical e bacia hidrográfica do planeta sob um clima quente e chuvoso. Com uma biodiversidade incomparável dividida entre florestas inundáveis e de terra firme, o bioma é essencial para a regulação do clima global e o regime de chuvas, embora enfrente a pressão contínua da desflorestação.
+                </p>
+                <a href="2PagBiomas.html" class="explore-other-btn">
+                    <span class="card-icon"><img src="Img/folhinha2.png" width="20" height="20"></span> Explorar outro bioma &rarr;
+                </a>
+            </article>
+
+            <!-- Card 2: Curiosidades Rápidas -->
+            <article class="info-card curiosidades-card">
+                <h2 class="info-card-title">
+                    Curiosidades Rápidas
+                </h2>
+                <p class="info-card-text">
+                    Ao contrário da informação de conhecimento popular que a Amazônia contribui com 20% do oxigênio na atmosfera, o bioma – na verdade – contribui com cerca de 20% do oxigênio produzido pela fotossíntese no planeta. Em seu estado mais primitivo, a Amazônia faz uma contribuição significativa para retirar o dióxido de carbono da atmosfera, o que não chega a ser um par de pulmões, e sim se assemelha a um ar-condicionado para o planeta.
+                </p>
+            </article>
+
+        </main>
+
+        <!-- Rodapé da Página -->
+        <footer class="main-footer">
+            <img src="Img/logo-superior.png" alt="Biomas do Brasil Logo" class="footer-logo">
+            <p class="footer-copyright">
+                © Biomas do Brasil.<br>Todos os direitos reservados.
+            </p>
+        </footer>
+
+    </section>
+
+</body>
+</html>
