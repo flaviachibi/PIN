@@ -62,9 +62,53 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================================
-   CONTENTOR MOBILE
-========================================= */
+
+
+
+
+
+/* aqui INICIA o botão fixo de voltar ao topo da pagina, 
+USAR SOMENTE NAS PÁGINAS LONGAS*/
+
+/* isso ativa a rolagem suave*/
+html {scroll-behavior: smooth;}
+
+
+/*botão fixo para voltar ao topo*/
+.btn-topo {
+    position: fixed;
+    bottom:  60px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--coramazonia3);
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+
+    /*seta*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*isso faz com q o botão fique por cima de qlqr coisa*/
+    z-index: 1000;
+}
+
+.btn-topo:hover {background-color: var(--coramazonia2);
+transform: translateY(-3px);
+}
+/* aqui TERMINA o botão fixo de voltar ao topo da pagina, 
+USAR SOMENTE NAS PÁGINAS LONGAS*/
+
+
+
+
+
+
+
+/*CONTENTOR MOBILE*/
 .page-container {
     width: 100%;
     max-width: 412px;
@@ -78,9 +122,7 @@ body {
     padding-top: 70px; /* Compensa a altura do header fixo */
 }
 
-/* =========================================
-   HEADER FIXO PRINCIPAL
-========================================= */
+/* HEADER FIXO PRINCIPAL */
 .main-header, header {
     position: fixed;
     top: 0;
@@ -128,9 +170,7 @@ body {
     border-radius: 2px;
 }
 
-/* =========================================
-   MENU LATERAL E OVERLAY
-========================================= */
+/* MENU LATERAL E OVERLAY */
 .menu-checkbox {
     display: none;
 }
