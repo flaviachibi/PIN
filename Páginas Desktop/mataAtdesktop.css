@@ -1,4 +1,13 @@
-* {
+        :root{
+             --cormataatlantica1: #F8FAF5;
+    --cormataatlantica2: #D4E1BC;
+    --cormataatlantica3: #94BB4E;
+    --cormataatlantica4: #3F521E;
+    --cormataatlantica5: #1C240F;
+        }
+
+
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,7 +15,7 @@
 }
 
 body {
-    background-color: #112920;
+    background-color: var(--cormataatlantica3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +28,7 @@ body {
     max-width: 1200px;
     height: auto;
     min-height: 80vh;
-    background-color: #112920;
+    background-color:var(--cormataatlantica2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
