@@ -135,8 +135,6 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     box-sizing: border-box;
 }
 
-
-
 .header-left {
     display: flex;
     align-items: center;
@@ -530,6 +528,9 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 
 
 
+
+
+/* Estilo para a class das imagens*/
 .container-infografico {
   width: 100%;
   margin: 1.5rem 0; /* Espaçamento acima e abaixo da imagem */
