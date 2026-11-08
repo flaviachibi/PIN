@@ -64,12 +64,12 @@ body {
 
 
 
+
 /* aqui INICIA o botão fixo de voltar ao topo da pagina, 
 USAR SOMENTE NAS PÁGINAS LONGAS*/
 
 /* isso ativa a rolagem suave*/
 html {scroll-behavior: smooth;}
-
 
 /*botão fixo para voltar ao topo*/
 .btn-topo {
@@ -248,6 +248,11 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     color: var(--coramazonia5);
     border-top: 1px solid #eee;
 }
+
+
+
+
+
 
 /* GRELHA DE EXPLORAR (Do seu CSS original)*/
 .explore-section {
