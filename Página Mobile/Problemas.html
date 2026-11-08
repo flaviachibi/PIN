@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazônia - Biomas do Brasil</title>
+    <title>Problemas - Biomas do Brasil</title>
     <!-- Aqui estamos chamando o arquivo CSS externo -->
-    <link rel="stylesheet" href="Problemas.css">
+    <link rel="stylesheet" href="problemaPreservacaoeSobreN.css">
 </head>
-<body>
 
-    <!-- Input Checkbox Oculto - Classe 'menu-checkbox' adicionada para funcionar com o CSS -->
+
+
+<!--COLOCAR A ID PARA ANCORA O BOTÃO FIXO NAS PAGINAS LONGAS-->
+
+<body id="topo">
+
+    <!--botão fixo para voltar ao topo, USAR SOMENTE NAS PÁGINAS LONGAS-->
+    <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593</a>
+
+
+
+    <!-- Input Checkbox Oculto (Técnica do Checkbox Hack) -->
     <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
 
+    <!-- Overlay Translúcido -->
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+
     <!-- Header Fixo -->
-    <header>
+    <header class="main-header">
         <section class="header-left">
             <!-- Label que funciona como Botão Hambúrguer -->
             <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
@@ -21,22 +35,19 @@
                 <span></span>
                 <span></span>
             </label>
-            <!-- logo -->
-            <a href="#" class="logo"><img src="Img/logo-superior.png" alt="logo biomas" width="150"></a>
         </section>
+        <!-- Logo -->
+        <a href="Inicio.html" class="logo"><img src="Img/logo-superior.png" alt="logo biomas" class="header-logo"></a>
     </header>
 
-    <!-- Overlay Translúcido -->
-    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
-    
-    <!-- Sidebar Drawer -->
+    <!-- Sidebar Drawer (Menu Lateral) -->
     <aside class="drawer">
         <div class="drawer-header">
             <div class="drawer-title-area">
-                <!-- logo que fica dentro do menu -->
                 <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png" alt="logo biomas" width="80"></div>
             </div>
-            <!-- Botão de Fechar dentro do Drawer -->
+
+            <!-- Botão de Fechar -->
             <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
                 <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
@@ -45,112 +56,196 @@
         </div>
 
         <nav class="drawer-nav">
-            <a href="Inicio.html" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
-                Início
-            </a>
-            <a href="#" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
-                Preservação
-            </a>
-            <a href="#" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
-                Problemas
-            </a>
-            <a href="#" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
-                Noticias
-            </a>
-            <a href="#" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"></svg>
-                Quiz
-            </a>
+            <a href="Inicio.html" class="nav-link">Início</a>
+            <a href="Preservacao.html" class="nav-link">Preservação</a>
+            <a href="Problemas.html" class="nav-link">Problemas</a>
+            <a href="Noticias.html" class="nav-link">Noticias</a>
+            <a href="Quiz.html" class="nav-link">Quiz</a>
         </nav>
 
         <footer class="drawer-footer">
             <section>
                 <article>
-                    <h4>Sobre Nós</h4>
+                    <h4><a href="Sobre.html" class="nav-link">Sobre Nós</h4></a>
                 </article>
             </section>
         </footer>
     </aside>
+
+
     <!-- FIM DO MENU LATERAL -->
+
+
 
     <!-- Contentor Principal (Moldura Mobile) -->
     <section class="page-container">
 
         <!-- Banner de Destaque / Hero -->
         <header class="hero-banner">
-            <img src="Img/amazoniabanner.webp" alt="Amazônia Fundo" class="hero-bg-img">
+            <img src="Img/fotoprincipal.png" alt="Amazônia Fundo" class="hero-bg-img">
             <span class="hero-overlay"></span>
-            <h1 class="hero-title">Amazônia</h1>
+            <h1 class="hero-title">Problemas</h1>
         </header>
 
         <!-- Conteúdo Principal da Página -->
         <main class="content-section">
-            
-            <!-- Grelha dos 4 Botões (Fauna, Flora, Clima, Solo) -->
-            <nav class="options-grid">
-                <!-- Card Fauna -->
-                <a href="#" class="option-card">
-                    <figure class="option-circle-img">
-                        <img src="Img/amazoniafauna.png" alt="Fauna">
-                    </figure>
-                    <span class="option-text">Fauna</span>
-                    <span class="option-badge"><img src="Img/patafauna.png" width="15" height="15"></span>
-                </a>
 
-                <!-- Card Flora -->
-                <a href="#" class="option-card">
-                    <figure class="option-circle-img">
-                        <img src="Img/amazoniaflora1.jpg" alt="Flora">
-                    </figure>
-                    <span class="option-text">Flora</span>
-                    <span class="option-badge"><img src="Img/florflora.png" width="20" height="20"></span>
-                </a>
 
-                <!-- Card Clima -->
-                <a href="#" class="option-card">
-                    <figure class="option-circle-img">
-                        <img src="Img/amazoniaclima.jpg" alt="Clima">
-                    </figure>
-                    <span class="option-text">Clima</span>
-                    <span class="option-badge"><img src="Img/tempoclima.png" width="20" height="20"></span>
-                </a>
-
-                <!-- Card Solo -->
-                <a href="#" class="option-card">
-                    <figure class="option-circle-img">
-                        <img src="Img/amazoniasolo.png" alt="Solo">
-                    </figure>
-                    <span class="option-text">Solo</span>
-                    <span class="option-badge"><img src="Img/terrasolo.png" width="20" height="20"></span>
-                </a>
-            </nav>
-
-            <!-- Card 1: Descrição do Bioma Amazônia -->
+            <!-- Card 1: Descrição do Bioma-->
             <article class="info-card">
                 <h2 class="info-card-title">
-                    <span class="card-icon"><img src="Img/folhinha.png" width="20" height="20"></span> Amazônia
+                    <span class="card-icon"><img src="Img/folhinha.png" width="20" height="20"></span> Problemas
+                    Ambientais
                 </h2>
                 <p class="info-card-text">
-                    A Amazônia é o maior bioma do Brasil, abrigando a mais extensa floresta tropical e bacia hidrográfica do planeta sob um clima quente e chuvoso. Com uma biodiversidade incomparável dividida entre florestas inundáveis e de terra firme, o bioma é essencial para a regulação do clima global e o regime de chuvas, embora enfrente a pressão contínua da desflorestação.
+                    Os biomas brasileiros enfrentam uma série de desafios ambientais urgentes, divididos na página entre
+                    quatro grandes fatores de degradação e a distribuição desses impactos em cada região específica.
+
+
                 </p>
-                <a href="2PagBiomas.html" class="explore-other-btn">
-                    <span class="card-icon"><img src="Img/folhinha2.png" width="20" height="20"></span> Explorar outro bioma &rarr;
-                </a>
+
             </article>
 
             <!-- Card 2: Curiosidades Rápidas -->
             <article class="info-card curiosidades-card">
                 <h2 class="info-card-title">
-                    Curiosidades Rápidas
+                    Os Quatro Grandes Problemas Ambientais
                 </h2>
                 <p class="info-card-text">
-                    Ao contrário da informação de conhecimento popular que a Amazônia contribui com 20% do oxigênio na atmosfera, o bioma – na verdade – contribui com cerca de 20% do oxigênio produzido pela fotossíntese no planeta. Em seu estado mais primitivo, a Amazônia faz uma contribuição significativa para retirar o dióxido de carbono da atmosfera, o que não chega a ser um par de pulmões, e sim se assemelha a um ar-condicionado para o planeta.
+
+
+
                 </p>
-            </article>
+
+
+                <article class="info-card curiosidades-card">
+                    <h2 id="linkFauna" class="info-card-title">
+                        1. Desflorestação (Desmatamento)
+                    </h2>
+                    <p class="info-card-text">
+
+                        A remoção da cobertura vegetal nativa é uma das ameaças mais diretas à biodiversidade
+                        brasileira. Impulsionada principalmente pela expansão agropecuária (abertura de pastagens e
+                        lavouras de monocultura), extração ilegal de madeira, mineração e crescimento urbano
+                        desordenado, a desflorestação destrói o habitat de milhares de espécies, levando muitas ao risco
+                        de extinção. Além disso, a retirada das árvores expõe o solo à erosão, reduz a recarga dos
+                        lençóis freáticos, assoreia rios e libera grandes quantidades de carbono na atmosfera, agravando
+                        o efeito estufa.
+                    </p>
+
+                </article>
+
+
+                <article class="info-card curiosidades-card">
+                    <h2 id="linkFlora" class="info-card-title">
+                        2. Poluição
+                    </h2>
+                    <p class="info-card-text">
+
+                        A contaminação do ar, da água e do solo compromete o equilíbrio ecológico dos biomas. Nos
+                        centros urbanos e polos industriais, a emissão de gases poluentes e o descarte inadequado de
+                        efluentes industriais e esgoto doméstico degradam bacias hidrográficas inteiras. No meio rural,
+                        o uso intensivo de agrotóxicos e fertilizantes químicos contamina o solo e os cursos d'água,
+                        afetando a fauna aquática, os polinizadores e a saúde das populações humanas. Nos ambientes
+                        costeiros e fluviais, o acúmulo de resíduos sólidos (especialmente plásticos) e o garimpo ilegal
+                        — com o uso de mercúrio — causam danos severos e duradouros às cadeias alimentares.
+
+                    </p>
+
+                </article>
+
+
+                <article class="info-card curiosidades-card">
+                    <h2 id="linkClima" class="info-card-title">
+                        3. Queimadas
+                    </h2>
+                    <p class="info-card-text">
+
+                        Embora o fogo possa ocorrer naturalmente em alguns ecossistemas (como no Cerrado, durante
+                        transições climáticas com incidência de raios), a imensa maioria das queimadas no Brasil tem
+                        origem humana. O fogo é frequentemente utilizado de forma ilegal para "limpar" áreas
+                        recém-desmatadas ou renovar pastagens. Quando saem de controle — especialmente em períodos de
+                        seca severa —, os incêndios florestais destroem vastas extensões de vegetação nativa, matam
+                        animais silvestres que não conseguem fugir, empobrecem a microbiota do solo e lançam toneladas
+                        de fumaça tóxica e gases de efeito estufa na atmosfera, afetando a qualidade do ar a milhares de
+                        quilômetros de distância.
+
+                    </p>
+                </article>
+
+                <article class="info-card curiosidades-card">
+                    <h2 id="linkClima" class="info-card-title">
+                        4. Mudanças Climáticas
+                    </h2>
+                    <p class="info-card-text">
+
+                        O aquecimento global, alimentado tanto por emissões globais quanto pela destruição das florestas
+                        locais, altera profundamente o regime de chuvas e as temperaturas nos biomas brasileiros. O
+                        resultado é a maior frequência e intensidade de eventos climáticos extremos: secas prolongadas,
+                        ondas de calor históricas e chuvas torrenciais concentradas. Esses fenômenos reduzem a
+                        disponibilidade hídrica, ressecam a vegetação (tornando as florestas mais inflamáveis e
+                        vulneráveis às queimadas), aceleram processos de desertificação e ameaçam diretamente a
+                        sobrevivência de espécies incapazes de se adaptar rapidamente às novas condições térmicas.
+
+                    </p>
+                </article>
+
+
+                <article class="info-card">
+                    <h2 class="info-card-title">
+                        <span class="card-icon"><img src="Img/folhinha.png" width="20" height="20"></span> O Termômetro
+                        de Alerta nos Biomas Brasileiros
+                    </h2>
+                    <p class="info-card-text">
+                        
+                        ● Cerrado (55% do alerta): Consolida-se como uma das fronteiras agrícolas mais ativas do mundo,
+                        sofrendo atualmente a maior pressão proporcional de desmatamento do país. A vegetação nativa de
+                        savana vem sendo rapidamente suprimida para dar lugar a extensas áreas de pastagens e
+                        monoculturas de grãos (como soja e milho). Por ser o "berço das águas" do Brasil, a destruição
+                        do Cerrado compromete o abastecimento de importantes bacias hidrográficas do continente. 
+                       <br>
+                        ● Amazônia (32% do alerta): A maior floresta tropical do mundo enfrenta a combinação perigosa
+                        entre o avanço do desmatamento e os eventos climáticos extremos. O aquecimento global somado a
+                        fenômenos como o El Niño tem provocado secas históricas, reduzindo drasticamente o nível dos
+                        rios, causando a mortandade de peixes e botos, facilitando a propagação de incêndios florestais
+                        e isolando comunidades ribeirinhas e indígenas que dependem dos rios para transporte, água e
+                        alimentação. 
+                        <br>
+
+                        ● Caatinga (8% do alerta): Único bioma exclusivamente brasileiro, a Caatinga sofre
+                        com a retirada contínua de sua vegetação nativa — muitas vezes explorada de forma insustentável
+                        para a produção de lenha e carvão vegetal (usados em indústrias locais, padarias, olarias e uso
+                        doméstico). Somado ao sobrepastoreio e às secas agravadas pelas mudanças climáticas, esse
+                        desmatamento acelera o grave processo de desertificação, tornando o solo árido e improdutivo. 
+                        <br>
+
+                        ● Pantanal (3% do alerta): Apesar de ocupar uma área territorial menor que a Amazônia ou o
+                        Cerrado, a maior planície alagável do planeta sofreu impactos severos nos últimos anos. A perda
+                        de água nas cabeceiras dos rios (localizadas no Cerrado), somada a secas extremas e às mudanças
+                        climáticas, reduziu os períodos de cheia e transformou a vegetação seca em combustível para
+                        grandes incêndios devastadores, que dizimaram milhões de animais vertebrados e invertebrados. 
+                        
+                        <br>
+                        ●
+                        Mata Atlântica (1% do alerta atual): Representa uma porcentagem menor nos alertas recentes de
+                        desmatamento apenas porque já foi o bioma mais devastado historicamente desde a colonização do
+                        Brasil, devido à intensa urbanização, industrialização e ciclos agrícolas no litoral e interior.
+                        Hoje, restam apenas fragmentos da floresta original. O grande desafio atual é impedir o
+                        desmatamento ilegal residual, proteger os pequenos pedaços remanescentes e promover a
+                        restauração florestal para reconectar a vegetação por meio de corredores ecológicos. 
+                        
+                        <br>
+                        ● Pampa (1%
+                        do alerta atual): Localizado no extremo sul do país, o Pampa é caracterizado por suas belas
+                        paisagens de campos nativos, que abrigam uma biodiversidade única de gramíneas, aves e
+                        mamíferos. O principal problema enfrentado pelo bioma é a descaracterização acelerada de sua
+                        vegetação campestre original, que vem sendo substituída em larga escala por monoculturas
+                        agrícolas (como soja e arroz), silvicultura (florestas plantadas de pinus e eucalipto) e
+                        pastagens cultivadas com espécies exóticas, levando à degradação e arenização do solo.
+
+                    </p>
+
+                </article>
 
         </main>
 
@@ -165,4 +260,5 @@
     </section>
 
 </body>
+
 </html>
