@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="CerradoCSS.css">
 </head>
 
-<body>
+<body id="topo">
+    <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593</a>
 
     <div class="desktop-container">
 
@@ -41,40 +42,40 @@
             <div class="desktop-options-grid">
 
                 <!-- Fauna -->
-                <a href="#" class="desktop-option-card">
+                <a href="#linkFauna" class="desktop-option-card">
                     <div class="desktop-option-circle">
                         <!-- INSIRA A FOTO DA FAUNA AQUI -->
-                        <img src="Img/mataatlanticafauna.jpg" alt="Fauna">
+                        <img src="Img/cerradofauna.jpg" alt="Fauna">
                     </div>
                     <span class="desktop-option-text">Fauna</span>
                     <span class="desktop-option-badge"> <img src="Img/patafauna.png" width="15px" alt="Folha"></span>
                 </a>
 
                 <!-- Flora -->
-                <a href="#" class="desktop-option-card">
+                <a href="#linkFlora" class="desktop-option-card">
                     <div class="desktop-option-circle">
                         <!-- INSIRA A FOTO DA FLORA AQUI -->
-                        <img src="Img/mataatlanticaflora.jpg" alt="Flora">
+                        <img src="Img/cerradoflora.jpg" alt="Flora">
                     </div>
                     <span class="desktop-option-text">Flora</span>
                     <span class="desktop-option-badge"> <img src="Img/florflora.png" width="25px" alt="Folha"></span>
                 </a>
 
                 <!-- Clima -->
-                <a href="#" class="desktop-option-card">
+                <a href="#linkClima" class="desktop-option-card">
                     <div class="desktop-option-circle">
                         <!-- INSIRA A FOTO DO CLIMA AQUI -->
-                        <img src="Img/mataatlanticaclima.jpg"> alt="Clima"
+                        <img src="Img/cerradoclima.jpg"> alt="Clima"
                     </div>
                     <span class="desktop-option-text">Clima</span>
                     <span class="desktop-option-badge"> <img src="Img/folhinha2.png" width="16px" alt="Folha"></span>
                 </a>
 
                 <!-- Solo -->
-                <a href="#" class="desktop-option-card">
+                <a href="#linkSolo" class="desktop-option-card">
                     <div class="desktop-option-circle">
                         <!-- INSIRA A FOTO DO SOLO AQUI -->
-                        <img src="Img/mataatlanticasolo.jpg" alt="Solo">
+                        <img src="Img/caatingasolo.webp" alt="Solo">
                     </div>
                     <span class="desktop-option-text">Solo</span>
                     <span class="desktop-option-badge"> <img src="Img/terrasolo.png" width="20px" alt="Folha"></span>
@@ -88,15 +89,15 @@
                 <!-- Card Esquerdo: Descrição -->
                 <div class="desktop-info-card">
                     <h2 class="desktop-info-title">
-                        <img src="Img/folhinha.png" width="20px" alt="Folha"> Mata Atlântica
+                        <img src="Img/folhinha.png" width="20px" alt="Folha"> Cerrado
                     </h2>
 
                     <p class="desktop-info-text">
-                        A Mata Atlântica é um dos biomas mais ricos e ameaçados do Brasil, estendendo-se ao longo do
-                        litoral sob um clima tropical úmido. Com uma biodiversidade surpreendente de florestas de
-                        encosta e formações costeiras, o bioma é essencial para o abastecimento de água de grande parte
-                        da população brasileira e para a proteção do solo, embora reste apenas uma fração de sua
-                        cobertura original. </p>
+                        O Cerrado é a savana mais biodiversa do planeta e o segundo maior bioma do Brasil, marcado por
+                        um clima de estações bem definidas de chuva e seca. Com árvores de troncos retorcidos, raízes
+                        profundas e chapadões imponentes, o bioma é considerado o berço das águas do país por abrigar as
+                        nascentes das principais bacias hidrográficas, enfrentando hoje grandes desafios de conservação
+                        de sua vegetação original. </p>
                     <a href="biomadesktop.html" class="desktop-explore-btn">
                         <img src="Img/folhinha2.png" width="20px" alt="Folha"> Explorar outro bioma &rarr;
                     </a>
@@ -106,15 +107,93 @@
                 <div class="desktop-info-card">
                     <h2 class="desktop-info-title">Curiosidades Rápidas</h2>
                     <p class="desktop-info-text">
-                        Ao contrário da informação de conhecimento popular que a Amazônia contribui com 20% do oxigênio
-                        na atmosfera, o bioma na verdade contribui com cerca de 20% do oxigênio produzido pela
-                        fotossíntese no planeta. Em seu estado mais primitivo, a Amazônia faz uma contribuição
-                        significativa para retirar o dióxido de carbono da atmosfera, o que não chega a ser um par de
-                        pulmões, e sim se assemelha a um ar-condicionado gigante que resfria o planeta.
+                        Conhecido como a "floresta de cabeça para baixo", o Cerrado possui raízes tão profundas que
+                        abrigam mais vegetação sob o solo do que na superfície. Considerado o berço das águas do Brasil
+                        por abrigar as nascentes de 8 das 12 principais bacias hidrográficas do país, é a savana mais
+                        biodiversa do planeta, com plantas adaptadas a resistir ao fogo e frutos nativos únicos como o
+                        pequi e o baru.
                     </p>
                 </div>
 
             </div>
+            <!--card fauna-->
+            <div class="desktop-info-card">
+                <h2 id="linkFauna" class="desktop-info-title">Fauna</h2>
+                <p class="desktop-info-text">
+                    A fauna da savana brasileira desenvolveu adaptações notáveis para percorrer
+                    grandes distâncias em campos abertos. O lobo-guará, maior canídeo da América do Sul,
+                    possui pernas longas e finas que facilitam sua locomoção e visão por cima do capim alto, além
+                    de atuar como importante dispersor de sementes (como a lobeira). Outro habitante clássico é o
+                    tamanduá-bandeira: desprovido de dentes, ele utiliza suas garras dianteiras extremamente
+                    fortes para escavar os duros cupinzeiros de barro típicos da paisagem do Cerrado, capturando
+                    milhares de cupins e formigas por dia com sua língua comprida e pegajosa.
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/faunaCerrado.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </div>
+            <!--FLORA  -->
+            <div class="desktop-info-card">
+                <h2 id="linkFlora" class="desktop-info-title">Flora</h2>
+                <p class="desktop-info-text">
+                    Reconhecido como a savana mais rica em biodiversidade do mundo, o Cerrado abriga
+                    mais de 12 mil espécies de plantas catalogadas, muitas delas utilizadas na alimentação e na
+                    medicina tradicional. Sua fisionomia mais famosa é formada por árvores baixas, espaçadas, de
+                    troncos retorcidos e cascas grossas (cortiça), além de folhas coriáceas (duras). Essas
+                    características, somadas a sistemas de raízes extremamente profundos — que muitas vezes
+                    fazem a planta ser maior debaixo da terra do que acima dela, a chamada "floresta invertida" —,
+                    permitem que a vegetação sobreviva à seca prolongada e rebrote rapidamente após
+                    queimadas naturais.
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/floraCerrado.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </div>
+
+            <!--  CLIMA  -->
+            <div class="desktop-info-card">
+                <h2 id="linkClima" class="desktop-info-title">Clima</h2>
+                <p class="desktop-info-text">
+                    O bioma é dominado pelo clima Equatorial, caracterizado por temperaturas elevadas (médias entre
+                    25 °C e 28 °C) e altíssima umidade com chuvas abundantes durante o ano inteiro. A floresta não
+                    apenas depende desse clima, mas também o produz: funcionando como um "ar-condicionado gigante",
+                    bilhões de árvores bombeiam água do subsolo e a liberam na atmosfera pela transpiração. Esse
+                    volume colossal de vapor forma os chamados Rios Voadores — verdadeiras correntes aéreas de
+                    umidade que viajam impulsionadas pelos ventos, encontram a barreira da Cordilheira dos Andes e
+                    fazem a curva em direção ao Centro-Oeste, Sudeste e Sul do Brasil, garantindo as chuvas que
+                    abastecem a agricultura e as represas do país.
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/climaCerrado.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </div>
+
+            <!-- SOLO   -->
+            <div class="desktop-info-card">
+                <h2 id="linkSolo" class="desktop-info-title">Solo</h2>
+                <p class="desktop-info-text">
+                    Existe um grande paradoxo na Amazônia: apesar de sustentar a maior e mais exuberante floresta
+                    tropical da Terra, cerca de 85% do solo amazônico é antigo, arenoso, ácido e naturalmente pobre
+                    em nutrientes minerais. O segredo que mantém a floresta viva está na sua própria superfície, em
+                    uma camada chamada serrapilheira. Milhões de toneladas de folhas, flores, frutos, galhos e
+                    restos de animais caem continuamente no chão da mata; graças ao calor, à umidade e à ação rápida
+                    de fungos, bactérias e insetos, essa matéria orgânica se decompõe em tempo recorde e as raízes
+                    superficiais das árvores absorvem os nutrientes imediatamente, num ciclo perfeito de reciclagem
+                    onde a floresta alimenta a si mesma.
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/soloCerrado.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </div>
+            <!--fim dos cards com as informações-->
         </main>
 
         <!-- Rodapé Desktop -->
