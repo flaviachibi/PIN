@@ -16,16 +16,18 @@
 <body id="topo">
 
     <!--botão fixo para voltar ao topo, USAR SOMENTE NAS PÁGINAS LONGAS-->
-    <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593</a>"
+    <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593</a>
 
 
 
-
-    <!-- Input Checkbox Oculto - Classe 'menu-checkbox' adicionada para funcionar com o CSS -->
+    <!-- Input Checkbox Oculto (Técnica do Checkbox Hack) -->
     <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
 
+    <!-- Overlay Translúcido -->
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+
     <!-- Header Fixo -->
-    <header>
+    <header class="main-header">
         <section class="header-left">
             <!-- Label que funciona como Botão Hambúrguer -->
             <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
@@ -33,23 +35,19 @@
                 <span></span>
                 <span></span>
             </label>
-            <!-- logo -->
-            <a href="#" class="logo"><img src="Img/logo-superior.png" alt="logo biomas" width="150"></a>
         </section>
+        <!-- Logo -->
+        <a href="Inicio.html" class="logo"><img src="Img/logo-superior.png" alt="logo biomas" class="header-logo"></a>
     </header>
 
-    <!-- Overlay Translúcido -->
-    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
-
-    <!-- Sidebar Drawer -->
+    <!-- Sidebar Drawer (Menu Lateral) -->
     <aside class="drawer">
         <div class="drawer-header">
             <div class="drawer-title-area">
-                <!-- logo que fica dentro do menu -->
                 <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png" alt="logo biomas" width="80"></div>
             </div>
 
-            <!-- Botão de Fechar dentro do Drawer -->
+            <!-- Botão de Fechar -->
             <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
                 <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
@@ -58,31 +56,11 @@
         </div>
 
         <nav class="drawer-nav">
-            <a href="Inicio.html" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24"></svg>
-                Início
-            </a>
-            <a href="Preservacao.html" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24"></svg>
-                Preservação
-            </a>
-            <a href="Problemas.html" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24"></svg>
-                Problemas
-            </a>
-            <a href="Noticias.html" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24"></svg>
-                Noticias
-            </a>
-            <a href="Quiz.html" class="nav-link">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24"></svg>
-                Quiz
-            </a>
+            <a href="Inicio.html" class="nav-link">Início</a>
+            <a href="Preservacao.html" class="nav-link">Preservação</a>
+            <a href="Problemas.html" class="nav-link">Problemas</a>
+            <a href="Noticias.html" class="nav-link">Noticias</a>
+            <a href="Quiz.html" class="nav-link">Quiz</a>
         </nav>
 
         <footer class="drawer-footer">
@@ -155,10 +133,8 @@
                     <span class="card-icon"><img src="Img/folhinha.png" width="20" height="20"></span> Caatinga
                 </h2>
                 <p class="info-card-text">
-                    A Amazônia é o maior bioma do Brasil, abrigando a mais extensa floresta tropical e bacia
-                    hidrográfica do planeta sob um clima quente e chuvoso. Com uma biodiversidade incomparável dividida
-                    entre florestas inundáveis e de terra firme, o bioma é essencial para a regulação do clima global e
-                    o regime de chuvas, embora enfrente a pressão contínua da desflorestação.
+                    A Caatinga é um bioma caracterizado por vegetação xerófila e clima semiárido, abrigando uma
+                    biodiversidade única e ameaçada pela atividade humana e pela mudança climática.
                 </p>
                 <a href="PagBiomas.html" class="explore-other-btn">
                     <span class="card-icon"><img src="Img/folhinha2.png" width="20" height="20"></span> Explorar outro
@@ -172,11 +148,12 @@
                     Curiosidades Rápidas
                 </h2>
                 <p class="info-card-text">
-                    Ao contrário da informação de conhecimento popular que a Amazônia contribui com 20% do oxigênio na
-                    atmosfera, o bioma – na verdade – contribui com cerca de 20% do oxigênio produzido pela fotossíntese
-                    no planeta. Em seu estado mais primitivo, a Amazônia faz uma contribuição significativa para retirar
-                    o dióxido de carbono da atmosfera, o que não chega a ser um par de pulmões, e sim se assemelha a um
-                    ar-condicionado para o planeta.
+                    A Caatinga é um bioma genuinamente brasileiro e único no mundo. O motivo dessa exclusividade está em
+                    seu patrimônio biológico singular: embora existam outras regiões semiáridas pelo planeta, as
+                    espécies que habitam a nossa Caatinga não são encontradas em nenhum outro lugar e apresentam uma
+                    diversidade muito mais rica e numerosa. Com uma extensão de aproximadamente 826.411 km², esse
+                    ecossistema abrange oito estados nordestinos, ocupando cerca de 70% da região Nordeste e o
+                    equivalente a 10% de todo o território nacional.
                 </p>
             </article>
 
@@ -186,15 +163,17 @@
                     Fauna
                 </h2>
                 <p class="info-card-text">
-                    A biodiversidade animal amazônica divide-se entre uma complexa rede de rios e os múltiplos andares
-                    da floresta. Nas águas barrentas e escuras vive o boto-cor-de-rosa, o maior golfinho de água doce do
-                    mundo, perfeitamente adaptado para nadar entre troncos submersos nas matas inundadas (igapós). No
-                    estrato superior da floresta, a mais de 40 metros de altura, reina o gavião-real (ou harpia).
-                    Considerada a maior e mais poderosa águia das florestas tropicais brasileiras, a harpia atua como
-                    predadora de topo e constrói seus ninhos gigantescos na copa das árvores mais altas, desempenhando
-                    um papel vital no equilíbrio ecológico ao controlar populações de macacos e preguiças.
-
+                    Longe de ser um ambiente sem vida, a Caatinga abriga animais altamente resistentes à escassez
+                    hídrica e ao calor intenso. O grande ícone desse bioma exclusivamente brasileiro é o tatu-bola
+                    (Tolypeutes tricinctus). Diferente de outras espécies de tatu que cavam buracos para fugir, o
+                    tatu-bola possui uma carapaça articulada que lhe permite fechar o corpo completamente no formato de
+                    uma esfera rígida quando ameaçado, protegendo suas partes vulneráveis contra predadores do sertão.
                 </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/faunaCaatinga.jpg"
+                        alt="Infografico"
+                        class="img-responsiva">
+                </figure>
             </article>
 
             <!-- FLORA -->
@@ -203,34 +182,39 @@
                     Flora
                 </h2>
                 <p class="info-card-text">
-                    A vegetação amazônica é composta por uma floresta tropical densa, perene (que nunca perde todas as
-                    folhas) e sempre úmida, onde árvores gigantescas como a castanheira e a sumaúma disputam a luz
-                    solar. Nos ambientes aquáticos, lagos e remansos dos rios, a flora exibe adaptações impressionantes
-                    como a vitória-régia. Essa planta aquática produz folhas circulares flutuantes que podem ultrapassar
-                    dois metros de diâmetro; graças a uma estrutura inferior repleta de nervuras cheias de ar que
-                    funcionam como boias, uma única folha é capaz de suportar até 40 quilos bem distribuídos na
-                    superfície da água.
-
+                    O nome "Caatinga" tem origem no tupi-guarani e significa "mata branca", uma referência direta à
+                    transformação radical que sua flora sofre ao longo do ano. Para sobreviver aos meses sem chuva, a
+                    maioria das árvores e arbustos espinhosos adota a caducifólia: derrubam todas as suas folhas para
+                    evitar a perda de água por transpiração, deixando a paisagem com aspecto seco e troncos
+                    esbranquiçados expostos ao sol. Ao lado dessas árvores destacam-se plantas xerófilas como os cactos
+                    (xique-xique e mandacaru), que armazenam água em seus caules esponjosos. Apesar da aparência árida
+                    na seca, basta a primeira chuva cair para que a Caatinga reverdeça e floresça em poucos dias.
                 </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/floraCaatinga.jpg"
+                        alt="Infográfico sobre a flora da Caatinga"
+                        class="img-responsiva">
+                </figure>
             </article>
 
-
+            
             <!-- CLIMA -->
             <article class="info-card curiosidades-card">
                 <h2 id="linkClima" class="info-card-title">
                     Clima
                 </h2>
                 <p class="info-card-text">
-                    O bioma é dominado pelo clima Equatorial, caracterizado por temperaturas elevadas (médias entre 25
-                    °C e 28 °C) e altíssima umidade com chuvas abundantes durante o ano inteiro. A floresta não apenas
-                    depende desse clima, mas também o produz: funcionando como um "ar-condicionado gigante", bilhões de
-                    árvores bombeiam água do subsolo e a liberam na atmosfera pela transpiração. Esse volume colossal de
-                    vapor forma os chamados Rios Voadores — verdadeiras correntes aéreas de umidade que viajam
-                    impulsionadas pelos ventos, encontram a barreira da Cordilheira dos Andes e fazem a curva em direção
-                    ao Centro-Oeste, Sudeste e Sul do Brasil, garantindo as chuvas que abastecem a agricultura e as
-                    represas do país.
-
+                    Inserida no coração do Nordeste brasileiro, a Caatinga é regida pelo clima Semiárido, o mais seco do
+                    país. Suas principais características são as temperaturas elevadas durante todos os meses do ano, a
+                    forte insolação, a alta taxa de evaporação da água e, sobretudo, a irregularidade das chuvas. Não se
+                    trata da ausência total de chuva como em um deserto, mas sim de precipitações escassas e
+                    concentradas em poucos meses do ano, intercaladas por longos períodos de estiagem que exigem extrema
+                    resiliência da natureza e das populações locais.
                 </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/climaCaatinga.jpg"
+                        alt="Infográfico explicando o clima da Caatinga" class="img-responsiva">
+                </figure>
             </article>
 
 
@@ -240,17 +224,19 @@
                     Solo
                 </h2>
                 <p class="info-card-text">
-                    Existe um grande paradoxo na Amazônia: apesar de sustentar a maior e mais exuberante floresta
-                    tropical da Terra, cerca de 85% do solo amazônico é antigo, arenoso, ácido e naturalmente pobre em
-                    nutrientes minerais. O segredo que mantém a floresta viva está na sua própria superfície, em uma
-                    camada chamada serrapilheira. Milhões de toneladas de folhas, flores, frutos, galhos e restos de
-                    animais caem continuamente no chão da mata; graças ao calor, à umidade e à ação rápida de fungos,
-                    bactérias e insetos, essa matéria orgânica se decompõe em tempo recorde e as raízes superficiais das
-                    árvores absorvem os nutrientes imediatamente, num ciclo perfeito de reciclagem onde a floresta
-                    alimenta a si mesma.
-
-
+                    Os solos da Caatinga são bastante variados, mas predominam os terrenos rasos, pedregosos e
+                    cristalinos. Ao contrário do solo da Amazônia, muitos solos do sertão são ricos em minerais, mas a
+                    falta de água e a pouca profundidade dificultam o armazenamento hídrico. Por ser um ambiente
+                    naturalmente seco, o solo da Caatinga é extremamente sensível à perda de sua vegetação protetora.
+                    Quando ocorre o desmatamento (para extração de lenha ou carvão), queimadas e o sobrepastoreio
+                    (excesso de gado pisoteando e consumindo a vegetação nativa), o solo fica nu sob o sol escaldante e
+                    as chuvas ocasionais lavam sua camada fértil, levando a um grave processo de degradação e
+                    desertificação, onde a terra perde permanentemente sua capacidade biológica de produzir vida.
                 </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/soloCaatinga.jpg"
+                        alt="Infográfico explicando o solo da Caatinga" class="img-responsiva">
+                </figure>
             </article>
 
 
