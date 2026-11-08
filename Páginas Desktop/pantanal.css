@@ -261,6 +261,28 @@ body {
     background-color:  #603569;
 }
 
+/* Estilo para a class das imagens*/
+.container-infografico {
+    width: 100%;
+    margin: 1.5rem 0;
+    /* Espaçamento acima e abaixo da imagem */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img-responsiva {
+    max-width: 100%;
+    /* Impede que a imagem seja maior que a largura do card */
+    width: 100%;
+    /* Faz a imagem ocupar exatamente o espaço disponível */
+    height: auto;
+    /* Mantém a proporção correta sem achatar ou esticar */
+    display: block;
+    /* Remove espaços extras indesejados abaixo da imagem */
+    border-radius: 8px;
+    /* Opcional: deixa os cantos arredondados combinando com o site */
+}
+
 /* --- Rodapé Desktop --- */
 .desktop-footer {
      background-color: #fff;
