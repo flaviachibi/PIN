@@ -1,6 +1,4 @@
-/* =========================================
-   VARIÁVEIS DE CORES
-========================================= */
+/* Variaveis de cores */
 :root {
     --corprincipal1: #F4FAF4;
     --corprincipal2: #B8E5BA;
@@ -45,6 +43,7 @@
     --corpampas5: #250E12;
 }
 
+
 /*reset básico de pag*/
 * {
     box-sizing: border-box;
@@ -52,16 +51,7 @@
     padding: 0;
     font-family: Inter, Arial, Helvetica, sans-serif;
 }
-/*
-body {
-    background-color: var(--coramazonia4); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-    */
+
 
 body {
     background-color:  var(--coramazonia4);
@@ -111,13 +101,14 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 
 
 
+
+
 /*CONTENTOR MOBILE */
 .page-container {
     width: 100%;
     max-width: 412px;
     min-height: 100vh;
     background-color: #1b3d2f;
-    display: flex;
     flex-direction: column;
     position: relative;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
@@ -130,8 +121,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
-    /* Centraliza o header alinhado com o container mobile */
+    transform: translateX(-50%); /* Centraliza o header alinhado com o container mobile */
     width: 100%;
     max-width: 412px;
     height: 70px;
@@ -140,9 +130,11 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
-    z-index: 100;
+    z-index: 100; /* Garante que o header fique acima do conteúdo */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
+
 
 
 .header-left {
@@ -152,7 +144,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 }
 
 .header-logo {
-    height: 35px;
+    height: 50px;
     object-fit: contain;
 }
 
@@ -469,6 +461,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     color: #222; /* Texto escuro */
 }
 
+
 /* Bolinha com o ícone no canto superior direito */
 .option-badge {
     position: absolute;
@@ -529,3 +522,21 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 .explore-other-btn:hover {
     background-color: var(--coramazonia5);
 }
+
+
+
+.container-infografico {
+  width: 100%;
+  margin: 1.5rem 0; /* Espaçamento acima e abaixo da imagem */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img-responsiva {
+  max-width: 100%; /* Impede que a imagem seja maior que a largura do card */
+  width: 100%;     /* Faz a imagem ocupar exatamente o espaço disponível */
+  height: auto;    /* Mantém a proporção correta sem achatar ou esticar */
+  display: block;  /* Remove espaços extras indesejados abaixo da imagem */
+  border-radius: 8px; /* Opcional: deixa os cantos arredondados combinando com o site */
+}
+
