@@ -44,9 +44,15 @@
 }
 
 
+
+
+
+
+
 /*CORPO, SÓ COLOQUEI A FONTE*/
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
+   
 }
 
 
@@ -509,6 +515,9 @@ main {
             display: none;
         }
 
-        body {
-            flex-direction: row;
+        .rodapefixo {
+            flex-direction: column;
+          
+            padding: 20px;
         }
+        
