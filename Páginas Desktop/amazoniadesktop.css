@@ -1,3 +1,11 @@
+:root{
+     --coramazonia1: #F5FAF5;
+    --coramazonia2: #C0E2BB;
+    --coramazonia3: #59BE4B;
+    --coramazonia4: #286121;
+    --coramazonia5: #11240F;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +20,32 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+.btn-topo:hover {background-color: var(--coramazonia2);
+transform: translateY(-3px);
+}
+/*botão fixo para voltar ao topo*/
+.btn-topo {
+    position: fixed;
+    bottom:  35px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--coramazonia3);
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+
+    /*seta*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*isso faz com q o botão fique por cima de qlqr coisa*/
+    z-index: 1000;
+}
+
+
 
 /* Moldura principal de desktop */
 .desktop-container {
@@ -211,6 +245,15 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.img-responsiva {
+  max-width: 100%; /* Impede que a imagem seja maior que a largura do card */
+  width: 100%;     /* Faz a imagem ocupar exatamente o espaço disponível */
+  height: auto;    /* Mantém a proporção correta sem achatar ou esticar */
+  display: block;  /* Remove espaços extras indesejados abaixo da imagem */
+  border-radius: 8px; /* Opcional: deixa os cantos arredondados combinando com o site */
+}
+
 
 .desktop-info-title {
     color: #00382b;
