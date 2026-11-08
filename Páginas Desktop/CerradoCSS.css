@@ -22,6 +22,38 @@ body {
     min-height: 100vh;
 }
 
+/*botão fixo para voltar ao topo*/
+
+/* isso ativa a rolagem suave*/
+html {scroll-behavior: smooth;}
+
+.btn-topo {
+    position: fixed;
+    bottom:  60px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--corcerrado3);
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+
+    /*seta*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*isso faz com q o botão fique por cima de qlqr coisa*/
+    z-index: 1000;
+}
+
+.btn-topo:hover {background-color: var(--corcerrado2);
+transform: translateY(-3px);
+}
+/* aqui TERMINA o botão fixo de voltar ao topo da pagina, 
+USAR SOMENTE NAS PÁGINAS LONGAS*/
+
 /* Moldura principal de desktop */
 .desktop-container {
      width: 100%;
@@ -260,6 +292,22 @@ body {
 .desktop-explore-btn:hover {
     transform: scale(1.04);
     background-color: #11382b;
+}
+
+/* Estilo para a class das imagens*/
+.container-infografico {
+  width: 100%;
+  margin: 1.5rem 0; /* Espaçamento acima e abaixo da imagem */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img-responsiva {
+  max-width: 100%; /* Impede que a imagem seja maior que a largura do card */
+  width: 100%;     /* Faz a imagem ocupar exatamente o espaço disponível */
+  height: auto;    /* Mantém a proporção correta sem achatar ou esticar */
+  display: block;  /* Remove espaços extras indesejados abaixo da imagem */
+  border-radius: 8px; /* Opcional: deixa os cantos arredondados combinando com o site */
 }
 
 /* --- Rodapé Desktop --- */
