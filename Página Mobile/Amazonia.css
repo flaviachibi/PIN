@@ -54,7 +54,7 @@
 
 
 body {
-    background-color:  var(--coramazonia4);
+    background-color: var(--coramazonia4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,12 +69,14 @@ body {
 USAR SOMENTE NAS PÁGINAS LONGAS*/
 
 /* isso ativa a rolagem suave*/
-html {scroll-behavior: smooth;}
+html {
+    scroll-behavior: smooth;
+}
 
 /*botão fixo para voltar ao topo*/
 .btn-topo {
     position: fixed;
-    bottom:  60px;
+    bottom: 60px;
     right: 25px;
     width: 50px;
     height: 50px;
@@ -83,19 +85,23 @@ html {scroll-behavior: smooth;}
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
+    opacity: 0.3;
 
     /*seta*/
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-text-stroke: 3px currentColor;
 
     /*isso faz com q o botão fique por cima de qlqr coisa*/
     z-index: 1000;
 }
 
-.btn-topo:hover {background-color: var(--coramazonia2);
-transform: translateY(-3px);
+.btn-topo:hover {
+    background-color: var(--coramazonia2);
+    transform: translateY(-3px);
 }
+
 /* aqui TERMINA o botão fixo de voltar ao topo da pagina, 
 USAR SOMENTE NAS PÁGINAS LONGAS*/
 
@@ -113,7 +119,8 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     position: relative;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     overflow-x: hidden;
-    padding-top: 70px; /* Compensa a altura do header fixo */
+    padding-top: 70px;
+    /* Compensa a altura do header fixo */
 }
 
 /* --- Header Fixo Principal --- */
@@ -121,7 +128,8 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* Centraliza o header alinhado com o container mobile */
+    transform: translateX(-50%);
+    /* Centraliza o header alinhado com o container mobile */
     width: 100%;
     max-width: 412px;
     height: 70px;
@@ -130,7 +138,8 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
-    z-index: 100; /* Garante que o header fique acima do conteúdo */
+    z-index: 100;
+    /* Garante que o header fique acima do conteúdo */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
@@ -171,11 +180,11 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 }
 
 /* Lógica do Menu Lateral */
-.menu-checkbox:checked ~ .drawer {
+.menu-checkbox:checked~.drawer {
     transform: translateX(0);
 }
 
-.menu-checkbox:checked ~ .overlay {
+.menu-checkbox:checked~.overlay {
     opacity: 1;
     pointer-events: auto;
 }
@@ -327,12 +336,29 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     opacity: 0;
 }
 
-.biome-amazonia { background-color: var(--coramazonia4); }
-.biome-caatinga { background-color: var(--corcaatinga4); }
-.biome-pampa { background-color: var(--corpampas4); }
-.biome-cerrado { background-color: var(--corcerrado4); }
-.biome-pantanal { background-color: var(--corpantanal4); }
-.biome-mata { background-color: var(--cormataatlantica4); }
+.biome-amazonia {
+    background-color: var(--coramazonia4);
+}
+
+.biome-caatinga {
+    background-color: var(--corcaatinga4);
+}
+
+.biome-pampa {
+    background-color: var(--corpampas4);
+}
+
+.biome-cerrado {
+    background-color: var(--corcerrado4);
+}
+
+.biome-pantanal {
+    background-color: var(--corpantanal4);
+}
+
+.biome-mata {
+    background-color: var(--cormataatlantica4);
+}
 
 .biome-name {
     color: var(--corprincipal1);
@@ -345,12 +371,53 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     font-weight: bold;
 }
 
-.biome-dotAm { width: 20px; height: 20px; border-radius: 50%; display: inline-block; background-color: var(--coramazonia3); }
-.biome-dotCa { width: 20px; height: 20px; border-radius: 50%; display: inline-block; background-color: var(--corcaatinga3); }
-.biome-dotCr { width: 20px; height: 20px; border-radius: 50%; display: inline-block; background-color: var(--corcerrado3); }
-.biome-dotPt { width: 20px; height: 20px; border-radius: 50%; display: inline-block; background-color: var(--corpantanal3); }
-.biome-dotPp { width: 20px; height: 20px; border-radius: 50%; display: inline-block; background-color: var(--corpampas3); }
-.biome-dotMt { width: 20px; height: 20px; border-radius: 50%; display: inline-block; background-color: var(--cormataatlantica3); }
+.biome-dotAm {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--coramazonia3);
+}
+
+.biome-dotCa {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--corcaatinga3);
+}
+
+.biome-dotCr {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--corcerrado3);
+}
+
+.biome-dotPt {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--corpantanal3);
+}
+
+.biome-dotPp {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--corpampas3);
+}
+
+.biome-dotMt {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--cormataatlantica3);
+}
 
 /*RODAPÉ*/
 .main-footer {
@@ -390,15 +457,21 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 
 .hero-bg-img {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: 1;
 }
 
 .hero-overlay {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     z-index: 2;
 }
 
@@ -422,20 +495,26 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 .options-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px; /* Espaço entre os botões */
+    gap: 15px;
+    /* Espaço entre os botões */
     margin-bottom: 25px;
 }
 
 .option-card {
     background-color: white;
-    border-radius: 30px; /* Formato de pílula (arredondado) */
-    padding: 6px; /* Espaço interno justo */
+    border-radius: 30px;
+    /* Formato de pílula (arredondado) */
+    padding: 6px;
+    /* Espaço interno justo */
     display: flex;
-    flex-direction: row; /* Alinhamento horizontal */
+    flex-direction: row;
+    /* Alinhamento horizontal */
     align-items: center;
     text-decoration: none;
-    position: relative; /* Necessário para posicionar a badge (ícone) livremente */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.25); /* Sombra mais marcada como na imagem */
+    position: relative;
+    /* Necessário para posicionar a badge (ícone) livremente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    /* Sombra mais marcada como na imagem */
     transition: transform 0.2s;
 }
 
@@ -448,7 +527,8 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     height: 45px;
     border-radius: 50%;
     overflow: hidden;
-    margin-right: 10px; /* Espaço entre a foto e o texto */
+    margin-right: 10px;
+    /* Espaço entre a foto e o texto */
     flex-shrink: 0;
 }
 
@@ -461,7 +541,8 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 .option-text {
     font-weight: 500;
     font-size: 15px;
-    color: #222; /* Texto escuro */
+    color: #222;
+    /* Texto escuro */
 }
 
 
@@ -470,7 +551,8 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     position: absolute;
     top: 6px;
     right: 8px;
-    background-color: var(--coramazonia4); /* Verde escuro */
+    background-color: var(--coramazonia4);
+    /* Verde escuro */
     color: white;
     width: 22px;
     height: 22px;
@@ -478,8 +560,9 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px; /* Tamanho do emoji/ícone */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 11px;
+    /* Tamanho do emoji/ícone */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Cartões de Informação */
@@ -488,7 +571,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     border-radius: 16px;
     padding: 20px;
     margin-bottom: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .info-card-title {
@@ -532,17 +615,22 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 
 /* Estilo para a class das imagens*/
 .container-infografico {
-  width: 100%;
-  margin: 1.5rem 0; /* Espaçamento acima e abaixo da imagem */
-  padding: 0;
-  box-sizing: border-box;
+    width: 100%;
+    margin: 1.5rem 0;
+    /* Espaçamento acima e abaixo da imagem */
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .img-responsiva {
-  max-width: 100%; /* Impede que a imagem seja maior que a largura do card */
-  width: 100%;     /* Faz a imagem ocupar exatamente o espaço disponível */
-  height: auto;    /* Mantém a proporção correta sem achatar ou esticar */
-  display: block;  /* Remove espaços extras indesejados abaixo da imagem */
-  border-radius: 8px; /* Opcional: deixa os cantos arredondados combinando com o site */
+    max-width: 100%;
+    /* Impede que a imagem seja maior que a largura do card */
+    width: 100%;
+    /* Faz a imagem ocupar exatamente o espaço disponível */
+    height: auto;
+    /* Mantém a proporção correta sem achatar ou esticar */
+    display: block;
+    /* Remove espaços extras indesejados abaixo da imagem */
+    border-radius: 8px;
+    /* Opcional: deixa os cantos arredondados combinando com o site */
 }
-
