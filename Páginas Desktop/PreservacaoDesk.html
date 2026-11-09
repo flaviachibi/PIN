@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas - Biomas do Brasil</title>
+    <link rel="stylesheet" href="PreservacaoDeskCSS.css">
+</head>
+
+<body id="topo">
+
+    <!-- Botão de Voltar ao Topo -->
+    <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593;</a>
+
+    <!-- Menu Drawer Mobile -->
+    <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+    <!-- Header Fixo -->
+    <header class="main-header">
+        <div class="header-left">
+            <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <a href="Inicio.html" class="logo"><img src="Img/logo-superior.png" alt="logo biomas" class="header-logo"></a>
+        
+        <!-- Navegação Desktop (Escondida no mobile, aparece no desktop) -->
+        <nav class="desktop-nav">
+            <a href="Inicio.html" class="nav-link">Início</a>
+            <a href="Preservacao.html" class="nav-link">Preservação</a>
+            <a href="Problemas.html" class="nav-link active">Problemas</a>
+            <a href="Noticias.html" class="nav-link">Notícias</a>
+            <a href="Quiz.html" class="nav-link">Quiz</a>
+        </nav>
+    </header>
+
+    <!-- Sidebar Lateral (Menu Mobile) -->
+    <aside class="drawer">
+        <div class="drawer-header">
+            <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png" alt="logo biomas" width="80"></div>
+            <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+        </div>
+        <nav class="drawer-nav">
+            <a href="Inicio.html" class="nav-link">Início</a>
+            <a href="Preservacao.html" class="nav-link">Preservação</a>
+            <a href="Problemas.html" class="nav-link">Problemas</a>
+            <a href="Noticias.html" class="nav-link">Noticias</a>
+            <a href="Quiz.html" class="nav-link">Quiz</a>
+        </nav>
+    </aside>
+
+    <!-- Container Principal da Página -->
+    <div class="page-container">
+
+        <!-- Banner Hero -->
+        <header class="hero-banner">
+            <img src="Img/fotoprincipal.png" alt="Fundo" class="hero-bg-img">
+            <span class="hero-overlay"></span>
+            <h1 class="hero-title">Problemas Ambientais</h1>
+        </header>
+
+        <!-- Conteúdo -->
+        <main class="content-section">
+            <article class="info-card">
+                <h2 class="info-card-title">Visão Geral dos Desafios</h2>
+                <p class="info-card-text">
+                    Os biomas brasileiros enfrentam uma série de desafios ambientais urgentes divididos em fatores de degradação.
+                </p>
+            </article>
+
+            <!-- Seção do Termômetro adaptável -->
+            <section class="termometro-secao">
+                <h2 class="termometro-titulo">TERMÔMETRO DE ALERTA: <span>Onde mora o perigo?</span></h2>
+                <div class="termometro-grid">
+                    <div class="termometro-barras">
+                        <div class="barra-item cerrado">
+                            <span class="barra-nome">CERRADO</span>
+                            <div class="barra-progresso"><div class="preenchimento" style="width: 55%;">55%</div></div>
+                        </div>
+                        <div class="barra-item amazonia">
+                            <span class="barra-nome">AMAZÔNIA</span>
+                            <div class="barra-progresso"><div class="preenchimento" style="width: 32%;">32%</div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="main-footer">
+            <img src="Img/logo-superior.png" alt="Biomas do Brasil Logo" class="footer-logo">
+            <p class="footer-copyright">&copy; Biomas do Brasil.<br>Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
