@@ -231,9 +231,9 @@ transform: translateY(-3px);
 
 /* --- Grelha Inferior (Cards Cinzentos) --- */
 .desktop-info-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
 }
 
 .desktop-info-card {
@@ -244,15 +244,11 @@ transform: translateY(-3px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
+    height: 100%;
 }
 
-.img-responsiva {
-  max-width: 100%; /* Impede que a imagem seja maior que a largura do card */
-  width: 100%;     /* Faz a imagem ocupar exatamente o espaço disponível */
-  height: auto;    /* Mantém a proporção correta sem achatar ou esticar */
-  display: block;  /* Remove espaços extras indesejados abaixo da imagem */
-  border-radius: 8px; /* Opcional: deixa os cantos arredondados combinando com o site */
-}
+
 
 
 .desktop-info-title {
@@ -267,31 +263,49 @@ transform: translateY(-3px);
 
 .desktop-info-text {
     color: #222;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 15px;
     text-align: justify;
 }
 
 .desktop-explore-btn {
-    display: inline-flex;
-    align-items: center;
-    background-color: #1b4d3e;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    gap: 8px;
-    width: fit-content;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.25s ease, background-color 0.2s ease;
-}
+  display: inline-flex;
+            align-items: center;
+            background-color: #1b4d3e;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            gap: 8px;
+            width: fit-content;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s ease, background-color 0.2s ease;
+        }
 
 .desktop-explore-btn:hover {
     transform: scale(1.04);
     background-color: #11382b;
+}
+
+/* Estilo para a class das imagens*/
+        .container-infografico {
+            width: 100%;           /* Ocupa toda a largura útil do card */
+            margin: 1rem auto;     /* Centraliza e dá um espaçamento elegante */
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+
+.img-responsiva {
+  max-width: 100%; /* Impede que a imagem seja maior que a largura do card */
+  width: 75% !important;     /* Faz a imagem ocupar exatamente o espaço disponível */
+  height: auto;    /* Mantém a proporção correta sem achatar ou esticar */
+  display: block;  /* Remove espaços extras indesejados abaixo da imagem */
+  border-radius: 8px; /* Opcional: deixa os cantos arredondados combinando com o site */
 }
 
 /* --- Rodapé Desktop --- */
