@@ -20,7 +20,41 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+/*botão fixo para voltar ao topo*/
 
+        /* isso ativa a rolagem suave*/
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .btn-topo {
+            position: fixed;
+            bottom: 60px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--corpantanal4);
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+
+            /*seta*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /*isso faz com q o botão fique por cima de qlqr coisa*/
+            z-index: 1000;
+        }
+
+        .btn-topo:hover {
+            background-color: var(--corpantanal3);
+            transform: translateY(-3px);
+        }
+
+        /* aqui TERMINA o botão fixo de voltar ao topo da pagina, 
+USAR SOMENTE NAS PÁGINAS LONGAS*/
 /* Moldura principal de desktop */
 .desktop-container {
      width: 100%;
@@ -261,30 +295,25 @@ body {
     background-color:  #603569;
 }
 
-/* Estilo para a class das imagens*/
-.container-infografico {
-    width: 100%;
-    margin: 1rem auto;
-    /* Espaçamento acima e abaixo da imagem */
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-}
+ /* Estilo para a class das imagens*/
+        .container-infografico {
+            width: 100%;           /* Ocupa toda a largura útil do card */
+            margin: 1rem auto;     /* Centraliza e dá um espaçamento elegante */
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
 
-.img-responsiva {
-    max-width: 100%;
-    /* Impede que a imagem seja maior que a largura do card */
-    width: 75% !important;
-    /* Faz a imagem ocupar exatamente o espaço disponível */
-    height: auto;
-    /* Mantém a proporção correta sem achatar ou esticar */
-    display: block;
-    /* Remove espaços extras indesejados abaixo da imagem */
-    border-radius: 8px;
-    /* Opcional: deixa os cantos arredondados combinando com o site */
-    margin: 0 auto;
-}
+        .img-responsiva {
+            max-width: 100%;       /* Garante que nunca ultrapasse o limite do card */
+            width: 75% !important; /* Diminui o tamanho da imagem (deixe entre 60% e 80% do card como preferir) */
+            height: auto;          /* Mantém a proporção exata sem distorcer ou perder a qualidade */
+            display: block;
+            border-radius: 8px;    /* Mantém os cantos arredondados */
+            margin: 0 auto;        /* Centraliza perfeitamente a imagem no card */
+        }
+
 
 /* --- Rodapé Desktop --- */
 .desktop-footer {
