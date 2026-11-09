@@ -1,336 +1,350 @@
-        :root{
-             --corcerrado1: #FCF8F3;
-    --corcerrado2: #F0D5AD;
-    --corcerrado3: #E99721;
-    --corcerrado4: #A46609;
-    --corcerrado5: #2D1E06;
+        :root {
+            --corcerrado1: #FCF8F3;
+            --corcerrado2: #F0D5AD;
+            --corcerrado3: #E99721;
+            --corcerrado4: #A46609;
+            --corcerrado5: #2D1E06;
         }
 
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-body {
-    background-color: var(--corcerrado3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--corcerrado3) 0%, var(--corcerrado2) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-/*botão fixo para voltar ao topo*/
+        /*botão fixo para voltar ao topo*/
 
-/* isso ativa a rolagem suave*/
-html {scroll-behavior: smooth;}
+        /* isso ativa a rolagem suave*/
+        html {
+            scroll-behavior: smooth;
+        }
 
-.btn-topo {
-    position: fixed;
-    bottom:  60px;
-    right: 25px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--corcerrado3);
-    border-radius: 50%;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
+        .btn-topo {
+            position: fixed;
+            bottom: 60px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--corcerrado4);
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
 
-    /*seta*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            /*seta*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    /*isso faz com q o botão fique por cima de qlqr coisa*/
-    z-index: 1000;
-}
+            /*isso faz com q o botão fique por cima de qlqr coisa*/
+            z-index: 1000;
+        }
 
-.btn-topo:hover {background-color: var(--corcerrado2);
-transform: translateY(-3px);
-}
-/* aqui TERMINA o botão fixo de voltar ao topo da pagina, 
+        .btn-topo:hover {
+            background-color: var(--corcerrado3);
+            transform: translateY(-3px);
+        }
+
+        /* aqui TERMINA o botão fixo de voltar ao topo da pagina, 
 USAR SOMENTE NAS PÁGINAS LONGAS*/
 
-/* Moldura principal de desktop */
-.desktop-container {
-     width: 100%;
-    max-width: 1200px;
-    height: auto;
-    min-height: 80vh;
-    background-color:var(--corcerrado2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    overflow: hidden;
-    text-decoration: none;
-}
+        /* Moldura principal de desktop */
+        .desktop-container {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            min-height: 80vh;
+            background-color: var(--corcerrado2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            text-decoration: none;
+        }
 
-/* --- Cabeçalho Desktop --- */
-.desktop-header {
-     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
-    z-index: 10;}
+        /* --- Cabeçalho Desktop --- */
+        .desktop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            z-index: 10;
+        }
 
-.desktop-logo {
-   height: 40px;
-    object-fit: contain;
-    width: 170px;
-    height: auto;
-}
+        .desktop-logo {
+            height: 40px;
+            object-fit: contain;
+            width: 170px;
+            height: auto;
+        }
 
-.desktop-nav {
-   display: flex;
-    gap: 55px;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
+        .desktop-nav {
+            display: flex;
+            gap: 55px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
 
-/* Efeito de hover sublinhado no menu */
-.nav-link {
-    text-decoration: none;
-    color: #222;
-    font-size: 16px;
-    font-weight: 500;
-    position: relative;
-    padding-bottom: 5px;
-    transition: color 0.3s;
-}
+        /* Efeito de hover sublinhado no menu */
+        .nav-link {
+            text-decoration: none;
+            color: #222;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s;
+        }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #004d40;
-    transition: width 0.3s ease-in-out;
-}
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #004d40;
+            transition: width 0.3s ease-in-out;
+        }
 
-.nav-link:hover, .nav-link.active {
-    color: #004d40;
-    font-weight: bold;
-}
+        .nav-link:hover,
+        .nav-link.active {
+            color: #004d40;
+            font-weight: bold;
+        }
 
-.nav-link:hover::after, .nav-link.active::after {
-    width: 100%;
-}
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
 
-/* --- Seção de Conteúdo --- */
-.desktop-content-section {
-    flex: 1;
-    padding: 20px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    overflow-y: auto;
-}
+        /* --- Seção de Conteúdo --- */
+        .desktop-content-section {
+            flex: 1;
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            overflow-y: auto;
+        }
 
-/* --- Banner Superior --- */
-.desktop-hero-banner {
-    position: relative;
-    width: 100%;
-    height: 120px;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
-}
+        /* --- Banner Superior --- */
+        .desktop-hero-banner {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+        }
 
-.desktop-hero-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
+        .desktop-hero-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
 
-.desktop-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
-    z-index: 2;
-}
+        .desktop-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+            z-index: 2;
+        }
 
-.desktop-hero-title {
-    position: relative;
-    z-index: 3;
-    color: #fff;
-    font-size: 34px;
-    font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
+        .desktop-hero-title {
+            position: relative;
+            z-index: 3;
+            color: #fff;
+            font-size: 34px;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-/* --- 4 Botões Superiores com Hover de Expansão --- */
-.desktop-options-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-}
+        /* --- 4 Botões Superiores com Hover de Expansão --- */
+        .desktop-options-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
 
-.desktop-option-card {
-    background-color: #fff;
-    border-radius: 30px;
-    padding: 8px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
+        .desktop-option-card {
+            background-color: #fff;
+            border-radius: 30px;
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
 
-.desktop-option-card:hover {
-    transform: scale(1.04); /* Leve expansão idêntica ao mobile */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
+        .desktop-option-card:hover {
+            transform: scale(1.04);
+            /* Leve expansão idêntica ao mobile */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
 
-.desktop-option-circle {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-}
+        .desktop-option-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
 
-.desktop-option-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        .desktop-option-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.desktop-option-text {
-    color: #111;
-    font-size: 16px;
-    font-weight: bold;
-    flex-grow: 1;
-    margin-left: 12px;
-}
+        .desktop-option-text {
+            color: #111;
+            font-size: 16px;
+            font-weight: bold;
+            flex-grow: 1;
+            margin-left: 12px;
+        }
 
-.desktop-option-badge {
-    background-color: #2e7d32;
-    color: #fff;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    flex-shrink: 0;
-}
+        .desktop-option-badge {
+            background-color: #2e7d32;
+            color: #fff;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
 
-/* --- Grelha Inferior (Cards Cinzentos) --- */
-.desktop-info-grid {
-    display: contents;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-}
+        /* --- Grelha Inferior (Cards Cinzentos) --- */
+        .desktop-info-grid {
+            display:flex;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
 
-.desktop-info-card {
-    background-color: #cbd5ce;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+        .desktop-info-card {
+            background-color: var(--corcerrado1);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-.desktop-info-title {
-    color: #00382b;
-    font-size: 19px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+        .desktop-info-title {
+            color: var(--corcerrado5);
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-.desktop-info-text {
-    color: #222;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    text-align: justify;
-   
-   
-}
+        .desktop-info-text {
+            color: #222;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            text-align: justify;
 
-.desktop-explore-btn {
-    display: inline-flex;
-    align-items: center;
-    background-color: #1b4d3e;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    gap: 8px;
-    width: fit-content;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.25s ease, background-color 0.2s ease;
-}
 
-.desktop-explore-btn:hover {
-    transform: scale(1.04);
-    background-color: #11382b;
-}
+        }
 
-/* Estilo para a class das imagens*/
-.container-infografico {
-  width: 100%;
-  margin: 1.5rem 0; /* Espaçamento acima e abaixo da imagem */
-  padding: 0;
-  box-sizing: border-box;
-}
+        .desktop-explore-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #1b4d3e;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            gap: 8px;
+            width: fit-content;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s ease, background-color 0.2s ease;
+        }
 
-.img-responsiva {
-  max-width: 100%; /* Impede que a imagem seja maior que a largura do card */
-  width: 100%;     /* Faz a imagem ocupar exatamente o espaço disponível */
-  height: auto;    /* Mantém a proporção correta sem achatar ou esticar */
-  display: block;  /* Remove espaços extras indesejados abaixo da imagem */
-  border-radius: 8px; /* Opcional: deixa os cantos arredondados combinando com o site */
-}
+        .desktop-explore-btn:hover {
+            transform: scale(1.04);
+            background-color: #11382b;
+        }
 
-/* --- Rodapé Desktop --- */
-.desktop-footer {
-     background-color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    border-top: 1px solid #eee;
-    z-index: 10;
-}
+       /* Estilo para a class das imagens*/
+        .container-infografico {
+            width: 100%;           /* Ocupa toda a largura útil do card */
+            margin: 1rem auto;     /* Centraliza e dá um espaçamento elegante */
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
 
-.footer-logo {
-      height: auto;
-    width: 100px;
-}
+        .img-responsiva {
+            max-width: 100%;       /* Garante que nunca ultrapasse o limite do card */
+            width: 75% !important; /* Diminui o tamanho da imagem (deixe entre 60% e 80% do card como preferir) */
+            height: auto;          /* Mantém a proporção exata sem distorcer ou perder a qualidade */
+            display: block;
+            border-radius: 8px;    /* Mantém os cantos arredondados */
+            margin: 0 auto;        /* Centraliza perfeitamente a imagem no card */
+        }
 
-.footer-copyright {
-     font-size: 11px;
-    color: #757575;
-    text-align: center;
-    line-height: 1.3;
-}
-/*```[cite: 8, 9, 13]*/
+        /* --- Rodapé Desktop --- */
+        .desktop-footer {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid #eee;
+            z-index: 10;
+        }
+
+        .footer-logo {
+            height: auto;
+            width: 100px;
+        }
+
+        .footer-copyright {
+            font-size: 11px;
+            color: #757575;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        /*```[cite: 8, 9, 13]*/
