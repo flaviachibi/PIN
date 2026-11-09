@@ -11,17 +11,46 @@
 <body id="topo">
     <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593</a>
 
+    <!-- 1. ADICIONADO: Checkbox e Overlay para o Menu Lateral funcionar no redimensionamento -->
+    <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+    <!-- 2. ADICIONADO: Menu Lateral (Drawer) oculto no PC, aparece no mobile -->
+    <aside class="drawer">
+        <div class="drawer-header">
+            <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png.png" alt="logo biomas" width="80"></div>
+            <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+        </div>
+        <nav class="drawer-nav">
+            <a href="4desktop.html" class="nav-link">Início</a>
+            <a href="biomadesktop.html" class="nav-link">Biomas</a>
+            <a href="ProblemasDesktop.html" class="nav-link">Problemas</a>
+            <a href="#" class="nav-link">Preservação</a>
+            <a href="#" class="nav-link">Sobre</a>
+        </nav>
+    </aside>
+
     <div class="desktop-container">
 
-        <!-- Cabeçalho Desktop -->
+        <!-- Cabeçalho Atualizado com o Botão Hambúrguer -->
         <header class="desktop-header">
-            <!-- INSIRA A FOTO DO LOGO AQUI -->
+            <!-- Botão Hambúrguer (Fica escondido no PC, aparece quando a tela diminui) -->
+            <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
             <img src="Img/logo-superior.png.png" alt="Biomas do Brasil Logo" class="desktop-logo">
 
             <nav class="desktop-nav">
                 <a href="4desktop.html" class="nav-link">Início</a>
-                <a href="biomadesktop.html" class="nav-link active">Biomas</a>
-                <a href="#" class="nav-link">Problemas</a>
+                <a href="biomadesktop.html" class="nav-link">Biomas</a>
+                <a href="ProblemasDesktop.html" class="nav-link active">Problemas</a>
                 <a href="#" class="nav-link">Preservação</a>
                 <a href="#" class="nav-link">Sobre</a>
             </nav>
