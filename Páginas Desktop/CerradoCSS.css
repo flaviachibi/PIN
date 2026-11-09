@@ -286,7 +286,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
         .desktop-explore-btn {
             display: inline-flex;
             align-items: center;
-            background-color: #1b4d3e;
+            background-color: var(--corcerrado4);
             color: #fff;
             padding: 8px 16px;
             border-radius: 20px;
@@ -301,7 +301,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 
         .desktop-explore-btn:hover {
             transform: scale(1.04);
-            background-color: #11382b;
+            background-color: var(--corcerrado3);
         }
 
        /* Estilo para a class das imagens*/

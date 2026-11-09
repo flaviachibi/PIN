@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caatinga- Desktop</title>
+    <link rel="stylesheet" href="CaatingaDeskCSS.css">
+</head>
+
+<body id="topo">
+    <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593</a>
+
+    <div class="desktop-container">
+
+        <!-- Cabeçalho Desktop -->
+        <header class="desktop-header">
+            <!-- INSIRA A FOTO DO LOGO AQUI -->
+            <img src="Img/logo-superior.png.png" alt="Biomas do Brasil Logo" class="desktop-logo">
+
+            <nav class="desktop-nav">
+                <a href="4desktop.html" class="nav-link">Início</a>
+                <a href="biomadesktop.html" class="nav-link active">Biomas</a>
+                <a href="#" class="nav-link">Problemas</a>
+                <a href="#" class="nav-link">Preservação</a>
+                <a href="#" class="nav-link">Sobre</a>
+            </nav>
+        </header>
+
+        <!-- Conteúdo Principal Desktop -->
+        <main class="desktop-content-section">
+
+            <!-- Banner Superior do Bioma -->
+            <div class="desktop-hero-banner">
+                <!-- INSIRA A FOTO DE CAPA DO BIOMA AQUI -->
+                <img src="Img/caatingabanner.jpg" alt="Cerrado Fundo" class="desktop-hero-img">
+                <div class="desktop-hero-overlay"></div>
+                <h1 class="desktop-hero-title">Caatinga</h1>
+            </div>
+
+            <!-- 4 Botões Superiores com Hover de Expansão -->
+            <div class="desktop-options-grid">
+
+                <!-- Fauna -->
+                <a href="#linkFauna" class="desktop-option-card">
+                    <div class="desktop-option-circle">
+                        <!-- INSIRA A FOTO DA FAUNA AQUI -->
+                        <img src="Img/caatingafauna.jpg" alt="Fauna">
+                    </div>
+                    <span class="desktop-option-text">Fauna</span>
+                    <span class="desktop-option-badge"> <img src="Img/patafauna.png" width="15px" alt="Folha"></span>
+                </a>
+
+                <!-- Flora -->
+                <a href="#linkFlora" class="desktop-option-card">
+                    <div class="desktop-option-circle">
+                        <!-- INSIRA A FOTO DA FLORA AQUI -->
+                        <img src="Img/caatingaflora.jpg" alt="Flora">
+                    </div>
+                    <span class="desktop-option-text">Flora</span>
+                    <span class="desktop-option-badge"> <img src="Img/florflora.png" width="25px" alt="Folha"></span>
+                </a>
+
+                <!-- Clima -->
+                <a href="#linkClima" class="desktop-option-card">
+                    <div class="desktop-option-circle">
+                        <!-- INSIRA A FOTO DO CLIMA AQUI -->
+                        <img src="Img/caatingaclima.png"> alt="Clima"
+                    </div>
+                    <span class="desktop-option-text">Clima</span>
+                    <span class="desktop-option-badge"> <img src="Img/folhinha2.png" width="16px" alt="Folha"></span>
+                </a>
+
+                <!-- Solo -->
+                <a href="#linkSolo" class="desktop-option-card">
+                    <div class="desktop-option-circle">
+                        <!-- INSIRA A FOTO DO SOLO AQUI -->
+                        <img src="Img/caatingasolo.webp" alt="Solo">
+                    </div>
+                    <span class="desktop-option-text">Solo</span>
+                    <span class="desktop-option-badge"> <img src="Img/terrasolo.png" width="20px" alt="Folha"></span>
+                </a>
+
+            </div>
+
+            <!-- Grelha Inferior com os 2 Cards (Texto descritivo e Curiosidades) -->
+            <div class="desktop-info-grid">
+
+                <!-- Card Esquerdo: Descrição -->
+                <div class="desktop-info-card">
+                    <h2 class="desktop-info-title">
+                        <img src="Img/folhinha.png" width="20px" alt="Folha"> Cerrado
+                    </h2>
+
+                    <p class="desktop-info-text">
+                        A Caatinga é um bioma genuinamente brasileiro e único no mundo. O motivo dessa exclusividade
+                        está em
+                        seu patrimônio biológico singular: embora existam outras regiões semiáridas pelo planeta, as
+                        espécies que habitam a nossa Caatinga não são encontradas em nenhum outro lugar e apresentam uma
+                        diversidade muito mais rica e numerosa. Com uma extensão de aproximadamente 826.411 km², esse
+                        ecossistema abrange oito estados nordestinos, ocupando cerca de 70% da região Nordeste e o
+                        equivalente a 10% de todo o território nacional. </p>
+                    <a href="biomadesktop.html" class="desktop-explore-btn">
+                        <img src="Img/folhinha2.png" width="20px" alt="Folha"> Explorar outro bioma &rarr;
+                    </a>
+                </div>
+
+                <!-- Card Direito: Curiosidades -->
+                <div class="desktop-info-card">
+                    <h2 class="desktop-info-title">Curiosidades Rápidas</h2>
+                    <p class="desktop-info-text">
+                        Longe de ser um ambiente sem vida, a Caatinga abriga animais altamente resistentes à escassez
+                        hídrica e ao calor intenso. O grande ícone desse bioma exclusivamente brasileiro é o tatu-bola
+                        (Tolypeutes tricinctus). Diferente de outras espécies de tatu que cavam buracos para fugir, o
+                        tatu-bola possui uma carapaça articulada que lhe permite fechar o corpo completamente no formato
+                        de
+                        uma esfera rígida quando ameaçado, protegendo suas partes vulneráveis contra predadores do
+                        sertão.
+                    </p>
+
+                </div>
+
+            </div>
+            <!--card fauna-->
+            <div class="desktop-info-card">
+                <h2 id="linkFauna" class="desktop-info-title">Fauna</h2>
+                <p class="desktop-info-text">
+                    Longe de ser um ambiente sem vida, a Caatinga abriga animais altamente
+                    resistentes à escassez hídrica e ao calor intenso. O grande ícone desse bioma exclusivamente
+                    brasileiro é o tatu-bola (Tolypeutes tricinctus). Diferente de outras espécies de tatu que cavam
+                    buracos para fugir, o tatu-bola possui uma carapaça articulada que lhe permite fechar o corpo
+                    completamente no formato de uma esfera rígida quando ameaçado, protegendo suas partes
+                    vulneráveis contra predadores do sertão.
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/faunaCaatinga.jpg"
+                        alt="Infográfico explicando o ambiente rico da Caatinga" class="img-responsiva">
+                </figure>
+            </div>
+            <!--FLORA  -->
+            <div class="desktop-info-card">
+                <h2 id="linkFlora" class="desktop-info-title">Flora</h2>
+                <p class="desktop-info-text">
+                    O nome "Caatinga" tem origem no tupi-guarani e significa "mata branca", uma
+                    referência direta à transformação radical que sua flora sofre ao longo do ano. Para sobreviver
+                    aos meses sem chuva, a maioria das árvores e arbustos espinhosos adota a caducifólia:
+                    derrubam todas as suas folhas para evitar a perda de água por transpiração, deixando a
+                    paisagem com aspecto seco e troncos esbranquiçados expostos ao sol. Ao lado dessas
+                    árvores destacam-se plantas xerófilas como os cactos (xique-xique e mandacaru), que
+                    armazenam água em seus caules esponjosos. Apesar da aparência árida na seca, basta a
+                    primeira chuva cair para que a Caatinga reverdeça e floresça em poucos dias.
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/floraCaatinga.jpg"
+                        alt="Infográfico explicando a mata branca da Caatinga"
+                        class="img-responsiva">
+                </figure>
+            </div>
+
+            <!--  CLIMA  -->
+            <div class="desktop-info-card">
+                <h2 id="linkClima" class="desktop-info-title">Clima</h2>
+                <p class="desktop-info-text">
+                    Inserida no coração do Nordeste brasileiro, a Caatinga é regida pelo clima Semiárido, o mais seco do
+                    país. Suas principais características são as temperaturas elevadas durante todos os meses do ano, a
+                    forte insolação, a alta taxa de evaporação da água e, sobretudo, a irregularidade das chuvas. Não se
+                    trata da ausência total de chuva como em um deserto, mas sim de precipitações escassas e
+                    concentradas em poucos meses do ano, intercaladas por longos períodos de estiagem que exigem extrema
+                    resiliência da natureza e das populações locais.
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/climaCaatinga.jpg"
+                        alt="Infográfico explicando o clima semiarido da Caatinga"
+                        class="img-responsiva">
+                </figure>
+            </div>
+
+            <!-- SOLO   -->
+            <div class="desktop-info-card">
+                <h2 id="linkSolo" class="desktop-info-title">Solo</h2>
+                <p class="desktop-info-text">
+                    Os solos da Caatinga são bastante variados, mas predominam os terrenos rasos, pedregosos e
+                    cristalinos. Ao contrário do solo da Amazônia, muitos solos do sertão são ricos em minerais, mas a
+                    falta de água e a pouca profundidade dificultam o armazenamento hídrico. Por ser um ambiente
+                    naturalmente seco, o solo da Caatinga é extremamente sensível à perda de sua vegetação protetora.
+                    Quando ocorre o desmatamento (para extração de lenha ou carvão), queimadas e o sobrepastoreio
+                    (excesso de gado pisoteando e consumindo a vegetação nativa), o solo fica nu sob o sol escaldante e
+                    as chuvas ocasionais lavam sua camada fértil, levando a um grave processo de degradação e
+                    desertificação, onde a terra
+                    perde permanentemente sua capacidade biológica de produzir vida.
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/soloCaatinga.jpg"
+                        alt="Infográfico explicando as características, fragilidades e desertificação do solo da Caatinga"
+                        class="img-responsiva">
+                </figure>
+            </div>
+            <!--fim dos cards com as informações-->
+        </main>
+
+        <!-- Rodapé Desktop -->
+        <footer class="desktop-footer">
+            <!-- INSIRA A FOTO DO LOGO DO RODAPÉ AQUI -->
+            <img src="Img/logo-superior.png.png" alt="Biomas do Brasil Logo" class="footer-logo">
+            <p class="footer-copyright">&copy; 2026 Biomas do Brasil<br>Todos os direitos reservados</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
