@@ -15,12 +15,48 @@
 }
 
 body {
-    background-color: var(--cormataatlantica3);
+     background: linear-gradient(150deg,var(--cormataatlantica3) 50%, var(--cormataatlantica4) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
+
+/*botão fixo para voltar ao topo*/
+
+        /* isso ativa a rolagem suave*/
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .btn-topo {
+            position: fixed;
+            bottom: 60px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--cormataatlantica4);
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+
+            /*seta*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /*isso faz com q o botão fique por cima de qlqr coisa*/
+            z-index: 1000;
+        }
+
+        .btn-topo:hover {
+            background-color: var(--cormataatlantica3);
+            transform: translateY(-3px);
+        }
+
+        /* aqui TERMINA o botão fixo de voltar ao topo da pagina, 
+USAR SOMENTE NAS PÁGINAS LONGAS*/
 
 /* Moldura principal de desktop */
 .desktop-container {
@@ -28,7 +64,7 @@ body {
     max-width: 1200px;
     height: auto;
     min-height: 80vh;
-    background-color:var(--cormataatlantica2);
+    background-color:rgba(218, 213, 213, 0.185);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -205,62 +241,81 @@ body {
 }
 
 /* --- Grelha Inferior (Cards Cinzentos) --- */
-.desktop-info-grid {
-    display: contents;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-}
+        .desktop-info-grid {
+            display:flex;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
 
-.desktop-info-card {
-    background-color: #cbd5ce;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+        .desktop-info-card {
+            background-color: var(--cormataatlantica1);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-.desktop-info-title {
-    color: #00382b;
-    font-size: 19px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+        .desktop-info-title {
+            color: var(--cormataatlantica5);
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-.desktop-info-text {
-    color: #222;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    text-align: justify;
-   
-   
-}
+        .desktop-info-text {
+            color: #222;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            text-align: justify;
 
-.desktop-explore-btn {
-    display: inline-flex;
-    align-items: center;
-    background-color: #1b4d3e;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    gap: 8px;
-    width: fit-content;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.25s ease, background-color 0.2s ease;
-}
 
-.desktop-explore-btn:hover {
-    transform: scale(1.04);
-    background-color: #11382b;
-}
+        }
+
+        .desktop-explore-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #1b4d3e;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            gap: 8px;
+            width: fit-content;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s ease, background-color 0.2s ease;
+        }
+
+        .desktop-explore-btn:hover {
+            transform: scale(1.04);
+            background-color: #11382b;
+        }
+
+       /* Estilo para a class das imagens*/
+        .container-infografico {
+            width: 100%;           /* Ocupa toda a largura útil do card */
+            margin: 1rem auto;     /* Centraliza e dá um espaçamento elegante */
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+
+        .img-responsiva {
+            max-width: 100%;       /* Garante que nunca ultrapasse o limite do card */
+            width: 75% !important; /* Diminui o tamanho da imagem (deixe entre 60% e 80% do card como preferir) */
+            height: auto;          /* Mantém a proporção exata sem distorcer ou perder a qualidade */
+            display: block;
+            border-radius: 8px;    /* Mantém os cantos arredondados */
+            margin: 0 auto;        /* Centraliza perfeitamente a imagem no card */
+        }
 
 /* --- Rodapé Desktop --- */
 .desktop-footer {

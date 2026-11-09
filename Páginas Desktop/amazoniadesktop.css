@@ -14,12 +14,16 @@
 }
 
 body {
-    background-color: #112920;
+    background:linear-gradient(135deg, var(--coramazonia5) 10%, var(--coramazonia3) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
+ /* isso ativa a rolagem suave*/
+        html {
+            scroll-behavior: smooth;
+        }
 .btn-topo:hover {background-color: var(--coramazonia2);
 transform: translateY(-3px);
 }
@@ -53,7 +57,7 @@ transform: translateY(-3px);
     max-width: 1200px;
     height: auto;
     min-height: 80vh;
-    background-color: #112920;
+    background-color: #1129203f;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

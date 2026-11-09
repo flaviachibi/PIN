@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color:  #1E1320;
+    background: linear-gradient(135deg, var(--corpantanal2) 0%, var(--corpantanal4) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,7 +247,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 }
 
 .desktop-info-card {
-    background-color: #cbd5ce;
+    background-color: var(--corpantanal1);
     border-radius: 16px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -257,7 +257,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 }
 
 .desktop-info-title {
-    color: #603569;
+    color: #311636;
     font-size: 19px;
     font-weight: bold;
     margin-bottom: 10px;

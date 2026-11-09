@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="mataAtdesktop.css">
 </head>
 
-<body>
+<body id="topo">
+    <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593</a>
 
     <div class="desktop-container">
 
@@ -41,7 +42,7 @@
             <div class="desktop-options-grid">
 
                 <!-- Fauna -->
-                <a href="#" class="desktop-option-card">
+                <a href="#linkFauna" class="desktop-option-card">
                     <div class="desktop-option-circle">
                         <!-- INSIRA A FOTO DA FAUNA AQUI -->
                         <img src="Img/mataatlanticafauna.jpg" alt="Fauna">
@@ -51,7 +52,7 @@
                 </a>
 
                 <!-- Flora -->
-                <a href="#" class="desktop-option-card">
+                <a href="#linkFlora" class="desktop-option-card">
                     <div class="desktop-option-circle">
                         <!-- INSIRA A FOTO DA FLORA AQUI -->
                         <img src="Img/mataatlanticaflora.jpg" alt="Flora">
@@ -61,7 +62,7 @@
                 </a>
 
                 <!-- Clima -->
-                <a href="#" class="desktop-option-card">
+                <a href="#linkClima" class="desktop-option-card">
                     <div class="desktop-option-circle">
                         <!-- INSIRA A FOTO DO CLIMA AQUI -->
                         <img src="Img/mataatlanticaclima.jpg"> alt="Clima"
@@ -71,7 +72,7 @@
                 </a>
 
                 <!-- Solo -->
-                <a href="#" class="desktop-option-card">
+                <a href="#linkSolo" class="desktop-option-card">
                     <div class="desktop-option-circle">
                         <!-- INSIRA A FOTO DO SOLO AQUI -->
                         <img src="Img/mataatlanticasolo.jpg" alt="Solo">
@@ -106,15 +107,90 @@
                 <div class="desktop-info-card">
                     <h2 class="desktop-info-title">Curiosidades Rápidas</h2>
                     <p class="desktop-info-text">
-                        Ao contrário da informação de conhecimento popular que a Amazônia contribui com 20% do oxigênio
-                        na atmosfera, o bioma na verdade contribui com cerca de 20% do oxigênio produzido pela
-                        fotossíntese no planeta. Em seu estado mais primitivo, a Amazônia faz uma contribuição
-                        significativa para retirar o dióxido de carbono da atmosfera, o que não chega a ser um par de
-                        pulmões, e sim se assemelha a um ar-condicionado gigante que resfria o planeta.
+                        Muito além de sua rica biodiversidade e das famosas árvores centenárias, a Mata Atlântica
+                        funciona como um verdadeiro "filtro e esponja" gigante para o sudeste do país. Em seu estado
+                        original, o bioma retira toneladas de dióxido de carbono da atmosfera e garante a regulação do
+                        ciclo de chuvas, agindo como um regulador térmico natural que protege e abastece as maiores
+                        metrópoles do Brasil.
                     </p>
                 </div>
-
             </div>
+            <!--card fauna-->
+            <div class="desktop-info-card">
+                <h2 id="linkFauna" class="desktop-info-title">Fauna</h2>
+                <p class="desktop-info-text">
+                    Apesar da intensa fragmentação histórica causada pela urbanização, a Mata
+                    Atlântica preserva uma das maiores taxas de endemismo do planeta — ou seja, espécies que
+                    não existem em nenhum outro lugar da Terra. O maior símbolo dessa riqueza e dos esforços de
+                    conservação no Brasil é o mico-leão-dourado. Esse pequeno primata de pelagem alaranjada
+                    brilhante vive exclusivamente nos remanescentes florestais de baixada do estado do Rio de
+                    Janeiro, vivendo em grupos familiares no alto das árvores e alimentando-se de frutos, insetos e
+                    pequenos vertebrados.
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/faunaCerrado.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </div>
+            <!--FLORA  -->
+            <div class="desktop-info-card">
+                <h2 id="linkFlora" class="desktop-info-title">Flora</h2>
+                <p class="desktop-info-text">
+                    A flora da Mata Atlântica é marcada por árvores de grande porte, palmeiras e
+                    uma imensa variedade de epífitas (como bromélias e orquídeas que vivem sobre os troncos). É
+                    o berço do pau-brasil, árvore nativa de madeira densa e avermelhada muito explorada no
+                    século XVI para tingir tecidos na Europa, cuja importância econômica batizou o nosso país.
+                    Além das plantas, a umidade constante e a sombra das matas preservadas — como no Vale do
+                    Ribeira, em Iporanga (SP) — criam o ambiente ideal para fungos raros como o Mycena
+                    lucentipes: pequenos cogumelos bioluminescentes que realizam reações químicas naturais
+                    para emitir uma fascinante luz verde neon durante a noite.
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/floraCerrado.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </div>
+
+            <!--  CLIMA  -->
+            <div class="desktop-info-card">
+                <h2 id="linkClima" class="desktop-info-title">Clima</h2>
+                <p class="desktop-info-text">
+                    Por se estender ao longo de grande parte da faixa litorânea brasileira, acompanhando cadeias
+                    montanhosas como a Serra do Mar e a Serra da Mantiqueira, a Mata Atlântica tem seu clima diretamente
+                    moldado pelo Oceano Atlântico. As massas de ar quentes e carregadas de umidade que vêm do mar
+                    avançam para o continente e encontram a barreira física das serras; ao subirem as montanhas, esse ar
+                    esfria e se condensa, provocando as chamadas chuvas orográficas (ou de relevo). Essa neblina e
+                    pluviosidade constantes mantêm a floresta sempre úmida, verdejante e rica em nascentes..
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/climaCerrado.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </div>
+
+            <!-- SOLO   -->
+            <div class="desktop-info-card">
+                <h2 id="linkSolo" class="desktop-info-title">Solo</h2>
+                <p class="desktop-info-text">
+                    Grande parte da Mata Atlântica original desenvolveu-se sobre terrenos acidentados, morros e encostas
+                    muito íngremes, onde o solo costuma ser raso e sujeito a chuvas torrenciais. Nesses locais, a
+                    cobertura florestal exerce um serviço ambiental insubstituível de engenharia natural: as copas das
+                    árvores amortecem o impacto direto das gotas de chuva no chão, a camada de folhas caídas retém a
+                    água e o emaranhado de raízes funciona como uma rede de contenção que "amarra" a terra às rochas.
+                    Quando a mata de encosta é removida, o solo perde essa proteção, favorecendo a erosão severa e os
+                    perigosos deslizamentos de terra.
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/soloCerrado.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </div>
+            <!--fim dos cards com as informações-->
+
         </main>
 
         <!-- Rodapé Desktop -->
