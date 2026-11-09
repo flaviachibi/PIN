@@ -209,7 +209,7 @@ body {
 .desktop-info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
 }
 
 .desktop-info-card {
@@ -234,7 +234,7 @@ body {
 
 .desktop-info-text {
     color: #222;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 15px;
     text-align: justify;
@@ -264,16 +264,18 @@ body {
 /* Estilo para a class das imagens*/
 .container-infografico {
     width: 100%;
-    margin: 1.5rem 0;
+    margin: 1rem auto;
     /* Espaçamento acima e abaixo da imagem */
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 
 .img-responsiva {
     max-width: 100%;
     /* Impede que a imagem seja maior que a largura do card */
-    width: 100%;
+    width: 75% !important;
     /* Faz a imagem ocupar exatamente o espaço disponível */
     height: auto;
     /* Mantém a proporção correta sem achatar ou esticar */
@@ -281,6 +283,7 @@ body {
     /* Remove espaços extras indesejados abaixo da imagem */
     border-radius: 8px;
     /* Opcional: deixa os cantos arredondados combinando com o site */
+    margin: 0 auto;
 }
 
 /* --- Rodapé Desktop --- */
