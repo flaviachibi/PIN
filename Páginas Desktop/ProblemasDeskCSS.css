@@ -1,0 +1,542 @@
+:root {
+   --corprincipal1: #F4FAF4;
+    --corprinciapl2: #B8E5BA;
+    --corprincipal3: #45C44B;
+    --corprincipal4: #217D26;
+    --corprincipal5: #124814;
+
+    --coramazonia1: #F5FAF5;
+    --coramazonia2: #C0E2BB;
+    --coramazonia3: #59BE4B;
+    --coramazonia4: #286121;
+    --coramazonia5: #11240F;
+
+    --cormataatlantica1: #F8FAF5;
+    --cormataatlantica2: #D4E1BC;
+    --cormataatlantica3: #94BB4E;
+    --cormataatlantica4: #3F521E;
+    --cormataatlantica5: #1C240F;
+
+    --corcaatinga1: #FCFAF3;
+    --corcaatinga2: #EBDBA0;
+    --corcaatinga3: #CAAD3F;
+    --corcaatinga4: #756629;
+    --corcaatinga5: #232010;
+
+    --corcerrado1: #FCF8F3;
+    --corcerrado2: #F0D5AD;
+    --corcerrado3: #E99721;
+    --corcerrado4: #A46609;
+    --corcerrado5: #2D1E06;
+
+    --corpantanal1: #F9F5FA;
+    --corpantanal2: #DABDE1;
+    --corpantanal3: #9344A4;
+    --corpantanal4: #603569;
+    --corpantanal5: #1E1320;
+
+    --corpampas1: #FBF4F5;
+    --corpampas2: #EEAFBC;
+    --corpampas3: #E84D6C;
+    --corpampas4: #801E31;
+    --corpampas5: #250E12;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:linear-gradient(135deg, var(--corprincipal3)0%, var(--corprinciapl2)100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn-topo {
+    position: fixed;
+    bottom: 60px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--coramazonia4);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.btn-topo:hover {
+    background-color: var(--coramazonia3);
+    transform: translateY(-3px);
+}
+
+/* Moldura Principal (Transparente para mostrar o fundo) */
+.desktop-container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 80vh;
+    background:linear-gradient(155deg, var(--corprincipal4)100%) var(--corprincipal2 50%); /* Verde translúcido */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+/* --- Cabeçalho Desktop --- */
+        .desktop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            z-index: 10;
+        }
+
+        .desktop-logo {
+            height: 40px;
+            object-fit: contain;
+            width: 170px;
+            height: auto;
+        }
+
+        .desktop-nav {
+            display: flex;
+            gap: 55px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        /* Efeito de hover sublinhado no menu */
+        .nav-link {
+            text-decoration: none;
+            color: #222;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #004d40;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #004d40;
+            font-weight: bold;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+/* Seção de Conteúdo */
+.desktop-content-section {
+    flex: 1;
+    padding: 25px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.problemas-titulo-container {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.desktop-hero-title {
+    color: #1E3F28;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Cards Superiores (Desflorestação, Poluição, etc) */
+.problemas-cards-topo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    display: flexbox;
+}
+
+.desktop-option-card {
+   
+    border-radius: 5px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.25s ease;
+    text-align: center;
+}
+
+.desktop-option-card:hover {
+    transform: scale(1.03);
+}
+
+.desktop-option-circle {
+    width: 100%;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.desktop-option-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.desktop-option-text {
+    color: #111;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Termômetro de Alerta */
+.termometro-secao {
+    margin-top: 25px 0px 25px 0px ;
+    text-align: center;
+    padding:20px 0px 20px 0px;
+    
+}
+
+.termometro-titulo {
+    font-size: 25px;
+    color: var(--corpampas4);
+    margin-bottom: 20px 0px 20px 0px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.termometro-titulo span {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.termometro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+    align-items:stretch;
+}
+
+/* Lado Esquerdo: Barras */
+.termometro-barras {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.barra-item {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 8px 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Cores específicas de fundo de cada barra estilo a imagem */
+.barra-item.cerrado {background-color: var(--corcerrado2) ; }
+.barra-item.amazonia { background-color: var(--coramazonia3); }
+.barra-item.caatinga { background-color: var(--corcaatinga3); }
+.barra-item.pantanal { background-color: var(--corpantanal3); }
+.barra-item.mata-atlantica { background-color: var(--cormataatlantica3); }
+.barra-item.pampa { background-color: var(--corpampas3); }
+
+.barra-icone {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.barra-nome {
+    flex-grow: -1;
+}
+
+.barra-progresso {
+    background-color: rgba(0,0,0,0.08);
+    border-radius: 15px;
+    width: 45%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+.preenchimento {
+    background-color: var(--corcerrado4); /* Cor da porcentagem estilo marrom/dourado */
+    color: #fff;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    padding: 0 12px;
+}
+
+/* Lado Direito: Cards de Descrição */
+.termometro-textos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-card-bioma {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* Cores dos cards de descrição correspondentes */
+.cerrado-desc { background-color: #EFA642; color: #000000; }
+.amazonia-desc { background-color: #B2D8C0; }
+.caatinga-desc { background-color: #E8D28A; }
+.pantanal-desc { background-color: #B885C4; color: #000000; }
+.mata-desc { background-color: #84A864; color: #000000; }
+.pampa-desc { background-color: #C07979; color: #000000; }
+
+/* Rodapé */
+.desktop-footer {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #eee;
+    z-index: 10;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+.footer-copyright {
+    font-size: 11px;
+    color: #757575;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* ==========================================================
+   REGRAS DE RESPONSIVIDADE PARA O HEADER E MENU LATERAL
+   ========================================================== */
+
+/* Por padrão, o botão hambúrguer fica oculto no computador grande */
+.hamburger-btn,
+.menu-checkbox,
+.overlay,
+.drawer {
+    display: none;
+}
+
+/* Quando a tela diminuir (Tablet ou Celular / abaixo de 1024px) */
+@media (max-width: 1024px) {
+
+    /* 1. Esconde o menu horizontal do topo */
+    .desktop-nav {
+        display: none !important;
+    }
+    @media (max-width: 1024px) {
+
+    /* Altera apenas a parte dos cards para empilharem um embaixo do outro */
+    .desktop-options-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Força 1 única coluna (cards empilhados) */
+        gap: 15px !important;
+    }
+
+}
+
+    /* 2. Mostra o botão hambúrguer */
+    .hamburger-btn {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    .hamburger-btn span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #11240F;
+    }
+
+    /* 3. Ativa o comportamento do Menu Lateral (Drawer) */
+    .menu-checkbox:checked ~ .drawer {
+        transform: translateX(0) !important;
+    }
+
+    .menu-checkbox:checked ~ .overlay {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
+    .overlay {
+        display: block !important;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 200;
+    }
+
+    .drawer {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 250px;
+        background-color: #ffffff;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 300;
+        box-shadow: 10px 0 25px rgba(0, 0, 0, 0.2);
+    }
+}
+/* ==========================================================
+   ESTILIZAÇÃO COMPLETA DO MENU LATERAL (DRAWER) NO MOBILE
+   ========================================================== */
+
+@media (max-width: 1024px) {
+
+    /* Estrutura visual da gaveta lateral */
+    .drawer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 250px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 300;
+        box-shadow: 10px 0 25px -5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Topo do menu lateral (onde fica a logo interna e o botão de fechar) */
+    .drawer-header {
+        height: 70px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--corprinciapl2, #B8E5BA);
+    }
+
+    .drawer-title-area {
+        display: flex;
+        align-items: center;
+    }
+
+    .drawer-avatar img {
+        object-fit: contain;
+    }
+
+    .drawer-close-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--coramazonia5, #11240F);
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Links de navegação dentro do menu lateral */
+    .drawer-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        flex: 1;
+    }
+
+    .drawer-nav .nav-link {
+        color: var(--coramazonia4, #286121) !important;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: color 0.2s;
+    }
+
+    .drawer-nav .nav-link:hover {
+        color: var(--coramazonia3, #59BE4B) !important;
+    }
+
+    /* Rodapé interno do menu lateral (Sobre Nós) */
+    .drawer-footer {
+        padding: 20px;
+        color: var(--coramazonia5, #11240F);
+        border-top: 1px solid #eee;
+    }
+
+    .drawer-footer h4 a {
+        text-decoration: none;
+        color: inherit;
+    }
+}

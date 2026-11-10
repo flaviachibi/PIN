@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas - Desktop</title>
+    <link rel="stylesheet" href="ProblemasDeskCSS.css">
+</head>
+
+<body id="topo">
+    <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593</a>
+
+    <!-- 1. ADICIONADO: Checkbox e Overlay para o Menu Lateral funcionar no redimensionamento -->
+    <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+    <!-- 2. ADICIONADO: Menu Lateral (Drawer) oculto no PC, aparece no mobile -->
+    <aside class="drawer">
+        <div class="drawer-header">
+            <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png.png" alt="logo biomas" width="80"></div>
+            <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+        </div>
+        <nav class="drawer-nav">
+            <a href="4desktop.html" class="nav-link">Início</a>
+            <a href="biomadesktop.html" class="nav-link">Biomas</a>
+            <a href="ProblemasDesktop.html" class="nav-link">Problemas</a>
+            <a href="PreservacaoDesk.html" class="nav-link">Preservação</a>
+            <a href="SobreDesk.html" class="nav-link">Sobre</a>
+        </nav>
+    </aside>
+
+    <div class="desktop-container">
+
+        <!-- Cabeçalho Atualizado com o Botão Hambúrguer -->
+        <header class="desktop-header">
+            <!-- Botão Hambúrguer (Fica escondido no PC, aparece quando a tela diminui) -->
+            <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <img src="Img/logo-superior.png.png" alt="Biomas do Brasil Logo" class="desktop-logo">
+
+            <nav class="desktop-nav">
+                <a href="4desktop.html" class="nav-link">Início</a>
+                <a href="biomadesktop.html" class="nav-link">Biomas</a>
+                <a href="ProblemasDesktop.html" class="nav-link active">Problemas</a>
+                <a href="PreservacaoDesk.html" class="nav-link">Preservação</a>
+                <a href="SobreDesk.html" class="nav-link">Sobre</a>
+            </nav>
+        </header>
+
+        <!-- Conteúdo Principal Desktop -->
+        <main class="desktop-content-section">
+
+            <!-- Título da Seção -->
+            <div class="problemas-titulo-container">
+                <h1 class="desktop-hero-title">Problemas que afetam nossos Biomas</h1>
+            </div>
+
+            <!-- 4 Cards Superiores (Desflorestação, Poluição, Queimadas, Mudanças Climáticas) -->
+            <div class="desktop-options-grid problemas-cards-topo">
+                <a href="#linkDesflorestacao" class="desktop-option-card">
+                    <div class="desktop-option-circle">
+                        <img src="Img/desflorestacao.jpg" alt="Desflorestação">
+                    </div>
+                    <span class="desktop-option-text">DESFLORESTAÇÃO</span>
+                </a>
+
+                <a href="#linkPoluicao" class="desktop-option-card">
+                    <div class="desktop-option-circle">
+                        <img src="Img/poluicao.jpg" alt="Poluição">
+                    </div>
+                    <span class="desktop-option-text">POLUIÇÃO</span>
+                </a>
+
+                <a href="#linkQueimadas" class="desktop-option-card">
+                    <div class="desktop-option-circle">
+                        <img src="Img/queimadas.jpg" alt="Queimadas">
+                    </div>
+                    <span class="desktop-option-text">QUEIMADAS</span>
+                </a>
+
+                <a href="#linkClimaticas" class="desktop-option-card">
+                    <div class="desktop-option-circle">
+                        <img src="Img/mudanca-climatica.jpg" alt="Mudanças Climáticas">
+                    </div>
+                    <span class="desktop-option-text">MUDANÇA CLIMÁTICAS</span>
+                </a>
+            </div>
+
+            <!-- Termômetro de Alerta (Gráfico de Barras e Descrições) -->
+            <section class="termometro-secao">
+                <h2 class="termometro-titulo">TERMÔMETRO DE ALERTA: <span>Onde mora o perigo?</span></h2>
+
+                <div class="termometro-grid">
+                    
+                    <!-- Lado Esquerdo: Barras dos Biomas -->
+                    <div class="termometro-barras">
+                        <div class="barra-item cerrado">
+                            <span class="barra-icone">⚠️</span>
+                            <span class="barra-nome">CERRADO</span>
+                            <div class="barra-progresso"><div class="preenchimento" style="width: 55%;">55%</div></div>
+                        </div>
+
+                        <div class="barra-item amazonia">
+                            <span class="barra-icone">🌳</span>
+                            <span class="barra-nome">AMAZÔNIA</span>
+                            <div class="barra-progresso"><div class="preenchimento" style="width: 32%;">32%</div></div>
+                        </div>
+
+                        <div class="barra-item caatinga">
+                            <span class="barra-icone">🌵</span>
+                            <span class="barra-nome">CAATINGA</span>
+                            <div class="barra-progresso"><div class="preenchimento" style="width: 8%;">8%</div></div>
+                        </div>
+
+                        <div class="barra-item pantanal">
+                            <span class="barra-icone">🐊</span>
+                            <span class="barra-nome">PANTANAL</span>
+                            <div class="barra-progresso"><div class="preenchimento" style="width: 3%;">3%</div></div>
+                        </div>
+
+                        <div class="barra-item mata-atlantica">
+                            <span class="barra-icone">🍃</span>
+                            <span class="barra-nome">MATA ATLÂNTICA</span>
+                            <div class="barra-progresso"><div class="preenchimento" style="width: 1%;">1%</div></div>
+                        </div>
+
+                        <div class="barra-item pampa">
+                            <span class="barra-icone">🌾</span>
+                            <span class="barra-nome">PAMPA</span>
+                            <div class="barra-progresso"><div class="preenchimento" style="width: 1%;">1%</div></div>
+                        </div>
+                    </div>
+
+                    <!-- Lado Direito: Cards de Explicação dos Biomas -->
+                    <div class="termometro-textos">
+                        <div class="info-card-bioma cerrado-desc">
+                            <p>É uma das fronteiras agrícolas mais ativas do mundo, sofrendo com a supressão de vegetação nativa para a abertura de pastagens e monoculturas de grãos.</p>
+                        </div>
+                        <div class="info-card-bioma amazonia-desc">
+                            <p>O bioma sofre com eventos extremos potencializados por aquecimento e pelo fenômeno El Niño, que reduzem o nível dos rios e isolam comunidades ribeirinhas.</p>
+                        </div>
+                        <div class="info-card-bioma caatinga-desc">
+                            <p>Nosso bioma exclusivamente brasileiro sofre com o desmatamento para uso de lenha e os riscos crescentes da desertificação.</p>
+                        </div>
+                        <div class="info-card-bioma pantanal-desc">
+                            <p>Embora menor em área, sofreu impactos severos recentemente por causa de secas extremas, mudanças climáticas e grandes incêndios.</p>
+                        </div>
+                        <div class="info-card-bioma mata-desc">
+                            <p>É o bioma mais desmatado historicamente no passado. Hoje, a luta é para proteger os pequenos pedaços que restam e reconectar a vegetação.</p>
+                        </div>
+                        <div class="info-card-bioma pampa-desc">
+                            <p>Suas belas paisagens de campos nativos vêm sendo substituídas aceleradamente por plantações e pastagens cultivadas.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Rodapé Desktop -->
+        <footer class="desktop-footer">
+            <img src="Img/logo-superior.png.png" alt="Biomas do Brasil Logo" class="footer-logo">
+            <p class="footer-copyright">&copy; 2026 Biomas do Brasil<br>Todos os direitos reservados</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

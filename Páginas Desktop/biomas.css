@@ -1,0 +1,537 @@
+
+/* variável das cores */
+:root {
+    --corprincipal1: #F4FAF4;
+    --corprinciapl2: #B8E5BA;
+    --corprincipal3: #45C44B;
+    --corprincipal4: #217D26;
+    --corprincipal5: #124814;
+
+    --coramazonia1: #F5FAF5;
+    --coramazonia2: #C0E2BB;
+    --coramazonia3: #59BE4B;
+    --coramazonia4: #286121;
+    --coramazonia5: #11240F;
+
+    --cormataatlantica1: #F8FAF5;
+    --cormataatlantica2: #D4E1BC;
+    --cormataatlantica3: #94BB4E;
+    --cormataatlantica4: #3F521E;
+    --cormataatlantica5: #1C240F;
+
+    --corcaatinga1: #FCFAF3;
+    --corcaatinga2: #EBDBA0;
+    --corcaatinga3: #CAAD3F;
+    --corcaatinga4: #756629;
+    --corcaatinga5: #232010;
+
+    --corcerrado1: #FCF8F3;
+    --corcerrado2: #F0D5AD;
+    --corcerrado3: #E99721;
+    --corcerrado4: #A46609;
+    --corcerrado5: #2D1E06;
+
+    --corpantanal1: #F9F5FA;
+    --corpantanal2: #DABDE1;
+    --corpantanal3: #9344A4;
+    --corpantanal4: #603569;
+    --corpantanal5: #1E1320;
+
+    --corpampas1: #FBF4F5;
+    --corpampas2: #EEAFBC;
+    --corpampas3: #E84D6C;
+    --corpampas4: #801E31;
+    --corpampas5: #250E12;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #112920;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: #004d40;
+    --amazonia-bg: rgba(46, 125, 50, 0.9);
+    --caatinga-bg: rgba(238, 210, 90, 0.9);
+    --pampa-bg: rgba(220, 150, 160, 0.9);
+    --cerrado-bg: rgba(230, 130, 30, 0.9);
+    --pantanal-bg: rgba(180, 130, 200, 0.9);
+    --mata-bg: rgba(110, 180, 70, 0.9);
+}
+
+/* Moldura principal de desktop */
+.desktop-container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 80vh;
+    background-color: #112920;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+/* --- Cabeçalho Desktop --- */
+.desktop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 10;
+}
+
+.desktop-logo {
+  height: 40px;
+    object-fit: contain;
+    width: 170px;
+    height: auto;
+}
+
+    .desktop-nav {
+    display: flex;
+    gap: 55px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Efeito de hover sublinhado no menu */
+.nav-link {
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #004d40;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #004d40;
+    font-weight: bold;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* --- Seção de Exploração --- */
+.explore-desktop-section {
+    flex: 1;
+    padding: 25px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.explore-desktop-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.explore-content-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    height: 100%;
+}
+
+/* --- Mapa do Brasil Desktop --- */
+.desktop-map-container {
+    background-color: #fcf9f0;
+    border-radius: 20px;
+    padding: 20px;
+    width: 340px;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+}
+
+.brazil-map-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* --- Grelha dos Biomas (3 colunas) --- */
+.desktop-biomes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 1;
+}
+
+.biome-card-desk {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 200px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: block;
+}
+
+.biome-card-desk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.biome-card-desk:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Barra de Identificação com Hover de Desaparecer --- */
+.biome-bar-desk {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    backdrop-filter: blur(4px);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover de desaparecer idêntico ao mobile */
+.biome-card-desk:hover .biome-bar-desk {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.biome-amazonia { background-color: var(--amazonia-bg); }
+.biome-caatinga { background-color: var(--caatinga-bg); }
+.biome-pampa { background-color: var(--pampa-bg); }
+.biome-cerrado { background-color: var(--cerrado-bg); }
+.biome-pantanal { background-color: var(--pantanal-bg); }
+.biome-mata { background-color: var(--mata-bg); }
+
+.biome-name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.biome-arrow {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.biome-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: -4px;
+}
+
+.biome-amazonia .biome-dot { background-color: #2e7d32; }
+.biome-caatinga .biome-dot { background-color: #fbc02d; }
+.biome-pampa .biome-dot { background-color: #f48fb1; }
+.biome-cerrado .biome-dot { background-color: #fb8c00; }
+.biome-pantanal .biome-dot { background-color: #ba68c8; }
+.biome-mata .biome-dot { background-color: #81c784; }
+
+/* --- Rodapé Desktop --- */
+.desktop-footer {
+     background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #eee;
+    z-index: 10;
+}
+
+.footer-logo {
+    height: auto;
+    width: 100px;
+}
+
+.footer-copyright {
+    font-size: 11px;
+    color: #757575;
+    text-align: center;
+    line-height: 1.3;}
+
+
+  /* ==========================================================
+   REGRAS DE RESPONSIVIDADE PARA O HEADER E MENU LATERAL
+   ========================================================== */
+
+/* Por padrão, o botão hambúrguer fica oculto no computador grande */
+.hamburger-btn,
+.menu-checkbox,
+.overlay,
+.drawer {
+    display: none;
+}
+
+/* Quando a tela diminuir (Tablet ou Celular / abaixo de 1024px) */
+@media (max-width: 1024px) {
+
+    /* 1. Esconde o menu horizontal do topo */
+    .desktop-nav {
+        display: none !important;
+    }
+    @media (max-width: 1024px) {
+
+    /* Altera apenas a parte dos cards para empilharem um embaixo do outro */
+    .desktop-options-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Força 1 única coluna (cards empilhados) */
+        gap: 15px !important;
+    }
+
+}
+
+    /* 2. Mostra o botão hambúrguer */
+    .hamburger-btn {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    .hamburger-btn span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #11240F;
+    }
+
+    /* 3. Ativa o comportamento do Menu Lateral (Drawer) */
+    .menu-checkbox:checked ~ .drawer {
+        transform: translateX(0) !important;
+    }
+
+    .menu-checkbox:checked ~ .overlay {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
+    .overlay {
+        display: block !important;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 200;
+    }
+
+    .drawer {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 250px;
+        background-color: #ffffff;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 300;
+        box-shadow: 10px 0 25px rgba(0, 0, 0, 0.2);
+    }
+}
+/* ==========================================================
+   ESTILIZAÇÃO COMPLETA DO MENU LATERAL (DRAWER) NO MOBILE
+   ========================================================== */
+
+@media (max-width: 1024px) {
+
+    /* Estrutura visual da gaveta lateral */
+    .drawer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 250px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 300;
+        box-shadow: 10px 0 25px -5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Topo do menu lateral (onde fica a logo interna e o botão de fechar) */
+    .drawer-header {
+        height: 70px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--corprinciapl2, #B8E5BA);
+    }
+
+    .drawer-title-area {
+        display: flex;
+        align-items: center;
+    }
+
+    .drawer-avatar img {
+        object-fit: contain;
+    }
+
+    .drawer-close-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--coramazonia5, #11240F);
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Links de navegação dentro do menu lateral */
+    .drawer-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        flex: 1;
+    }
+
+    .drawer-nav .nav-link {
+        color: var(--coramazonia4, #286121) !important;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: color 0.2s;
+    }
+
+    .drawer-nav .nav-link:hover {
+        color: var(--coramazonia3, #59BE4B) !important;
+    }
+
+    /* Rodapé interno do menu lateral (Sobre Nós) */
+    .drawer-footer {
+        padding: 20px;
+        color: var(--coramazonia5, #11240F);
+        border-top: 1px solid #eee;
+    }
+
+    .drawer-footer h4 a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+/* ==========================================================
+   ORGANIZAÇÃO LADO A LADO: MAPA + CARDS (DESKTOP)
+   ========================================================== */
+
+@media (min-width: 768px) {
+    
+    /* Contêiner principal que segura o mapa e a grade juntos */
+    .biomes-main-container,
+    .desktop-content-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 30px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    /* Mantém o mapa com tamanho fixo e elegante à esquerda */
+    .desktop-map-container {
+        flex-shrink: 0 !important;
+    }
+
+    /* Mantém a grade de biomas com 3 colunas exatas à direita */
+    .desktop-biomes-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 colunas lado a lado */
+        gap: 15px !important;
+    }
+}
+@media (max-width: 1024px) {
+
+    /* 1. Transforma o container que segura o mapa e os cards em coluna */
+    .biomes-main-container,
+    .desktop-content-wrapper {
+        display:flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 20px !important;
+       max-width: 100% !important;
+    }
+
+    /* 2. Mantém o mapa centralizado e com tamanho adequado para celular */
+    .desktop-map-container {
+        width: 90% !important;
+        max-width: 320px !important;
+        height: 350px !important;
+        margin: 0 auto !important;
+    }
+
+    /* 3. Força os cards a aparecerem e ficarem em 1 ou 2 colunas empilhados abaixo do mapa */
+    .desktop-biomes-grid {
+        display: grid !important;
+        grid-template-columns:repeat(2, 1fr) !important; /* 2 cards lado a lado embaixo */
+        gap: 15px !important;
+        width: 90% !important;
+        max-width: 450px !important;
+        margin: 0 auto !important;
+    }
+
+    .biome-card-desk {
+        width: 100% !important;
+        height: 120px !important;
+    }
+}

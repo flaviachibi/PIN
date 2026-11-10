@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Atlântica - Biomas do Brasil</title>
+    <!-- Aqui estamos chamando o arquivo CSS externo -->
+    <link rel="stylesheet" href="MataAtlantica.css">
+</head>
+
+
+<!--COLOCAR A ID PARA ANCORA O BOTÃO FIXO NAS PAGINAS LONGAS-->
+
+<body id="topo">
+
+    <!--botão fixo para voltar ao topo, USAR SOMENTE NAS PÁGINAS LONGAS-->
+    <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593</a>
+
+
+
+    <!-- Input Checkbox Oculto (Técnica do Checkbox Hack) -->
+    <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
+
+    <!-- Overlay Translúcido -->
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+    <!-- Header Fixo -->
+    <header class="main-header">
+        <section class="header-left">
+            <!-- Label que funciona como Botão Hambúrguer -->
+            <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </section>
+        <!-- Logo -->
+        <a href="Inicio.html" class="logo"><img src="Img/logo-superior.png" alt="logo biomas" class="header-logo"></a>
+    </header>
+
+    <!-- Sidebar Drawer (Menu Lateral) -->
+    <aside class="drawer">
+        <div class="drawer-header">
+            <div class="drawer-title-area">
+                <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png" alt="logo biomas" width="80"></div>
+            </div>
+
+            <!-- Botão de Fechar -->
+            <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+        </div>
+
+        <nav class="drawer-nav">
+            <a href="Inicio.html" class="nav-link">Início</a>
+            <a href="Preservacao.html" class="nav-link">Preservação</a>
+            <a href="Problemas.html" class="nav-link">Problemas</a>
+            <a href="Noticias.html" class="nav-link">Noticias</a>
+           <a href="Inicio.html" class="nav-link">Quiz <small>(Em Breve)</small></a>
+        </nav>
+
+        <footer class="drawer-footer">
+            <section>
+                <article>
+                    <h4><a href="Sobre.html" class="nav-link">Sobre Nós</h4></a>
+                </article>
+            </section>
+        </footer>
+    </aside>
+
+
+    <!-- FIM DO MENU LATERAL -->
+
+
+
+
+    <!-- Contentor Principal (Moldura Mobile) -->
+    <section class="page-container">
+
+        <!-- Banner de Destaque / Hero -->
+        <header class="hero-banner">
+            <img src="Img/mataatlanticabanner.webp" alt="Mata Fundo" class="hero-bg-img">
+            <span class="hero-overlay"></span>
+            <h1 class="hero-title">Mata Atlântica</h1>
+        </header>
+
+        <!-- Conteúdo Principal da Página -->
+        <main class="content-section">
+
+            <!-- Grelha dos 4 Botões (Fauna, Flora, Clima, Solo) -->
+            <nav class="options-grid">
+                <!-- Card Fauna -->
+                <a href="#linkFauna" class="option-card">
+                    <figure class="option-circle-img">
+                        <img src="Img/mataatlanticafauna.jpg" alt="Fauna">
+                    </figure>
+                    <span class="option-text">Fauna</span>
+                    <span class="option-badge"><img src="Img/patafauna.png" width="15" height="15"></span>
+                </a>
+
+                <!-- Card Flora -->
+                <a href="#linkFlora" class="option-card">
+                    <figure class="option-circle-img">
+                        <img src="Img/mataatlanticaflora.jpg" alt="Flora">
+                    </figure>
+                    <span class="option-text">Flora</span>
+                    <span class="option-badge"><img src="Img/florflora.png" width="20" height="20"></span>
+                </a>
+
+                <!-- Card Clima -->
+                <a href="#linkClima" class="option-card">
+                    <figure class="option-circle-img">
+                        <img src="Img/mataatlanticaclima.webp" alt="Clima">
+                    </figure>
+                    <span class="option-text">Clima</span>
+                    <span class="option-badge"><img src="Img/tempoclima.png" width="20" height="20"></span>
+                </a>
+
+                <!-- Card Solo -->
+                <a href="#linkSolo" class="option-card">
+                    <figure class="option-circle-img">
+                        <img src="Img/mataatlanticasolo.jpg" alt="Solo">
+                    </figure>
+                    <span class="option-text">Solo</span>
+                    <span class="option-badge"><img src="Img/terrasolo.png" width="20" height="20"></span>
+                </a>
+            </nav>
+
+            <!-- Card 1: Descrição do Bioma Amazônia -->
+            <article class="info-card">
+                <h2 class="info-card-title">
+                    <span class="card-icon"><img src="Img/folhinha.png" width="20" height="20"></span> Mata Atlântica
+                </h2>
+                <p class="info-card-text">
+                    A Mata Atlântica é um dos biomas mais diversos e ameaçados do mundo, restando apenas cerca de 12% da
+                    sua área original ao longo da costa brasileira. Com elevada taxa de espécies endémicas e
+                    ecossistemas variados, a sua conservação é essencial para a regulação ambiental e para o
+                    abastecimento de água de grande parte da população do país.
+
+                </p>
+                <a href="PagBiomas.html" class="explore-other-btn">
+                    <span class="card-icon"><img src="Img/folhinha2.png" width="20" height="20"></span> Explorar outro
+                    bioma &rarr;
+                </a>
+            </article>
+
+            <!-- Card 2: Curiosidades Rápidas -->
+            <article class="info-card curiosidades-card">
+                <h2 class="info-card-title">
+                    Curiosidades Rápidas
+                </h2>
+                <p class="info-card-text">
+                    Na Reserva Betary, trecho de 60 hectares da Mata Atlântica localizado na cidade de Iporanga, no
+                    estado de São Paulo, é possível ver exemplares de Mycena lucentipes, uma das seis novas espécies
+                    de cogumelos bioluminescentes encontradas no bioma.
+                    Durante o dia, esses fungos podem passar despercebidos, mas à noite eles emitem um brilho luminoso
+                    verde neon.
+
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/curiosidadeMataA.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </article>
+
+
+            <!-- FAUNA -->
+            <article class="info-card curiosidades-card">
+                <h2 id="linkFauna" class="info-card-title">
+                    Fauna
+                </h2>
+                <p class="info-card-text">
+                    Apesar da intensa fragmentação histórica causada pela urbanização, a Mata Atlântica preserva uma das
+                    maiores taxas de endemismo do planeta — ou seja, espécies que não existem em nenhum outro lugar da
+                    Terra. O maior símbolo dessa riqueza e dos esforços de conservação no Brasil é o mico-leão-dourado.
+                    Esse pequeno primata de pelagem alaranjada brilhante vive exclusivamente nos remanescentes
+                    florestais de baixada do estado do Rio de Janeiro, vivendo em grupos familiares no alto das árvores
+                    e alimentando-se de frutos, insetos e pequenos vertebrados.
+
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/faunaMataAtl.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </article>
+
+            <!-- FLORA -->
+            <article class="info-card curiosidades-card">
+                <h2 id="linkFlora" class="info-card-title">
+                    Flora
+                </h2>
+                <p class="info-card-text">
+                    A flora da Mata Atlântica é marcada por árvores de grande porte, palmeiras e uma imensa variedade de
+                    epífitas (como bromélias e orquídeas que vivem sobre os troncos). É o berço do pau-brasil, árvore
+                    nativa de madeira densa e avermelhada muito explorada no século XVI para tingir tecidos na Europa,
+                    cuja importância econômica batizou o nosso país. Além das plantas, a umidade constante e a sombra
+                    das matas preservadas — como no Vale do Ribeira, em Iporanga (SP) — criam o ambiente ideal para
+                    fungos raros como o Mycena lucentipes: pequenos cogumelos bioluminescentes que realizam reações
+                    químicas naturais para emitir uma fascinante luz verde neon durante a noite.
+
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/floraMataAtla.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </article>
+
+
+            <!-- CLIMA -->
+            <article class="info-card curiosidades-card">
+                <h2 id="linkClima" class="info-card-title">
+                    Clima
+                </h2>
+                <p class="info-card-text">
+                    Por se estender ao longo de grande parte da faixa litorânea brasileira, acompanhando cadeias
+                    montanhosas como a Serra do Mar e a Serra da Mantiqueira, a Mata Atlântica tem seu clima diretamente
+                    moldado pelo Oceano Atlântico. As massas de ar quentes e carregadas de umidade que vêm do mar
+                    avançam para o continente e encontram a barreira física das serras; ao subirem as montanhas, esse ar
+                    esfria e se condensa, provocando as chamadas chuvas orográficas (ou de relevo). Essa neblina e
+                    pluviosidade constantes mantêm a floresta sempre úmida, verdejante e rica em nascentes.
+
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/climaMataA.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+            </article>
+
+
+            <!-- SOLO -->
+            <article class="info-card curiosidades-card">
+                <h2 id="linkSolo" class="info-card-title">
+                    Solo
+                </h2>
+                <p class="info-card-text">
+                    Grande parte da Mata Atlântica original desenvolveu-se sobre terrenos acidentados, morros e encostas
+                    muito íngremes, onde o solo costuma ser raso e sujeito a chuvas torrenciais. Nesses locais, a
+                    cobertura florestal exerce um serviço ambiental insubstituível de engenharia natural: as copas das
+                    árvores amortecem o impacto direto das gotas de chuva no chão, a camada de folhas caídas retém a
+                    água e o emaranhado de raízes funciona como uma rede de contenção que "amarra" a terra às rochas.
+                    Quando a mata de encosta é removida, o solo perde essa proteção, favorecendo a erosão severa e os
+                    perigosos deslizamentos de terra.
+
+                </p>
+                <figure class="container-infografico">
+                    <img src="../Textos/Img para os textos/soloMataA.jpg"
+                        alt="Infográfico explicando o ciclo da serrapilheira e o paradoxo do solo na Amazônia"
+                        class="img-responsiva">
+                </figure>
+
+
+            </article>
+
+
+
+
+        </main>
+
+        <!-- Rodapé da Página -->
+        <footer class="main-footer">
+            <img src="Img/logo-superior.png" alt="Biomas do Brasil Logo" class="footer-logo">
+            <p class="footer-copyright">
+                © Biomas do Brasil.<br>Todos os direitos reservados.
+            </p>
+        </footer>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preservação - Biomas do Brasil</title>
+    <!-- Aqui estamos chamando o arquivo CSS externo -->
+    <link rel="stylesheet" href="problemaPreservacaoeSobreN.css">
+</head>
+
+
+
+<!--COLOCAR A ID PARA ANCORA O BOTÃO FIXO NAS PAGINAS LONGAS-->
+
+<body id="topo">
+
+    <!--botão fixo para voltar ao topo, USAR SOMENTE NAS PÁGINAS LONGAS-->
+    <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593</a>
+
+
+
+    <!-- Input Checkbox Oculto (Técnica do Checkbox Hack) -->
+    <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
+
+    <!-- Overlay Translúcido -->
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+    <!-- Header Fixo -->
+    <header class="main-header">
+        <section class="header-left">
+            <!-- Label que funciona como Botão Hambúrguer -->
+            <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </section>
+        <!-- Logo -->
+        <a href="Inicio.html" class="logo"><img src="Img/logo-superior.png" alt="logo biomas" class="header-logo"></a>
+    </header>
+
+    <!-- Sidebar Drawer (Menu Lateral) -->
+    <aside class="drawer">
+        <div class="drawer-header">
+            <div class="drawer-title-area">
+                <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png" alt="logo biomas" width="80"></div>
+            </div>
+
+            <!-- Botão de Fechar -->
+            <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+        </div>
+
+        <nav class="drawer-nav">
+            <a href="Inicio.html" class="nav-link">Início</a>
+            <a href="Preservacao.html" class="nav-link">Preservação</a>
+            <a href="Problemas.html" class="nav-link">Problemas</a>
+            <a href="Noticias.html" class="nav-link">Noticias</a>
+            <a href="Inicio.html" class="nav-link">Quiz <small>(Em Breve)</small></a>
+        </nav>
+
+        <footer class="drawer-footer">
+            <section>
+                <article>
+                    <h4><a href="Sobre.html" class="nav-link">Sobre Nós</h4></a>
+                </article>
+            </section>
+        </footer>
+    </aside>
+
+
+    <!-- FIM DO MENU LATERAL -->
+
+
+
+    <!-- Contentor Principal (Moldura Mobile) -->
+    <section class="page-container">
+
+        <!-- Banner de Destaque / Hero -->
+        <header class="hero-banner">
+            <img src="Img/fotoprincipal.png" alt="Amazônia Fundo" class="hero-bg-img">
+            <span class="hero-overlay"></span>
+            <h1 class="hero-title">Preservação</h1>
+        </header>
+
+        <!-- Conteúdo Principal da Página -->
+        <main class="content-section">
+
+
+            <!-- Card 1: Descrição do Bioma-->
+            <article class="info-card">
+                <h2 class="info-card-title">
+                    <span class="card-icon"><img src="Img/folhinha.png" width="20" height="20"></span> A Importância
+                    Vital e a Preservação de Nossos Biomas
+                </h2>
+                <p class="info-card-text">
+                    O Brasil abriga uma das maiores biodiversidades do planeta, distribuída em ecossistemas únicos que
+                    vão da densa floresta tropical às vastas planícies naturais. Conectar-se com a riqueza dos nossos
+                    biomas é o primeiro passo para compreender por que a sua conservação é um compromisso urgente para
+                    todos nós.
+
+
+                </p>
+
+            </article>
+
+            <!-- Card 2: Curiosidades Rápidas -->
+            <article class="info-card curiosidades-card">
+                <h2 class="info-card-title">
+                    Por que a preservação importa tanto?
+                </h2>
+                <p class="info-card-text">
+                    A preservação do meio ambiente não é apenas um conceito abstrato ou uma pauta de debates
+                    internacionais; ela é a base invisível que sustenta a nossa existência diária e o equilíbrio do
+                    país.
+
+
+                </p>
+
+
+                <article class="info-card curiosidades-card">
+                    <h2 id="linkFauna" class="info-card-title">
+                        1. O equilíbrio da vida: biodiversidade e interconexão
+                    </h2>
+                    <p class="info-card-text">
+
+                        Cada planta, animal, inseto e microrganismo desempenha um papel único e insubstituível na
+                        natureza. O desaparecimento de uma única espécie pode desencadear um efeito dominó que afeta
+                        todo o ecossistema. As florestas, os campos e as áreas úmidas abrigam polinizadores essenciais
+                        para a agricultura, predadores naturais que controlam pragas e plantas que servem de base para a
+                        medicina e a ciência. Preservar a biodiversidade é garantir o funcionamento desses sistemas que,
+                        silenciosamente, oferecem recursos vitais para todos os seres vivos.
+                    </p>
+
+                </article>
+
+
+                <article class="info-card curiosidades-card">
+                    <h2 id="linkFlora" class="info-card-title">
+                        2. O clima em nossas mãos: a regulação ambiental
+                    </h2>
+                    <p class="info-card-text">
+                        As nossas florestas e áreas verdes atuam como verdadeiros sistemas de regulação climática e
+                        hídrica para o continente. Elas ajudam a controlar a temperatura global, absorvendo massas de
+                        carbono, e funcionam como o "ar-condicionado natural" da Terra. Além disso, a vegetação nativa
+                        desempenha um papel crucial no ciclo da água. Fenômenos como os "rios voadores" da Amazônia
+                        transportam umidade para outras regiões do país, alimentando as chuvas que sustentam a
+                        agricultura, abastecem as cidades e geram energia por meio das hidrelétricas. Sem esses
+                        ecossistemas preservados, o equilíbrio das estações e a segurança hídrica ficam gravemente
+                        ameaçados.
+
+
+                    </p>
+
+                </article>
+
+
+                <article class="info-card curiosidades-card">
+                    <h2 id="linkClima" class="info-card-title">
+                        3. O futuro depende de hoje: a nossa missão diária
+                    </h2>
+                    <p class="info-card-text">
+
+                        Proteger o meio ambiente não é uma tarefa exclusiva de cientistas, ONGs ou governos; é uma
+                        missão diária que se constrói a partir de pequenas escolhas individuais e comunitárias. Cada
+                        decisão de consumo consciente, cada redução no desperdício de recursos naturais e todo apoio a
+                        iniciativas de sustentabilidade somam-se a um esforço coletivo. O amanhã das próximas gerações
+                        está diretamente ligado ao nível de cuidado e responsabilidade que exercemos no presente.
+
+                    </p>
+                </article>
+
+
+                <article class="info-card">
+                    <h2 class="info-card-title">
+                        <span class="card-icon"><img src="Img/folhinha.png" width="20" height="20"></span> O segredo
+                        está em suas mãos 
+                    </h2>
+                    <p class="info-card-text">
+                     Cuidar da natureza é o único "superpoder" real que temos para garantir que as
+                        próximas gerações também possam explorar, aprender e se encantar com as riquezas e as belezas do
+                        Brasil. A transformação começa na conscientização e se consolida na prática cotidiana de
+                        valorizar, respeitar e proteger a terra. Vamos juntos nessa missão? Preservar os nossos biomas é
+                        salvaguardar o futuro da vida. Conhecer para preservar é a nossa maior força!
+
+
+                    </p>
+
+                </article>
+
+        </main>
+
+        <!-- Rodapé da Página -->
+        <footer class="main-footer">
+            <img src="Img/logo-superior.png" alt="Biomas do Brasil Logo" class="footer-logo">
+            <p class="footer-copyright">
+                © Biomas do Brasil.<br>Todos os direitos reservados.
+            </p>
+        </footer>
+
+    </section>
+
+</body>
+
+</html>
