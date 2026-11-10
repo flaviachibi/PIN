@@ -91,7 +91,7 @@ html {
     max-width: 1200px;
     height: auto;
     min-height: 80vh;
-    background-color: rgba(210, 232, 197, 0.233); /* Verde translúcido */
+    background:linear-gradient(155deg, var(--corprincipal4)100%) var(--corprincipal2 50%); /* Verde translúcido */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

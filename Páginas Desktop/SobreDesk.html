@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Biomas do Brasil</title>
+    <link rel="stylesheet" href="SobreDeskCSS.css">
+</head>
+
+<body id="topo">
+    <!-- Botão Fixo para Voltar ao Topo -->
+    <a href="#topo" class="btn-topo" title="Voltar ao topo">&#8593</a>
+
+    <!-- Checkbox e Overlay para o Menu Lateral funcionar no redimensionamento -->
+    <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+    <!-- Menu Lateral (Drawer) oculto no PC, aparece no mobile -->
+    <aside class="drawer">
+        <div class="drawer-header">
+            <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png.png" alt="logo biomas" width="80"></div>
+            <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+        </div>
+        <nav class="drawer-nav">
+            <a href="4desktop.html" class="nav-link">Início</a>
+            <a href="biomadesktop.html" class="nav-link">Biomas</a>
+            <a href="ProblemasDesktop.html" class="nav-link">Problemas</a>
+            <a href="PreservacaoDesk.html" class="nav-link">Preservação</a>
+            <a href="Sobre.html" class="nav-link active">Sobre</a>
+        </nav>
+    </aside>
+
+    <div class="desktop-container">
+
+        <!-- Cabeçalho Atualizado com o Botão Hambúrguer -->
+        <header class="desktop-header">
+            <!-- Botão Hambúrguer (Fica escondido no PC, aparece quando a tela diminui) -->
+            <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <img src="Img/logo-superior.png.png" alt="Biomas do Brasil Logo" class="desktop-logo">
+
+            <nav class="desktop-nav">
+                <a href="4desktop.html" class="nav-link">Início</a>
+                <a href="biomadesktop.html" class="nav-link">Biomas</a>
+                <a href="ProblemasDesktop.html" class="nav-link">Problemas</a>
+                <a href="PreservacaoDesk.html" class="nav-link">Preservação</a>
+                <a href="Sobre.html" class="nav-link active">Sobre</a>
+            </nav>
+        </header>
+
+        <!-- Banner de Destaque / Hero -->
+        <header class="hero-banner">
+            <img src="Img/fotoprincipal.png" alt="principal Fundo" class="hero-bg-img">
+            <span class="hero-overlay"></span>
+            <h1 class="hero-title">Sobre Nós</h1>
+        </header>
+
+        <!-- Conteúdo Principal da Página -->
+        <main class="content-section">
+
+            <!-- Card Principal: Quem Somos -->
+            <article class="info-card">
+                <h2 class="info-card-title">
+                    <span class="card-icon"><img src="Img/folhinha.png" width="20" height="20" alt="Ícone"></span> Quem somos
+                </h2>
+                <p class="info-card-text">
+                    Somos estudantes do curso de <strong>Informática para Internet do IFSP — Campus Caraguatatuba</strong>, desenvolvendo este projeto como parte do nosso <strong>Projeto Integrador (PIN)</strong>. O <em>Biomas do Brasil</em> é uma plataforma web criada para apresentar informações sobre os ecossistemas brasileiros de forma acessível, interativa e responsiva.
+                </p>
+            </article>
+
+            <!-- Seção de Integrantes com Círculo para Foto -->
+
+            <!-- Integrante 1 -->
+            <article class="info-card curiosidades-card">
+                <div class="integrante-header">
+                    <div class="integrante-foto-circulo">
+                        <img src="Img/dara-foto.jpg" alt="Foto Vlandara">
+                    </div>
+                    <h2 class="info-card-title member-title">Vlandara Camargo</h2>
+                </div>
+                <p class="info-card-text">
+                    <strong>29 anos</strong> | Estudante de Informática para Internet no IFSP Caraguatatuba. Atuante no desenvolvimento do front-end e estruturação das páginas do projeto integrador.
+                </p>
+            </article>
+
+            <!-- Integrante 2 -->
+            <article class="info-card curiosidades-card">
+                <div class="integrante-header">
+                    <div class="integrante-foto-circulo">
+                        <img src="Img/letra-julia.jpg" alt="Foto Julia">
+                    </div>
+                    <h2 class="info-card-title member-title">Julia Dominique</h2>
+                </div>
+                <p class="info-card-text">
+                    <strong>25 anos</strong> | Estudante de Informática para Internet no IFSP Caraguatatuba. Colaboradora na concepção e implementação do layout responsivo do site.
+                </p>
+            </article>
+
+            <!-- Integrante 3 -->
+            <article class="info-card curiosidades-card">
+                <div class="integrante-header">
+                    <div class="integrante-foto-circulo">
+                        <img src="Img/letra-laura.jpg" alt="Foto Laura">
+                    </div>
+                    <h2 class="info-card-title member-title">Laura Souto</h2>
+                </div>
+                <p class="info-card-text">
+                    <strong>19 anos</strong> | Estudante de Informática para Internet no IFSP Caraguatatuba. Participante da equipe de desenvolvimento e estruturação do código HTML e CSS.
+                </p>
+            </article>
+
+            <!-- Integrante 4 -->
+            <article class="info-card curiosidades-card">
+                <div class="integrante-header">
+                    <div class="integrante-foto-circulo">
+                        <img src="Img/maria-foto.jpg" alt="Foto Maria">
+                    </div>
+                    <h2 class="info-card-title member-title">Maria Cecilia</h2>
+                </div>
+                <p class="info-card-text">
+                    <strong>16 anos</strong> | Estudante de Informática para Internet no IFSP Caraguatatuba. Integrante do grupo voltado à criação e refinamento das telas do projeto.
+                </p>
+            </article>
+
+            <!-- Integrante 5 -->
+            <article class="info-card curiosidades-card">
+                <div class="integrante-header">
+                    <div class="integrante-foto-circulo">
+                        <img src="Img/foto-flavia.png" alt="Foto Flavia">
+                    </div>
+                    <h2 class="info-card-title member-title">Flávia Bezerro</h2>
+                </div>
+                <p class="info-card-text">
+                    <strong>40 anos</strong> | Estudante de Informática para Internet no IFSP Caraguatatuba. Atua na organização geral, versionamento do código via Git/GitHub e desenvolvimento das telas do sistema.
+                </p>
+            </article>
+
+        </main>
+
+        <!-- Rodapé da Página -->
+        <footer class="main-footer">
+            <img src="Img/logo-superior.png.png" alt="Biomas do Brasil Logo" class="footer-logo" width="120">
+            <p class="footer-copyright">
+                © Biomas do Brasil.<br>Todos os direitos reservados.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

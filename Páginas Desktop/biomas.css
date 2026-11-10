@@ -1,3 +1,49 @@
+
+/* variável das cores */
+:root {
+    --corprincipal1: #F4FAF4;
+    --corprinciapl2: #B8E5BA;
+    --corprincipal3: #45C44B;
+    --corprincipal4: #217D26;
+    --corprincipal5: #124814;
+
+    --coramazonia1: #F5FAF5;
+    --coramazonia2: #C0E2BB;
+    --coramazonia3: #59BE4B;
+    --coramazonia4: #286121;
+    --coramazonia5: #11240F;
+
+    --cormataatlantica1: #F8FAF5;
+    --cormataatlantica2: #D4E1BC;
+    --cormataatlantica3: #94BB4E;
+    --cormataatlantica4: #3F521E;
+    --cormataatlantica5: #1C240F;
+
+    --corcaatinga1: #FCFAF3;
+    --corcaatinga2: #EBDBA0;
+    --corcaatinga3: #CAAD3F;
+    --corcaatinga4: #756629;
+    --corcaatinga5: #232010;
+
+    --corcerrado1: #FCF8F3;
+    --corcerrado2: #F0D5AD;
+    --corcerrado3: #E99721;
+    --corcerrado4: #A46609;
+    --corcerrado5: #2D1E06;
+
+    --corpantanal1: #F9F5FA;
+    --corpantanal2: #DABDE1;
+    --corpantanal3: #9344A4;
+    --corpantanal4: #603569;
+    --corpantanal5: #1E1320;
+
+    --corpampas1: #FBF4F5;
+    --corpampas2: #EEAFBC;
+    --corpampas3: #E84D6C;
+    --corpampas4: #801E31;
+    --corpampas5: #250E12;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -48,7 +94,7 @@ body {
     align-items: center;
     padding: 15px 40px;
     background-color: #fff;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #fff;
     z-index: 10;
 }
 
@@ -79,7 +125,7 @@ body {
 }
 
 .nav-link::after {
-    content: '';
+    content:'';
     position: absolute;
     width: 0;
     height: 2px;
