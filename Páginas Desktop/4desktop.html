@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,39 @@
 </head>
 <body>
 
+    <!-- Checkbox e Overlay para o Menu Lateral (Necessário para a responsividade funcionar) -->
+    <input type="checkbox" id="drawer-toggle" class="menu-checkbox">
+    <label for="drawer-toggle" class="overlay" aria-label="Fechar menu"></label>
+
+    <!-- Menu Lateral (Drawer) para telas menores -->
+    <aside class="drawer">
+        <div class="drawer-header">
+            <div class="drawer-avatar"><img src="Img/LOGOdentroMenu.png.png" alt="logo biomas" width="80"></div>
+            <label for="drawer-toggle" class="drawer-close-btn" aria-label="Fechar menu">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+        </div>
+        <nav class="drawer-nav">
+            <a href="4desktop.html" class="nav-link">Início</a>
+            <a href="biomadesktop.html" class="nav-link">Biomas</a>
+            <a href="ProblemasDesktop.html" class="nav-link">Problemas</a>
+            <a href="PreservacaoDesk.html" class="nav-link">Preservação</a>
+            <a href="SobreDesk.html" class="nav-link">Sobre</a>
+        </nav>
+    </aside>
+
     <div class="desktop-container">
         
-        <!-- Cabeçalho Desktop -->
+        <!-- Cabeçalho Desktop (Com o botão hambúrguer adicionado para acionar o menu lateral) -->
         <header class="desktop-header">
+
+            <label for="drawer-toggle" class="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
             <img src="Img/logo-superior.png.png" alt="Biomas do Brasil Logo" class="desktop-logo">
             
@@ -31,17 +60,15 @@
                 <p class="hero-description">CONHECER PARA PRESERVAR</p>
             </div>
 
-            <!-- Botões centrais com mudança de cor no hover (verde para cinza) -->
+            <!-- Botões centrais (Agora ambos são links funcionais, limpos e sem tags soltas) -->
             <div class="hero-buttons-desktop">
-               <a href="biomadesktop.html" class="desktop-btn btn-green-to-gray">
-        <img src="Img/folhinha.png" alt="Ícone" class="btn-icon"> Explorar Biomas
-    </a>
+                <a href="biomadesktop.html" class="desktop-btn btn-green-to-gray">
+                    <img src="Img/folhinha.png" alt="Ícone" class="btn-icon"> Explorar Biomas
+                </a>
                 
-                    
-                </button>
-                <button class="desktop-btn btn-light-gray">
+                <a href="ProblemasDesktop.html" class="desktop-btn btn-light-gray">
                     <img src="Img/alerta1.png" alt="Ícone" class="btn-icon"> Problemas Ambientais
-                </button>
+                </a>
             </div>
         </main>
 
