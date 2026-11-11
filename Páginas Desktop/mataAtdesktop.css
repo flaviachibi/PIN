@@ -15,7 +15,7 @@
 }
 
 body {
-     background: linear-gradient(150deg,var(--cormataatlantica3) 50%, var(--cormataatlantica4) 100%);
+     background: linear-gradient(180deg,var(--cormataatlantica3) 20%, var(--cormataatlantica4) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@ body {
             right: 25px;
             width: 50px;
             height: 50px;
-            background-color: var(--cormataatlantica4);
+            background-color: var(--cormataatlantica2);
             border-radius: 50%;
             font-size: 24px;
             font-weight: bold;
@@ -102,7 +102,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 /* Efeito de hover sublinhado no menu */
 .nav-link {
     text-decoration: none;
-    color: #222;
+    color: var(--cormataatlantica4);
     font-size: 16px;
     font-weight: 500;
     position: relative;
@@ -220,7 +220,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 }
 
 .desktop-option-text {
-    color: #111;
+    color: var(--cormataatlantica5);
     font-size: 16px;
     font-weight: bold;
     flex-grow: 1;
@@ -280,7 +280,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
         .desktop-explore-btn {
             display: inline-flex;
             align-items: center;
-            background-color: #1b4d3e;
+            background-color: var(--cormataatlantica4);
             color: #fff;
             padding: 8px 16px;
             border-radius: 20px;
