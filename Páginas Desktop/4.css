@@ -129,7 +129,7 @@ body {
 }
 
 .nav-link:hover::after {
-    width: 100%; /* Sublinha ao passar o rato */
+    width: 100%; /* Sublinha ao passar o mouse */
 }
 
 /* --- Seção Hero --- */
