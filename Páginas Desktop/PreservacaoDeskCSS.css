@@ -242,8 +242,8 @@ body {
     font-size: 32px;
     margin-bottom: 15px;
     background: #d8f3dc;
-    width: 55px;
-    height: 55px;
+    width: 100%;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -400,4 +400,13 @@ body {
     .preservacao-content-wrapper {
         padding: 20px 15px;
     }
+}
+
+/* Faz a imagem ocupar todo o espaço do card e se manter responsiva */
+.preservation-card .card-icon-area img.card-photo {
+    width: 100%;
+    height: 180px;        /* Altura padrão para todas as fotos dos cards ficarem iguais */
+    object-fit: cover;    /* Corta o excesso de forma inteligente para a foto não esticar */
+    border-radius: 8px;   /* Arredonda levemente as bordas da foto (opcional) */
+    display: block;
 }
