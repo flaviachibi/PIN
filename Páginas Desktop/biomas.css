@@ -1,4 +1,3 @@
-
 /* variável das cores */
 :root {
     --corprincipal1: #F4FAF4;
@@ -52,10 +51,10 @@
 }
 
 body {
-    background-color: #112920;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--corprincipal5);
+
+
+    overflow-x: hidden;
     min-height: 100vh;
     width: 100%;
     margin: 0;
@@ -75,20 +74,20 @@ body {
 /* Moldura principal de desktop */
 .desktop-container {
     width: 100%;
-    max-width: 1200px;
-    height: auto;
-    min-height: 80vh;
+    justify-content: space-between;
+    height: 100vh;
+    min-height: 100vh;
     background-color: #112920;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    overflow: hidden;
+
+position: relative;
+
 }
 
 /* --- Cabeçalho Desktop --- */
 .desktop-header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,13 +98,13 @@ body {
 }
 
 .desktop-logo {
-  height: 40px;
+    
     object-fit: contain;
     width: 170px;
     height: auto;
 }
 
-    .desktop-nav {
+.desktop-nav {
     display: flex;
     gap: 55px;
     align-items: center;
@@ -125,7 +124,7 @@ body {
 }
 
 .nav-link::after {
-    content:'';
+    content: '';
     position: absolute;
     width: 0;
     height: 2px;
@@ -135,35 +134,44 @@ body {
     transition: width 0.3s ease-in-out;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: #004d40;
     font-weight: bold;
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
 /* --- Seção de Exploração --- */
 .explore-desktop-section {
     flex: 1;
-    padding: 25px 40px;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    
+    max-width: 1200px;
 }
 
 .explore-desktop-title {
     color: #fff;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-.explore-content-wrapper {
+.explore-content-wrapper, .biomes-main-container, .desktop-content-wrapper {
     display: flex;
+    flex-direction: row;
     gap: 30px;
     align-items: center;
-    height: 100%;
+    justify-content: space-between;
+    width: 100%;
 }
 
 /* --- Mapa do Brasil Desktop --- */
@@ -176,7 +184,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     flex-shrink: 0;
 }
 
@@ -200,7 +208,7 @@ body {
     overflow: hidden;
     height: 200px;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: block;
 }
 
@@ -237,18 +245,35 @@ body {
     pointer-events: none;
 }
 
-.biome-amazonia { background-color: var(--amazonia-bg); }
-.biome-caatinga { background-color: var(--caatinga-bg); }
-.biome-pampa { background-color: var(--pampa-bg); }
-.biome-cerrado { background-color: var(--cerrado-bg); }
-.biome-pantanal { background-color: var(--pantanal-bg); }
-.biome-mata { background-color: var(--mata-bg); }
+.biome-amazonia {
+    background-color: var(--amazonia-bg);
+}
+
+.biome-caatinga {
+    background-color: var(--caatinga-bg);
+}
+
+.biome-pampa {
+    background-color: var(--pampa-bg);
+}
+
+.biome-cerrado {
+    background-color: var(--cerrado-bg);
+}
+
+.biome-pantanal {
+    background-color: var(--pantanal-bg);
+}
+
+.biome-mata {
+    background-color: var(--mata-bg);
+}
 
 .biome-name {
     color: #fff;
     font-size: 15px;
     font-weight: bold;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .biome-arrow {
@@ -265,16 +290,33 @@ body {
     margin-right: -4px;
 }
 
-.biome-amazonia .biome-dot { background-color: #2e7d32; }
-.biome-caatinga .biome-dot { background-color: #fbc02d; }
-.biome-pampa .biome-dot { background-color: #f48fb1; }
-.biome-cerrado .biome-dot { background-color: #fb8c00; }
-.biome-pantanal .biome-dot { background-color: #ba68c8; }
-.biome-mata .biome-dot { background-color: #81c784; }
+.biome-amazonia .biome-dot {
+    background-color: #2e7d32;
+}
+
+.biome-caatinga .biome-dot {
+    background-color: #fbc02d;
+}
+
+.biome-pampa .biome-dot {
+    background-color: #f48fb1;
+}
+
+.biome-cerrado .biome-dot {
+    background-color: #fb8c00;
+}
+
+.biome-pantanal .biome-dot {
+    background-color: #ba68c8;
+}
+
+.biome-mata .biome-dot {
+    background-color: #81c784;
+}
 
 /* --- Rodapé Desktop --- */
 .desktop-footer {
-     background-color: #fff;
+    background-color: #fff;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -293,10 +335,11 @@ body {
     font-size: 11px;
     color: #757575;
     text-align: center;
-    line-height: 1.3;}
+    line-height: 1.3;
+}
 
 
-  /* ==========================================================
+/* ==========================================================
    REGRAS DE RESPONSIVIDADE PARA O HEADER E MENU LATERAL
    ========================================================== */
 
@@ -315,16 +358,18 @@ body {
     .desktop-nav {
         display: none !important;
     }
+
     @media (max-width: 1024px) {
 
-    /* Altera apenas a parte dos cards para empilharem um embaixo do outro */
-    .desktop-options-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important; /* Força 1 única coluna (cards empilhados) */
-        gap: 15px !important;
-    }
+        /* Altera apenas a parte dos cards para empilharem um embaixo do outro */
+        .desktop-options-grid {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            /* Força 1 única coluna (cards empilhados) */
+            gap: 15px !important;
+        }
 
-}
+    }
 
     /* 2. Mostra o botão hambúrguer */
     .hamburger-btn {
@@ -346,11 +391,11 @@ body {
     }
 
     /* 3. Ativa o comportamento do Menu Lateral (Drawer) */
-    .menu-checkbox:checked ~ .drawer {
+    .menu-checkbox:checked~.drawer {
         transform: translateX(0) !important;
     }
 
-    .menu-checkbox:checked ~ .overlay {
+    .menu-checkbox:checked~.overlay {
         opacity: 1 !important;
         pointer-events: auto !important;
     }
@@ -381,6 +426,7 @@ body {
         box-shadow: 10px 0 25px rgba(0, 0, 0, 0.2);
     }
 }
+
 /* ==========================================================
    ESTILIZAÇÃO COMPLETA DO MENU LATERAL (DRAWER) NO MOBILE
    ========================================================== */
@@ -475,7 +521,7 @@ body {
    ========================================================== */
 
 @media (min-width: 768px) {
-    
+
     /* Contêiner principal que segura o mapa e a grade juntos */
     .biomes-main-container,
     .desktop-content-wrapper {
@@ -495,21 +541,23 @@ body {
     /* Mantém a grade de biomas com 3 colunas exatas à direita */
     .desktop-biomes-grid {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; /* 3 colunas lado a lado */
+        grid-template-columns: repeat(3, 1fr) !important;
+        /* 3 colunas lado a lado */
         gap: 15px !important;
     }
 }
+
 @media (max-width: 1024px) {
 
     /* 1. Transforma o container que segura o mapa e os cards em coluna */
     .biomes-main-container,
     .desktop-content-wrapper {
-        display:flex !important;
+        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         width: 100% !important;
         gap: 20px !important;
-       max-width: 100% !important;
+        max-width: 100% !important;
     }
 
     /* 2. Mantém o mapa centralizado e com tamanho adequado para celular */
@@ -523,7 +571,8 @@ body {
     /* 3. Força os cards a aparecerem e ficarem em 1 ou 2 colunas empilhados abaixo do mapa */
     .desktop-biomes-grid {
         display: grid !important;
-        grid-template-columns:repeat(2, 1fr) !important; /* 2 cards lado a lado embaixo */
+        grid-template-columns: repeat(2, 1fr) !important;
+        /* 2 cards lado a lado embaixo */
         gap: 15px !important;
         width: 90% !important;
         max-width: 450px !important;
