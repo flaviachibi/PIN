@@ -139,6 +139,8 @@ body {
     gap: 85px;
     align-items:center;
     justify-content: space-between;
+    flex:1;
+    padding: 0px;
     
 }
 
