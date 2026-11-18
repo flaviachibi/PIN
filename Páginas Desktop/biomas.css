@@ -110,8 +110,7 @@ body {
     background-color: #112920;
     display: flex;
     flex-direction: column;
-
-position: relative;
+    position: relative;
 
 }
 
@@ -181,7 +180,8 @@ position: relative;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     margin: 0 auto;
     max-width: 1200px;
