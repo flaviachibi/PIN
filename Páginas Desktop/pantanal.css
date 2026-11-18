@@ -16,8 +16,9 @@
 body {
     background: linear-gradient(135deg, var(--corpantanal2) 0%, var(--corpantanal4) 100%);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
     min-height: 100vh;
 }
 /*botão fixo para voltar ao topo*/
@@ -55,23 +56,19 @@ body {
 
         /* aqui TERMINA o botão fixo de voltar ao topo da pagina, 
 USAR SOMENTE NAS PÁGINAS LONGAS*/
-/* Moldura principal de desktop */
+/* Moldura principal: agora ocupa a tela toda (cabeçalho e rodapé de ponta a ponta) */
 .desktop-container {
      width: 100%;
-    max-width: 1200px;
     height: auto;
-    min-height: 80vh;
-    background-color: #DABDE1;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    overflow: hidden;
     text-decoration: none;
 }
 
-/* --- Cabeçalho Desktop --- */
+/* --- Cabeçalho Desktop (largura total) --- */
 .desktop-header {
      display: flex;
     justify-content: space-between;
@@ -129,14 +126,18 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
     width: 100%;
 }
 
-/* --- Seção de Conteúdo --- */
+/* --- Seção de Conteúdo: mantém o painel centralizado de 1200px (mesmo visual de antes) --- */
 .desktop-content-section {
     flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #DABDE1;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     padding: 20px 40px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    overflow-y: auto;
 }
 
 /* --- Banner Superior --- */
@@ -315,8 +316,9 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
         }
 
 
-/* --- Rodapé Desktop --- */
+/* --- Rodapé Desktop (largura total) --- */
 .desktop-footer {
+     width: 100%;
      background-color: #fff;
     padding: 20px;
     display: flex;
@@ -475,10 +477,37 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
         border-top: 1px solid #eee;
     }
 
+    /* --- CONTEÚDO: tudo empilha para baixo e a página rola normalmente --- */
+    .desktop-container {
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    .desktop-content-section {
+        flex: unset;
+        height: auto;
+        padding: 20px 15px;
+    }
+
     /* --- CARDS EMPILHADOS --- */
     .desktop-options-grid {
         display: grid !important;
         grid-template-columns: 1fr !important; /* Força 1 coluna para empilhar */
         gap: 15px !important;
+    }
+
+    .desktop-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Celulares: título do banner um pouco menor */
+@media (max-width: 600px) {
+    .desktop-hero-banner {
+        padding: 0 20px;
+    }
+
+    .desktop-hero-title {
+        font-size: 24px;
     }
 }
