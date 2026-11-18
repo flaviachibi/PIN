@@ -11,8 +11,8 @@
 body {
     background:linear-gradient(145deg, var(--corprincipal5)50%, var(--coramazonia3))100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     min-height: 100vh;
     width: 100%;
 }
@@ -91,20 +91,17 @@ transform: translateY(-3px);
 }
 
 /* ==========================================================
-   2. CONTAINER PRINCIPAL (MOLDURA DESKTOP)
+   2. CONTAINER PRINCIPAL (agora ocupa a tela toda)
    ========================================================== */
 .desktop-container,
 .page-container {
     width: 100%;
-    max-width: 1200px;
     min-height: 100vh;
     background-color: var(--corprincipal4);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    overflow-x: hidden;
     padding-top: 75px; /* Espaço para o header fixo */
 }
 
@@ -114,15 +111,13 @@ transform: translateY(-3px);
 .desktop-header {
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 100%;
-    max-width: 1200px;
     height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px;
+    padding: 15px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #eee;
     z-index: 1000;
@@ -130,16 +125,18 @@ transform: translateY(-3px);
 }
 
 .desktop-logo {
-    width: 150px;
+    width: 170px;
     height: auto;
     object-fit: contain;
 }
 
+/* Menu centralizado, igual às outras páginas */
 .desktop-nav {
     display: flex;
-    gap: 45px;
+    gap: 55px;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 /* Efeito de hover sublinhado no menu desktop */
@@ -397,7 +394,7 @@ transform: translateY(-3px);
 }
 
 /* ==========================================================
-   6. RODAPÉ
+   6. RODAPÉ (largura total)
    ========================================================== */
 .main-footer {
     width: 100%;
@@ -431,13 +428,11 @@ transform: translateY(-3px);
 @media (max-width: 1024px) {
     .desktop-container,
     .page-container {
-        max-width: 100%;
         min-height: 100vh;
-        box-shadow: none;
+        padding-top: 70px;
     }
 
     .desktop-header {
-        max-width: 100%;
         padding: 0 20px;
         height: 70px;
     }
