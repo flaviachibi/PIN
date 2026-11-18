@@ -120,6 +120,9 @@ body {
     background-color: #fff;
     border-bottom: 1px solid #fff;
     z-index: 10;
+    position: fixed;
+     top: 0;
+    left: 0;
 }
 
 .desktop-logo {
