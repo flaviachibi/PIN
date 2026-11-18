@@ -1,5 +1,5 @@
 :root {
-   --corprincipal1: #F4FAF4;
+    --corprincipal1: #F4FAF4;
     --corprinciapl2: #B8E5BA;
     --corprincipal3: #45C44B;
     --corprincipal4: #217D26;
@@ -49,19 +49,21 @@
     font-family: Arial, sans-serif;
 }
 
+/* O body agora empilha tudo em coluna e ocupa a largura toda */
 body {
     margin: 0;
     min-height: 100vh;
-    background:linear-gradient(180deg, var(--coramazonia3)35%, var(--coramazonia5)100%);
+    width: 100%;
+    background: linear-gradient(180deg, var(--coramazonia3) 35%, var(--coramazonia5) 100%);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
 }
 
- /* isso ativa a rolagem suave*/
-        html {
-            scroll-behavior: smooth;
-        }
+/* isso ativa a rolagem suave*/
+html {
+    scroll-behavior: smooth;
+}
 
 .btn-topo {
     position: fixed;
@@ -86,88 +88,87 @@ body {
     transform: translateY(-3px);
 }
 
-/* Moldura Principal (Transparente para mostrar o fundo) */
+/* Moldura Principal: agora ocupa a tela toda (cabeçalho e rodapé de ponta a ponta) */
 .desktop-container {
     width: 100%;
-    max-width: 1200px;
     height: auto;
-    min-height: 80vh;
-    background:linear-gradient(155deg, var(--corprincipal4)100%) var(--corprincipal2 50%); /* Verde translúcido */
+    min-height: 100vh;
+    background: transparent;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
 }
 
-/* --- Cabeçalho Desktop --- */
-        .desktop-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 40px;
-            background-color: #fff;
-            border-bottom: 1px solid #eee;
-            z-index: 10;
-        }
+/* --- Cabeçalho Desktop (largura total, igual à página de biomas) --- */
+.desktop-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 10;
+}
 
-        .desktop-logo {
-            height: 40px;
-            object-fit: contain;
-            width: 150px;
-            height: auto;
-        }
+.desktop-logo {
+    object-fit: contain;
+    width: 170px;
+    height: auto;
+}
 
-        .desktop-nav {
-            display: flex;
-            gap: 55px;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-        }
+.desktop-nav {
+    display: flex;
+    gap: 55px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
 
-        /* Efeito de hover sublinhado no menu */
-        .nav-link {
-            text-decoration: none;
-            color: #222;
-            font-size: 16px;
-            font-weight: 500;
-            position: relative;
-            padding-bottom: 5px;
-            transition: color 0.3s;
-        }
+/* Efeito de hover sublinhado no menu */
+.nav-link {
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #004d40;
-            transition: width 0.3s ease-in-out;
-        }
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #004d40;
+    transition: width 0.3s ease-in-out;
+}
 
-        .nav-link:hover,
-        .nav-link.active {
-            color: #004d40;
-            font-weight: bold;
-        }
+.nav-link:hover,
+.nav-link.active {
+    color: #004d40;
+    font-weight: bold;
+}
 
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 100%;
-        }
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
 
-/* Seção de Conteúdo */
+/* Seção de Conteúdo: centralizada, com largura máxima, sem rolagem interna */
 .desktop-content-section {
     flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 25px 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    overflow-y: auto;
 }
 
 .problemas-titulo-container {
@@ -186,13 +187,10 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    display: flexbox;
 }
 
 .desktop-option-card {
-   
     border-radius: 5px;
-   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,8 +228,7 @@ body {
 .termometro-secao {
     margin-top: 25px 0px 25px 0px ;
     text-align: center;
-    padding:20px 0px 20px 0px;
-    
+    padding: 20px 0px 20px 0px;
 }
 
 .termometro-titulo {
@@ -252,7 +249,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px 20px;
-    align-items:stretch;
+    align-items: stretch;
 }
 
 /* Lado Esquerdo: Barras */
@@ -277,7 +274,7 @@ body {
 }
 
 /* Cores específicas de fundo de cada barra estilo a imagem */
-.barra-item.cerrado {background-color: var(--corcerrado2) ; }
+.barra-item.cerrado { background-color: var(--corcerrado2); }
 .barra-item.amazonia { background-color: var(--coramazonia3); }
 .barra-item.caatinga { background-color: var(--corcaatinga3); }
 .barra-item.pantanal { background-color: var(--corpantanal3); }
@@ -344,17 +341,17 @@ body {
 .mata-desc { background-color: #84A864; color: #000000; }
 .pampa-desc { background-color: #C07979; color: #000000; }
 
-/* Rodapé */
+/* Rodapé (largura total, igual à página de biomas) */
 .desktop-footer {
+    width: 100%;
     background-color: #fff;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    border-top: 5px  #eee;
+    border-top: 1px solid #eee;
     z-index: 10;
-    
 }
 
 .footer-logo {
@@ -388,16 +385,6 @@ body {
     .desktop-nav {
         display: none !important;
     }
-    @media (max-width: 1024px) {
-
-    /* Altera apenas a parte dos cards para empilharem um embaixo do outro */
-    .desktop-options-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important; /* Força 1 única coluna (cards empilhados) */
-        gap: 15px !important;
-    }
-
-}
 
     /* 2. Mostra o botão hambúrguer */
     .hamburger-btn {
@@ -449,34 +436,11 @@ body {
         background-color: #ffffff;
         flex-direction: column;
         transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        z-index: 300;
-        box-shadow: 10px 0 25px rgba(0, 0, 0, 0.2);
-    }
-}
-/* ==========================================================
-   ESTILIZAÇÃO COMPLETA DO MENU LATERAL (DRAWER) NO MOBILE
-   ========================================================== */
-
-@media (max-width: 1024px) {
-
-    /* Estrutura visual da gaveta lateral */
-    .drawer {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 250px;
-        background-color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        transform: translateX(-100%);
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 300;
         box-shadow: 10px 0 25px -5px rgba(0, 0, 0, 0.2);
     }
 
-    /* Topo do menu lateral (onde fica a logo interna e o botão de fechar) */
     .drawer-header {
         height: 70px;
         padding: 0 20px;
@@ -506,7 +470,6 @@ body {
         justify-content: center;
     }
 
-    /* Links de navegação dentro do menu lateral */
     .drawer-nav {
         display: flex;
         flex-direction: column;
@@ -530,7 +493,6 @@ body {
         color: var(--coramazonia3, #59BE4B) !important;
     }
 
-    /* Rodapé interno do menu lateral (Sobre Nós) */
     .drawer-footer {
         padding: 20px;
         color: var(--coramazonia5, #11240F);
@@ -540,5 +502,65 @@ body {
     .drawer-footer h4 a {
         text-decoration: none;
         color: inherit;
+    }
+
+    /* === CONTEÚDO: tudo empilha para baixo e a página rola normalmente === */
+    .desktop-container {
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    .desktop-content-section {
+        flex: unset;
+        height: auto;
+        padding: 25px 20px;
+    }
+
+    .desktop-hero-title {
+        font-size: 28px;
+    }
+
+    /* Cards do topo: 2 por linha */
+    .problemas-cards-topo {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    /* Termômetro: barras em cima e descrições embaixo */
+    .termometro-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Celulares: cards do topo em 1 coluna */
+@media (max-width: 600px) {
+    .desktop-header {
+        padding: 15px 20px;
+    }
+
+    .desktop-hero-title {
+        font-size: 24px;
+    }
+
+    .problemas-cards-topo {
+        grid-template-columns: 1fr;
+    }
+
+    .termometro-titulo {
+        font-size: 20px;
+    }
+
+    .termometro-titulo span {
+        display: block;
+        font-size: 16px;
+    }
+
+    .barra-item {
+        font-size: 15px;
+    }
+
+    .preenchimento {
+        font-size: 14px;
     }
 }
