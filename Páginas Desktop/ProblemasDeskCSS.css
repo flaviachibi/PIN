@@ -347,7 +347,7 @@ html {
 .desktop-footer {
     width: 100%;
     background-color: #fff;
-    padding: 20px;
+    padding: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
