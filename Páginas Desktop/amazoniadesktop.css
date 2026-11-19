@@ -321,7 +321,7 @@ transform: translateY(3.0s);
 .desktop-footer {
      width: 100%;
      background-color: #fff;
-    padding: 20px;
+    padding: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -332,12 +332,12 @@ transform: translateY(3.0s);
 
 .footer-logo {
       height: auto;
-    width: 100px;
+    width: 120px;
 }
 
 .footer-copyright {
-     font-size: 11px;
-    color: #757575;
+     font-size: 13px;
+    color: #000000;
     text-align: center;
     line-height: 1.3;
 }
