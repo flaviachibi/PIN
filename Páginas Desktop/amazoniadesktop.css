@@ -23,10 +23,12 @@ body {
 }
  /* isso ativa a rolagem suave*/
         html {
-            scroll-behavior: smooth;
+            scroll-behavior:smooth;
+            
+           
         }
 .btn-topo:hover {background-color: var(--coramazonia2);
-transform: translateY(-3px);
+transform: translateY(3.0s);
 }
 /*botão fixo para voltar ao topo*/
 .btn-topo {
@@ -79,6 +81,7 @@ transform: translateY(-3px);
     object-fit: contain;
     width: 150px;
     height: auto;
+    margin: 0 40px;
 }
 
 .desktop-nav {
@@ -154,6 +157,7 @@ transform: translateY(-3px);
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    
 }
 
 .desktop-hero-overlay {
