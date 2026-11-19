@@ -70,8 +70,8 @@ body {
     right: 20px;
     background-color: var(--coramazonia3);
     color: #ffffff;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -278,12 +278,9 @@ html {
     background-color: #ffffff;
     padding: 1px;
     text-align: center;
-    color: #11240F;
+    color: #000000;
     border-top: 1px solid #eee;
     margin-top: 5px;
-   display: grid;
-   
-    
 }
 
 .main-footer p {
