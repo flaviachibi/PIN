@@ -340,12 +340,12 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 
         .footer-logo {
             height: auto;
-            width: 100px;
+            width: 120px;
         }
 
         .footer-copyright {
-            font-size: 11px;
-            color: #757575;
+            font-size: 13px;
+            color: #000000;
             text-align: center;
             line-height: 1.3;
         }
