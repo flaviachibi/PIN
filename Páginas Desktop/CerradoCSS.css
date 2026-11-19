@@ -85,6 +85,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
         }
 
         .desktop-logo {
+            margin:0 40;
             height: 40px;
             object-fit: contain;
             width: 150px;
@@ -328,7 +329,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
         .desktop-footer {
             width: 100%;
             background-color: #fff;
-            padding: 20px;
+            padding: 1px;
             display: flex;
             justify-content: center;
             align-items: center;
