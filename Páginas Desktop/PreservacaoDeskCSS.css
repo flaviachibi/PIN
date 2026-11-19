@@ -272,6 +272,7 @@ html {
 /* ==========================================================
    4. RODAPÉ (largura total)
    ========================================================== */
+
 .main-footer {
     width: 100%;
     background-color: #ffffff;
@@ -280,18 +281,15 @@ html {
     color: #000000;
     border-top: 1px solid #eee;
     margin-top: 5px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 15px;
 }
 
 .main-footer p {
     font-size: 13px;
     margin-top: 5px;
     font-weight: 500;
+    
 }
+
 
 /* ==========================================================
    5. RESPONSIVIDADE (MOBILE / TABLET < 1024PX)
