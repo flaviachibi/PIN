@@ -277,9 +277,14 @@ html {
     background-color: #ffffff;
     padding: 1px;
     text-align: center;
-    color: #11240F;
+    color: #000000;
     border-top: 1px solid #eee;
     margin-top: 5px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 15px;
 }
 
 .main-footer p {

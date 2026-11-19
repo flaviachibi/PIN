@@ -409,13 +409,14 @@ transform: translateY(-3px);
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
+    gap: 25px;
     z-index: 10;
 }
 .main-footer p {
     font-size: 13px;
     margin-top: 5px;
     font-weight: 500;
+    
   
 }
 
@@ -423,17 +424,22 @@ transform: translateY(-3px);
     width: 120px;
     height: auto;
     object-fit:contain;
- 
+
+
     
     
     
 }
 
+
+
 .footer-copyright {
     font-size: 25px;
     color: #555555;
     line-height: 1.4;
+    
 }
+
 
 /* ==========================================================
    7. RESPONSIVIDADE (MOBILE / TABLET < 1024PX)
