@@ -106,7 +106,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding:0px;
     background-color: #fff;
     border-bottom: 1px solid #fff;
     z-index: 10;

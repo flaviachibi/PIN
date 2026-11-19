@@ -128,7 +128,7 @@ html {
 }
 
 .desktop-logo {
-    width: 170px;
+    width: 150px;
     height: auto;
     object-fit: contain;
 }
@@ -275,11 +275,11 @@ html {
 .main-footer {
     width: 100%;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
     color: #11240F;
     border-top: 1px solid #eee;
-    margin-top: auto;
+    margin-top: 5px;
 }
 
 .main-footer p {

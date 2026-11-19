@@ -73,7 +73,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
      display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding:0px;
     background-color: #fff;
     border-bottom: 1px solid #eee;
     z-index: 10;}
@@ -81,7 +81,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
 .desktop-logo {
    height: 40px;
     object-fit: contain;
-    width: 170px;
+    width: 150px;
     height: auto;
 }
 
