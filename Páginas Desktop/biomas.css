@@ -129,6 +129,7 @@ body {
     object-fit: contain;
     width: 150px;
     height: auto;
+    margin: 0 40px;
 }
 
 .desktop-nav {
@@ -136,7 +137,7 @@ body {
     gap: 55px;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 /* Efeito de hover sublinhado no menu */
@@ -327,7 +328,7 @@ body {
 
 .footer-logo {
     height: auto;
-    width: 100px;
+    width: 120px;
 }
 
 .footer-copyright {
