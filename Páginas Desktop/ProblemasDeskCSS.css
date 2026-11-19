@@ -110,11 +110,12 @@ html {
     background-color: #fff;
     border-bottom: 1px solid #fff;
     z-index: 10;
+    margin: 0px;
 }
 
 .desktop-logo {
     object-fit: contain;
-    width: 170px;
+    width: 150px;
     height: auto;
 }
 
