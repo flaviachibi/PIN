@@ -114,17 +114,19 @@ body {
 .header-inner {
     width: 100%;
     max-width: 1200px;
-    margin: 0 3px;
+    margin: 0;
     display: flex;
     align-items: center;
-    gap: 55px;
+    gap: 20px;
+    padding: 0 40px;
+    justify-content: flex-start;
 }
 
 .desktop-logo {
     width: 150px;
     height: auto;
     object-fit: contain;
-    margin: 0 -90px;
+    margin: 0;
     
 }
 
@@ -354,6 +356,9 @@ body {
         cursor: pointer;
         background: none;
         border: none;
+         flex-shrink: 0;
+        position: relative;
+        z-index: 5;
     }
 
     .hamburger-btn span {

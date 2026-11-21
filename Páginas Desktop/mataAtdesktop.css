@@ -76,7 +76,7 @@ USAR SOMENTE NAS PÁGINAS LONGAS*/
      display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px;
+    padding: 0 40px;
     background-color: #fff;
     border-bottom: 1px solid #eee;
     z-index: 10;}
